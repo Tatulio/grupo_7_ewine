@@ -19,8 +19,8 @@ aficionado de los video juegos . Tengo como hobbie el cafe y la pizza estilo nap
 
    * Mauro Grandis : 19 años, estudiante de ingeniería química. Sin experiencia previa en programación,
  apasionado por la tecnología en general.
-
-
+ 
+   * Nicolás Tablas: 32 años, Tecnico logistico. Casi sin experiencia en programacion, apasionado por lo videos juegos y la cocina.
 
 
 4. [Sitios de referencia](#Referencia)
