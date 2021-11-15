@@ -53,6 +53,26 @@ creacion de nuevas cuentas vimos que estaba muy claro y simple de leer.
 5. [FAQs](#faqs)
 
 
+Tipografia
 
-Add an optional extended description…
- Commit directly to the main branch.
+Logo, Nombre Marca = MONTAGA
+
+Formularios, filtros y otros= ROBOTO
+
+Sobre nosotros y bodegas = PRATA
+
+Colores
+
+Franjas laterales = 440217
+
+Logo, marca, iconos, varios = AD9863
+
+Fondo = F4F4F4
+
+Menu horizontal, pie de pagina, botones y varios = 383D41
+
+texto pie pagina, boton y otros = A9AAAA
+
+
+
+
