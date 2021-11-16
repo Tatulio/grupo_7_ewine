@@ -12,15 +12,15 @@ horizontes.
 
 3. [Integrantes del equipo](#Integrantes)
 
-   * Juan Manuel Cotoli : 37 años , cocinero y maradoneano. Ningun tipo de experiencia previa en el mundo programacion,
+   - Juan Manuel Cotoli : 37 años , cocinero y maradoneano. Ningun tipo de experiencia previa en el mundo programacion,
 aficionado de los video juegos . Tengo como hobbie el cafe y la pizza estilo napolitano.
 
-   * Martin Vidal Freyre : 27 años, Estudiante de Ciencia Política, dando sus primeros pasos en el mundo de la programación.
+   - Martin Vidal Freyre : 27 años, Estudiante de Ciencia Política, dando sus primeros pasos en el mundo de la programación.
 
-   * Mauro Grandis : 19 años, estudiante de ingeniería química. Sin experiencia previa en programación,
+   - Mauro Grandis : 19 años, estudiante de ingeniería química. Sin experiencia previa en programación,
  apasionado por la tecnología en general.
  
-   * Nicolás Tablas: 32 años, Tecnico logistico. Casi sin experiencia en programacion, apasionado por lo videos juegos y la cocina.
+   - Nicolás Tablas: 32 años, Tecnico logistico. Casi sin experiencia en programacion, apasionado por lo videos juegos y la cocina.
 
 
 4. [Sitios de referencia](#Referencia)
