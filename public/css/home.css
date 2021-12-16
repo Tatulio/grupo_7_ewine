@@ -1,7 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+main {
+    text-align: center;
+    flex-direction: row;
+}
+
+.logo-pagina {
+    max-height: 10vw;
+    padding: 12px;
 }
 
 .main-content {
@@ -10,37 +24,31 @@
     min-height: 50vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    padding-bottom: 3vh;
 }
 
 .bodega {
     display: flex;
     background-color: #ffffff;
-    border-radius: 35px;
-    padding-bottom: 35px;
-    border-bottom-left-radius: 35px;
-    border-top-left-radius: 35px;
-    font-family: 'Roboto', sans-serif;
+    border-radius: 45px;
+    
 }
 
 .bodegas {
-    border-top-left-radius: 35px;
-    border-bottom-left-radius: 35px;
+    max-width: 30vw;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
 }
-
-.productos {
-    border-top-left-radius: 35px;
-    border-bottom-left-radius: 35px;
-}
-
 
 img {
-    max-width: 30vw;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.foto-texto {
+.foto-texto-principal {
+    margin: 5vh 12.5vw;
     max-width: 60vw;
-    margin-top: 5vh;
 }
 
 .text-inicio {
@@ -49,18 +57,88 @@ img {
 }
 
 .text-bodega {
-    text-align: left;
-    padding: 2.5vh 5vh 0 5vh;
+    font-size: 2.3vh;
+    text-align: justify;
+    padding: 3vh 5vh 0 5vh;
 }
 
-.text-producto {
-    text-align: left;
-    padding: 2.5vh 5vh 0 5vh;
-    width: 35vw;
-}
 .text-titulo {
-    font-size: 25px;
+    font-size: 3.8vh;
     text-align: center;
     min-width: 20vh;
-    padding: 3.5vh 5vh 0 5vh;
+    padding: 3.8vh 5vh 0 5vh;
+}
+
+.texto-seccion-barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 5vh;
+    background-color: #383D41;
+    border-radius: 45px;
+    font-size: 3vh;
+    font-family: Roboto;
+    color: #AD9863;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+.cajadecajas {
+    margin: 15px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.vinos {
+    background: white;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: none;
+    border-radius: 10px;
+    max-width: 23%;
+    transition: all 0.5s;
+}
+.vinos:hover{
+    box-shadow:0px 0px 10px rgb(100, 100, 100);
+}
+
+.detallecompleto {
+    text-align: left;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+}
+
+.detallecompleto p {
+    display: inline-flex;
+    margin: 12px 10px 12px 0;
+
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    font-style: italic;
+    font-family: "Roboto";
+    font-size: 12px;
+}
+.info button{
+    width: 50%;
+    border-radius: 6px;
+    border: none;
+    background-color: #383D41;
+    color: gainsboro ;
+    height: 1.5em;
+}
+.aclaracion{
+font-weight: 300;
+}
+.precio{
+    font-weight: bold;
 }
