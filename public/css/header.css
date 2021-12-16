@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #383D41;
+    width: 85vw;
+    height: 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+header section{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    align-self: center;
+}
+
+.searchBar input{
+    border-radius: 20px;
+    padding: 5%;
+    outline: none;
+    border: none;
+    position: relative;
+    right: 35px;
+    float: left;
+}
+
+.searchBar input::placeholder{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+.carritoUsuario{
+    position: relative;
+    right: 10px;
+}
+
+.carritoUsuario a{
+    color: #AD9863;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.logoPagina{
+    padding: 12px;
+}
+
+.menu a{
+    color: white;
+    font-size: 25px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.borde{
+    border-right: white solid 1.5px; 
+    padding-right: 10px;
+    padding-left: 10px;
+}

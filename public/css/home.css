@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content {
+    background-color: #F4F4F4;
+    width: 85vw;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bodega {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 35px;
+    padding-bottom: 35px;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bodegas {
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+.productos {
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+
+img {
+    max-width: 30vw;
+}
+
+.foto-texto {
+    max-width: 60vw;
+    margin-top: 5vh;
+}
+
+.text-inicio {
+    list-style: none;
+    justify-content: center;
+}
+
+.text-bodega {
+    text-align: left;
+    padding: 2.5vh 5vh 0 5vh;
+}
+
+.text-producto {
+    text-align: left;
+    padding: 2.5vh 5vh 0 5vh;
+    width: 35vw;
+}
+.text-titulo {
+    font-size: 25px;
+    text-align: center;
+    min-width: 20vh;
+    padding: 3.5vh 5vh 0 5vh;
+}
