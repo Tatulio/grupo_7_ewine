@@ -73,6 +73,9 @@ Menu horizontal, pie de pagina, botones y varios = 383D41
 
 Texto pie pagina, boton y otros = A9AAAA
 
+******* TRELLO ******
 
+
+Tablero de trabajo Trello : https://trello.com/b/J1wfjYJl/sprint-1-y-2-backlog 
 
 
