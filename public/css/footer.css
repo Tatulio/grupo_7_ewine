@@ -1,33 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #440217;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
 }
 
-.logo{
-    padding: 12px;
-    max-width: 100px;
+body {
+    font-family: "Roboto";
+    background:  #ebebeb;;
 }
 
-footer {
+main {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+footer{
     bottom: 0%;
     background-color: #383D41;
-    width: 85vw;
     height: 12vh;
-    min-height: 195px;  
+    min-height: 240px;
+    text-align: center;
 }
-
 
 .main-foot-bar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center;    
+    justify-content: center;
     align-items: flex-start;
     max-height: 100px;
 }
@@ -40,12 +44,13 @@ footer {
 .link-footer{
     padding: 0 15px;
     list-style: none;    
+    text-align: left;    
 }
 
 .link-footer a {
+    font-size: 15px;
     color: #A9AAAA;
     flex-direction: column;
-    text-align: left;
     text-decoration-line: none;
 }
 
@@ -54,13 +59,15 @@ footer {
 }
 
 .icon-color {
-    color: #AD9863;
-   
+    color: #AD9863;   
     padding: 0 10px;
-    font-size: 30px;  
+    font-size: 30px;
 }
 
+
+
 .icon-footer {
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -69,7 +76,98 @@ footer {
 
 .copyright {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 1.5vh;
     color: #A9AAAA;
+    padding-bottom: 10px;
+}
+
+.logo-footer {
+    max-width: 100px;
+    display: none;
+}
+
+
+@media (min-width: 768px) {  /*TABLET*/
+    body{
+        background-color: #440217;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+      
+    footer {
+        display: flex;
+        flex-wrap: wrap;  
+        bottom: 0%;
+        background-color: #383D41;
+        width: 85vw;
+        height: 21vh;
+        min-height: 195px;  
+    }
+    
+    
+    .main-foot-bar {
+        margin-top: 2vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    .columnas{
+        display: flex;
+        padding-top: 12px;
+    }
+    
+    .link-footer{
+        padding: 0 15px;
+        list-style: none;    
+    }
+    
+    .link-footer a {
+        color: #A9AAAA;
+        flex-direction: column;
+        text-align: left;
+        text-decoration-line: none;
+    }
+    
+    .link-footer-principal {
+        font-size: 21px;
+    }
+    
+    .icon-color {
+        margin:0 0.5vh 1vh;
+        padding: 0 10px; 
+    }
+    
+    .icon-footer {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+   }
+    
+    .copyright {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        font-size: 1.5vh;
+        color: #A9AAAA;
+    }
+
+    .logo-footer {
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {  /*ESCRITORIO*/ 
+    .main-foot-bar {
+        width: 90%;       
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 2vh;
+    }
 }

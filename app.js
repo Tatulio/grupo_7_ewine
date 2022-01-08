@@ -1,15 +1,22 @@
-const express = require("express");
-const app =  express();
-const path = require('path');
-const { allowedNodeEnvironmentFlags } = require("process");
+const path = require("path")
+const express = require("express")
 
-app.set("port",3040);
-
-app.listen(app.get("port"),()=> console.log ("servidor corriendo"))
-
-app.get("/",(req,res)=>{res.sendFile(path.resolve(__dirname,"./views", "home.html"))})  
-
-app.use(express.static(path.resolve(__dirname,"./public")));
+const app = express()
 
 
-app.get("/productos",(req,res)=>{res.sendFile(path.resolve(__dirname,"./views", "productos.html"))})  
+app.set("port", process.env.PORT || 9000) 
+
+
+app.listen(app.get("port"), () => console.log("listening on port http:localhost:" + app.get("port")))
+
+app.use(express.static(path.resolve(__dirname,"./public")))
+
+app.get("/", (req, res) => res.sendFile(path.resolve(__dirname,"./views","home.html")))
+
+app.get("/registrar", (req, res) => res.sendFile(path.resolve(__dirname,"./views","registrar.html")))
+
+app.get("/ingresar", (req, res) => res.sendFile(path.resolve(__dirname,"./views","ingresar.html")))
+
+app.get("/carrito", (req, res) => res.sendFile(path.resolve(__dirname,"./views","carrito.html")))
+
+app.get("/nosotros", (req, res) => res.sendFile(path.resolve(__dirname,"./views","nosotros.html")))

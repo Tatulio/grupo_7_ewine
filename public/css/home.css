@@ -1,44 +1,18 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    background:  #ebebeb;;
 }
 
 main {
     text-align: center;
-    flex-direction: row;
-}
-
-.logo-pagina {
-    max-height: 10vw;
-    padding: 12px;
-}
-
-.main-content {
-    background-color: #F4F4F4;
-    width: 85vw;
-    min-height: 50vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 3vh;
-}
-
-.bodega {
-    display: flex;
-    background-color: #ffffff;
-    border-radius: 45px;
-    
-}
-
-.bodegas {
-    max-width: 30vw;
-    border-top-left-radius: 45px;
-    border-bottom-left-radius: 45px;
 }
 
 img {
@@ -47,29 +21,10 @@ img {
 }
 
 .foto-texto-principal {
-    margin: 5vh 12.5vw;
-    max-width: 60vw;
+    display: none;
 }
 
-.text-inicio {
-    list-style: none;
-    justify-content: center;
-}
-
-.text-bodega {
-    font-size: 2.3vh;
-    text-align: justify;
-    padding: 3vh 5vh 0 5vh;
-}
-
-.text-titulo {
-    font-size: 3.8vh;
-    text-align: center;
-    min-width: 20vh;
-    padding: 3.8vh 5vh 0 5vh;
-}
-
-.texto-seccion-barra {
+.titulares {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,42 +35,24 @@ img {
     font-size: 3vh;
     font-family: Roboto;
     color: #AD9863;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin: 30px 0 20px 5%;
 }
 
-
 .cajadecajas {
-    margin: 15px 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .vinos {
+    margin: 3vh 0;
     background: white;
-    padding: 15px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     box-shadow: none;
     border-radius: 10px;
-    max-width: 23%;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 .vinos:hover{
     box-shadow:0px 0px 10px rgb(100, 100, 100);
-}
-
-.detallecompleto {
-    text-align: left;
-    border-top: 1px solid #ebebeb;
-    position: relative;
-}
-
-.detallecompleto p {
-    display: inline-flex;
-    margin: 12px 10px 12px 0;
-
 }
 
 .info{
@@ -128,17 +65,235 @@ img {
     font-family: "Roboto";
     font-size: 12px;
 }
+
 .info button{
-    width: 50%;
+    width: 20vh;
+    margin-bottom: 3vh;
     border-radius: 6px;
     border: none;
     background-color: #383D41;
     color: gainsboro ;
     height: 1.5em;
+    transition: all 0.2s;
 }
+
+.info button:hover {
+    box-shadow:0px 0px 10px #AD9863;
+}
+
+
+.info button:focus {
+    background-color: #AD9863;
+    color: #383D41;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .aclaracion{
-font-weight: 300;
+    font-weight: 300;
 }
-.precio{
+.precio {
+    font-size: 18px;
     font-weight: bold;
 }
+
+.descripcion {
+    color: #666;
+    font-size: 16px;
+    display: none;
+}
+
+
+
+.bodegas-desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {  /*TABLET*/
+  
+    .main-header-top-bar{
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .foto-texto-principal {
+        background-color: #FFFFFF;
+        margin: auto;
+        margin: 5vh 12.5vw;
+        max-height: 100%;
+        max-width: 60vw;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 50px;
+    }
+    .bodega {
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 50px;
+    }
+
+    .bodegas-desktop {
+        display: none;
+    }
+
+    .bodegas-tablet {
+        max-width: 100%;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+    
+    
+    .text-inicio {
+        list-style: none;
+        justify-content: center;
+    }
+    
+    .text-titulo {
+        font-size: 3.8vh;
+        text-align: center;
+        min-width: 20vh;
+        margin: 10px 0;
+    }
+    
+    .text-bodega {
+        padding: 0 8% 18px;
+        font-size: 2vh;
+        text-align: justify;
+        justify-content: center;
+    }
+
+    .formsearch {
+        justify-content: center;
+        align-self: center;
+        max-width: 226.5px;        
+    }
+
+    .copy-header {
+        margin-right: 0;
+        width: 250px;
+        max-width: none;
+        text-align: right;
+        font-size: 14px;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    .main-navbar {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li {
+        margin: 0 5px;
+    }
+
+    .descripcion {
+        display: block;
+    }
+
+    .caja-producto h3:hover {
+        display: block;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .caja-producto {
+        transition: all 0.5s ease;
+    }
+
+    .caja-producto:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .cajadecajas {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .vinos {
+        width: 46%;
+    }
+
+}
+
+@media  (min-width: 1200px) {
+    .foto-texto-principal {
+        flex-wrap: nowrap;
+        margin: auto;
+        margin-top: 25px;
+        max-width: 70%;
+    }
+
+    .bodega {
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 50px;
+    
+    }
+    
+    .bodegas-tablet {
+        display: none;
+    }
+
+    .bodegas-desktop {        
+        max-width: 60vw;
+        display: flex;
+        width: 90%;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    
+    .text-titulo-bodega {
+        width: 70%;
+    }
+   
+    .text-inicio {
+        list-style: none;
+        justify-content: center;
+    }
+    
+    .text-titulo {
+        font-size: 3.8vh;
+        text-align: center;
+        min-width: 20vh;
+        margin: 10px 0;
+    }
+    
+    .text-bodega {
+        padding: 0 8% 18px 0;
+        font-size: 2vh;
+        text-align: justify;
+        justify-content: center;
+    }
+
+    .cajadecajas {
+        flex-wrap: nowrap;
+    }
+
+    .vinos {
+        max-width: 25%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+}
+

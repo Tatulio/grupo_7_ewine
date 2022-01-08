@@ -1,65 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
 }
 
-header{
+body {
+    font-family: "Roboto";
+    background:  #ebebeb;;
+}
+
+main {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.main-header {
     background-color: #383D41;
-    width: 85vw;
-    height: 10vw;
-    display: flex;
-    justify-content: space-between;
 }
 
-header section{
+.main-header-top-bar {
+    flex-direction: column;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
-.menu{
-    align-self: center;
+.logo {
+    max-width: 14vh;
+    margin: 1.5vh 0;
 }
 
-.searchBar input{
-    border-radius: 20px;
-    padding: 5%;
-    outline: none;
+.formsearch {
+    position: relative;
+    display:flex;  
+}
+
+.formsearch input {
     border: none;
-    position: relative;
-    right: 35px;
-    float: left;
+    display: block;
+    width: 100%;
+    max-width: 192px;
+    padding: 7px 35px 7px 7px;
+    border-radius: 50px;
+    height: 40px;
+    font-size: 1em;
 }
 
-.searchBar input::placeholder{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
+.iconolupa {
+    position: absolute;
+    top: 22%;
+    right: 4%;
+    background-color: #ffffff;
+    color: #AD9863;
+    padding: 1px;
+    text-align: center;
+    font-size: 22px;
+    width: 23px; 
+    height: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    display: flex;
 }
 
-.carritoUsuario{
-    position: relative;
-    right: 10px;
+.icon-carrito-usuario {
+    text-align: center;
+    margin-top: 15px;
 }
 
-.carritoUsuario a{
+.icon-carrito-usuario a {
     color: #AD9863;
     font-size: 25px;
     padding: 5px;
 }
 
-.logoPagina{
-    padding: 12px;
+.burger-menu {
+    text-align: center;
+    font-size: 30px;
+    width: 50px; 
+    padding: 6px;
+    box-sizing: border-box;
+    border: solid 1px #AD9863;
+    margin: 3vh 0;
+    border-radius: 10px;
+    transition: all 0.2s;
 }
 
-.menu a{
-    color: white;
-    font-size: 25px;
-    padding-left: 10px;
-    text-decoration: none;
+.burger-menu:hover{
+    box-shadow:0px 0px 10px #AD9863;
 }
 
-.borde{
-    border-right: white solid 1.5px; 
-    padding-right: 10px;
-    padding-left: 10px;
+.tresbarras{
+    color: #AD9863;
+}
+
+.main-navbar {
+    display: none;
+}
+
+.main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {  /*TABLET*/
+
+    main {
+        justify-content: center;
+        background-color: #F4F4F4;
+        width: 85vw; 
+    }
+
+    header{
+        background-color: #383D41;
+        width: 85vw;
+        min-height: 10vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-header-top-bar{
+        margin-top: -1vh;
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .logo {
+        max-width: 9%;
+        margin-top: 2.5vh;
+    }
+
+    .main-navbar{
+        margin-top: 0px;
+        display: flex;
+        align-self: center;
+    }
+
+    .main-navbar a {        
+        color: #FFFFFF;        
+        display: inline-block;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 0 10px;
+    }    
+
+    .borde{
+        border-right: white solid 1.5px; 
+        border-left: white solid 1.5px;
+    }
+
+
+    .icon-carrito-usuario {
+        padding-right: 1vh;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .banner {
+        display: none;
+    }
+}
+
+
+
+@media (min-width: 1200px) {  /*ESCRITORIO*/
+    .main-header-top-bar, .main-navbar{
+        max-width: 90%;
+        margin: auto;
+    }
+    .main-header-top-bar {
+        align-items: center;
+    }
+
+    .copy-header {
+       width: 450px;
+       max-width: none;
+       font-weight: 400;
+       margin: 0;
+       font-size: 14px;
+    }
+
+    .formsearch input {
+        max-width: 226.5px;        
+    }
+
+    .icon-carrito-usuario {
+        padding-left: 20px;
+    }
 }
