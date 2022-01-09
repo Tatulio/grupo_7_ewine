@@ -117,10 +117,8 @@ a {
 
 @media (min-width: 768px) {  /*TABLET*/
   
-    .main-header-top-bar{
-        margin: auto;
-        align-items: center;
-        justify-content: space-between;
+    body {        
+        background-color: #440217
     }
 
     .foto-texto-principal {
@@ -188,7 +186,6 @@ a {
     }
 
     .main-navbar {
-        margin-top: 10px;
         display: flex;
         justify-content: space-between;
     }

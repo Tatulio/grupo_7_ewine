@@ -8,7 +8,7 @@
 
 body {
     font-family: "Roboto";
-    background:  #ebebeb;;
+    background:  #ebebeb;
 }
 
 main {
@@ -136,6 +136,7 @@ img {
         margin-top: -1vh;
         width: 100%;
         flex-direction: row;
+        justify-content: space-around;
     }
     
     .logo {

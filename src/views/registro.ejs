@@ -1,0 +1,68 @@
+<%- include("./includes/head") %>
+<body>
+    <%- include("./includes/header") %>
+    <main class="main-register">
+        <form class="register-login">
+            <h2>Identificarse</h2>
+            <fieldset class="fs-e-mail">
+                <label for="e-mail">Correo Electronico</label>
+                <input type="email" id="e-mail" placeholder="Direccion de Email">
+            </fieldset>
+            <fieldset class="fs-pass">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" placeholder="**********">
+            </fieldset>
+
+            <fieldset class="fs-button">
+                <button>Identificarse</button>
+               <section class="fs-conectar">
+                    <a>Conectar con | </a>
+                    <img href="google.com" class="img-google" src="/images/google-login.png" alt="icono-google">
+                    <img href="facebook.com" class="img-fb" src="/images/logo-fb.jpg" alt="icono-fb">
+                </section>    
+            </fieldset>
+            
+            <fieldset class="fs-kl">
+                <input type="checkbox" name="kl" id="kl">
+                <label for="kl">Recordarme</label>
+            </fieldset> 
+        </form>
+
+        <form class="register-signin">
+            <h2>Registro</h2>
+            <fieldset class="fs-nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre completo">
+            </fieldset>
+            <fieldset class="fs-apellido">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" placeholder="Ingrese su apellido">
+            </fieldset>
+            <fieldset class="fs-e-mail-reg">
+                <label for="e-mail-reg">Correo Electronico</label>
+                <input type="email" id="e-mail-reg" placeholder="Direccion de Email">
+            </fieldset>
+            <fieldset class="fs-pass-reg">
+                <label for="pass-reg">Contraseña</label>
+                <input type="password" id="pass-reg" placeholder="***********">
+            </fieldset>
+            <fieldset class="fs-pass-reg2">
+                <label for="pass-reg2">Confirmar Contraseña</label>
+                <input type="password" id="pass-reg2" placeholder="Confirmar">
+            </fieldset>
+            <fieldset class="fs-button-si">
+                <button>Registrarse</button>
+                <section class="fs-conectar">
+                    <a>Registrarme con</a>
+                    <img href="google.com" class="img-google" src="/images/logo-google.png" alt="icono-google">
+                    <img href="facebook.com" class="img-fb" src="/images/logo-fb.jpg" alt="icono-fb">
+                </section>    
+            </fieldset>
+            
+            
+        </form>
+
+    </main>
+    <%- include("./includes/footer") %>
+</body>
+</html>

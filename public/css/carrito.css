@@ -266,6 +266,12 @@ h5 {
 
 
 @media (min-width: 768px) {
+
+    body {
+        font-family: "Roboto";
+        background:  #440217;
+    }
+
     .secciones-carrito {
         justify-content: space-between;
     }

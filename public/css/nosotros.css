@@ -135,6 +135,10 @@ img {
 }
 
 @media (min-width: 768px) {  /*TABLET*/ 
+    body {        
+        background-color: #440217
+    }
+
     .nosotros-foto-texto-principal {
         max-width: 75%;
 }
