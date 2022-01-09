@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel = "stylesheet" href ="/css/header.css">
-    <link rel = "stylesheet" href ="/css/register.css">
+    <link rel = "stylesheet" href ="/css/registro.css">
     <link rel = "stylesheet" href ="/css/footer.css">
     <link rel="stylesheet" href="https://fontawesome.com/icons?d=gallery&m=free">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,78 +13,102 @@
     <title>Ewine</title>
 </head>
 <body>
-    <header>
-        <picture class="logoPagina">
-            <img src="/images/logo.png" alt="logo" width="100%" height="100%">
-        </picture>
-        <nav class="menu">
-            <a class="borde" href="/vinos">Vinos</a>
-            <a class="borde" href="/nosotros">Nosotros</a>
-            <a href="/contacto">Contacto</a>
-        </nav>
-        <section>
-        <form class="searchBar">
-            <input type="search" name="barra" placeholder=" Buscar...">
-        </form>
-        <nav class="carritoUsuario">
-            <a href="" ><i class="fas fa-shopping-cart"></i></a>
-            <a href="" ><i class="fas fa-user"></i></a>
-        </nav>
-        </section>
+    <header class="main-header">
+        <section class="main-header-top-bar">
+            <picture class="logo">
+            <img  src="/images/logo.png" alt="icono">
+                </picture>
+    
+                <nav class="main-navbar">
+                    <a href="http://localhost:3040/catalogo.html">Vinos</a>
+                    <a class="borde" href="/nosotros">Nosotros</a>
+                    <a href="/contacto">Contacto</a>
+                </nav>
+    
+                    <form action="#" class="formsearch">
+                        <input type="search" name="barra" placeholder="Buscar..."><button class="iconolupa"><i class="fas fa-search"></i></button>
+                    </form>
+            
+                    <nav class="icon-carrito-usuario">
+                        <a href="" ><i class="fas fa-shopping-cart"></i></a>
+                        <a href="" ><i class="fas fa-user"></i></a>
+                    </nav>
+    
+                    <div class="burger-menu">
+                        <a class="tresbarras" href="/menu"><i class="fas fa-bars"></i></a>
+                    </div> 
+                </section>           
     </header>
     <main class="main-register">
         <form class="register-login">
             <h2>Identificarse</h2>
             <fieldset class="fs-e-mail">
                 <label for="e-mail">Correo Electronico</label>
-                <input type="email" id="e-mail">
+                <input type="email" id="e-mail" placeholder="Direccion de Email">
             </fieldset>
             <fieldset class="fs-pass">
                 <label for="pass">Contraseña</label>
-                <input type="password" id="pass"">
+                <input type="password" id="pass" placeholder="**********">
             </fieldset>
+
             <fieldset class="fs-button">
                 <button>Identificarse</button>
+               <section class="fs-conectar">
+                    <a>Conectar con | </a>
+                    <img href="google.com" class="img-google" src="/images/google-login.png" alt="icono-google">
+                    <img href="facebook.com" class="img-fb" src="/images/logo-fb.jpg" alt="icono-fb">
+                </section>    
             </fieldset>
+            
+            <fieldset class="fs-kl">
+                <input type="checkbox" name="kl" id="kl">
+                <label for="kl">Recordarme</label>
+            </fieldset> 
         </form>
 
         <form class="register-signin">
             <h2>Registro</h2>
             <fieldset class="fs-nombre">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre">
+                <input type="text" id="nombre" placeholder="Ingrese su nombre completo">
             </fieldset>
             <fieldset class="fs-apellido">
                 <label for="apellido">Apellido</label>
-                <input type="text" id="apellido">
+                <input type="text" id="apellido" placeholder="Ingrese su apellido">
             </fieldset>
             <fieldset class="fs-e-mail-reg">
                 <label for="e-mail-reg">Correo Electronico</label>
-                <input type="email" id="e-mail-reg">
+                <input type="email" id="e-mail-reg" placeholder="Direccion de Email">
             </fieldset>
             <fieldset class="fs-pass-reg">
                 <label for="pass-reg">Contraseña</label>
-                <input type="password" id="pass-reg">
+                <input type="password" id="pass-reg" placeholder="***********">
             </fieldset>
             <fieldset class="fs-pass-reg2">
                 <label for="pass-reg2">Confirmar Contraseña</label>
-                <input type="password" id="pass-reg2">
+                <input type="password" id="pass-reg2" placeholder="Confirmar">
             </fieldset>
-            <fieldset class="fs-button">
+            <fieldset class="fs-button-si">
                 <button>Registrarse</button>
+                <section class="fs-conectar">
+                    <a>Registrarme con</a>
+                    <img href="google.com" class="img-google" src="/images/google-login.png" alt="icono-google">
+                    <img href="facebook.com" class="img-fb" src="/images/logo-fb.jpg" alt="icono-fb">
+                </section>    
             </fieldset>
+            
             
         </form>
 
     </main>
     <footer>
         <section class="main-foot-bar">
-  <picture class="logo">
+    <picture class="logo-footer">
             <img src="/images/copa.png" alt="logo" width="100%" height="100%">
         </picture>   
         <article class="columnas">
             <ul class="link-footer">
-                <li><a class="link-footer-principal" href="/vinos">Vinos</a></li>
+                <li><a class="link-footer-principal" href="/catalogo">Vinos</a></li>
                 <li><a href="/nosotros">Colecciones</a></li>
                 <li><a href="/contacto">Bodegas</a></li>
             </ul>
@@ -99,7 +123,7 @@
                 <li><a href="https://es.wikipedia.org/wiki/Mendoza_(Argentina)" target="_blank">Oficinas Mendoza</a></li>
             </ul>
         </article>
-        <picture class="logo">
+        <picture class="logo-footer">
             <img src="/images/nombre.png" alt="logo" width="100%" height="100%">
         </picture>
     </section>

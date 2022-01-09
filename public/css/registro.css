@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-weight: bold;
+
+}
+
+.main-register {
+    background-color: #F4F4F4;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.main-register form{
+    width: 80%; 
+    margin: 10%;
+    border: solid #AD9863 1px;
+    border-radius: 4px;
+    padding: 2vh;
+    text-align: start;
+}
+
+.register-login {
+   
+    background-color: white;
+    margin: 5%;
+    
+}
+
+
+
+.register-signin {
+   
+    background-color: white;
+    margin: 1vh;
+}
+
+main button {
+    background-color: #414141;
+    padding: 10px 5px 10px 5px;
+    border: solid #AD9863 1px;
+    border-radius: 4px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+main input {
+    background-color: #F4F4F4;
+    box-shadow: 0px 0px 1px 1px #A9AAAA;
+    border: 0;
+    margin-top: 1px;
+    padding: 5px;
+    width: 95%;
+}
+
+main button:hover {
+    box-shadow:0px 0px 10px #AD9863;
+}
+
+main button:focus {
+    background-color: #AD9863;
+    color: #383D41;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+main input:hover {
+    box-shadow:0px 0px 10px #AD9863;
+}
+
+.img-google{
+    max-width: 4vh;
+}
+.img-fb{
+    max-width: 4.5vh;
+}
+    
+
+fieldset {
+    border: 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+fieldset label{
+    display: none;
+}
+
+.fs-button {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px
+}
+
+.fs-button-si {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px
+}
+
+.fs-kl {
+    margin-top: 10px;
+}
+
+.fs-kl label {
+    display: contents;
+}
+
+
+
+
+
+.fs-kl input {
+    width:fit-content;
+    box-shadow: none;
+    margin-right: 1%;
+    align-self: center;
+}
+
+.fs-conectar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.fs-conectar a{
+    padding-top: 5px;
+    margin-right: 5px;
+    font-size: smaller;
+    font-style: normal;
+    text-align: justify;
+}
+
+
+
+
+
+@media (min-width: 768px) {  /*TABLET*/
+
+
+
+.main-register {
+    background-color: #F4F4F4;
+    width: 85vw;
+    min-height: 50vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.main-register form{
+    width: 40%;
+    max-width: 350px;
+    margin: 5%;
+    border: solid #AD9863 1px;
+    border-radius: 4px;
+    padding: 2%;
+    flex-direction: column;
+    
+}
+
+
+main input {
+    border: 0;
+    margin-top: 1px;
+    padding: 5px;
+    width: 95%;
+}
+
+
+fieldset {
+    border: 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+fieldset label{
+    display: block;
+}
+
+
+
+}
