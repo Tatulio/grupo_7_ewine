@@ -79,10 +79,12 @@ main input:hover {
 }
 
 .img-google{
-    max-width: 4vh;
+    max-width: 16px;
+    max-height: 16px;
 }
 .img-fb{
-    max-width: 4.5vh;
+    max-width: 16px;
+    max-height: 16px;
 }
     
 
@@ -96,26 +98,20 @@ fieldset label{
     display: none;
 }
 
-.fs-button {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 15px
-}
 
-.fs-button-si {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 15px
+
+.fs-button {
+    margin-top: 5px;
 }
 
 .fs-kl {
-    margin-top: 10px;
+    margin-top: 1px;
+    padding: 0px 0px 0px 10px;
 }
 
 .fs-kl label {
     display: contents;
+    font-size: smaller;
 }
 
 .fs-kl input {
@@ -127,12 +123,15 @@ fieldset label{
 
 .fs-conectar {
     display: flex;
-    align-content: center;
-    justify-content: center;
+    justify-content: flex-end;
+
+}
+
+.fs-conectar {
+    align-self: stretch;
 }
 
 .fs-conectar a{
-    padding-top: 5px;
     margin-right: 5px;
     font-size: smaller;
     font-style: normal;
@@ -180,11 +179,7 @@ main input {
 }
 
 
-fieldset {
-    border: 0;
-    margin-top: 20px;
-    font-size: 14px;
-}
+
 
 fieldset label{
     display: block;
