@@ -119,6 +119,7 @@ fieldset label{
     box-shadow: none;
     margin-right: 1%;
     align-self: center;
+    padding-top: 5px;
 }
 
 .fs-conectar {
