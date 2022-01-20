@@ -1,0 +1,46 @@
+<%- include("../includes/head") %>
+<body>
+    <%- include("../includes/header") %>   
+    <main>
+        <h2><%= locals.title ? title : null %> </h2>
+        <% if (product.image) { %>
+            <img src="/uploads/<%= product.image %>" alt="" srcset="">          
+        <% } %>
+        <article>
+            <span>
+                <%= product.anno %> 
+          
+                <%= product.varietal %> 
+      
+                <%= product.tipoVino %> 
+           
+                <%= product.bodega %> 
+         
+                <%= product.notasCata %> 
+         
+                <%= product.maridaje %> 
+            </span>
+            <% if (product.offert) { %>
+            <span>
+                Ofertas
+            </span>
+            <%  } %>
+            <% if (product.destacado) { %>
+                <span>
+                    Destacados
+            </span>
+            <%  } %>
+            <% if (product.recomendaciones) { %>
+                <span>
+                    Recomendaciones
+            </span>
+            <%  } %>
+            <span>
+                $<%= product.price %> 
+            </span>
+        </article>
+
+    </main>
+    <%- include("../includes/footer") %>
+</body>
+</html>

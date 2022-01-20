@@ -1,0 +1,56 @@
+<%- include("../includes/head") %>
+<body>
+
+    <%- include("../includes/header") %>   
+<main>
+    <h2><%= locals.title ? title : null %> </h2>
+    <form action="/products/" enctype="multipart/form-data" method="post">
+        <label for="name">
+            <input type="text" name="name" id="name" placeholder="Nombre del vino">
+        </label>
+        <label for="anno">
+            <input type="number" name="anno" id="anno" placeholder="Año de cosecha">
+        </label>
+        <label for="varietal">
+            <input type="text" name="varietal" id="varietal" placeholder="Varietal">
+        </label>
+        <label for="tipoVino">
+            <input type="text" name="tipoVino" id="tipoVino" placeholder="Tipo de vino">
+        </label>
+        <label for="bodega">
+            <input type="text" name="bodega" id="bodega" placeholder="Bodega">
+        </label>
+        <label for="notasCata">       
+        <textarea rows="3" cols="30" name="notasCata" id="notasCata" placeholder="Nota de cata"></textarea>
+        </label> 
+        <label for="maridaje"> 
+        <textarea rows="3" cols="30" name="maridaje" id="maridaje" placeholder="Maridaje"></textarea>
+        </label>
+        <label for="offert">
+            <input type="checkbox" name="offert" id="offert">
+            Ofertas
+        </label>
+        <label for="destacado">
+            <input type="checkbox" name="destacado" id="destacado">
+            Destacados
+        </label>
+        <label for="recomendaciones">
+            <input type="checkbox" name="recomendaciones" id="recomendaciones">
+            Recomendaciones
+        </label>
+        <label for="file">
+            <input type="file" name="file" id="file" multiple>
+        </label>
+        <label for="price">
+            <input type="number" name="price" id="price" placeholder="Precio" min="0">
+        </label>
+        <fieldset>
+            <button type="submit">Save</button> 
+        </fieldset>
+    </form>
+
+</main>
+
+    <%- include("../includes/footer") %>
+</body>
+</html>
