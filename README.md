@@ -76,6 +76,6 @@ Texto pie pagina, boton y otros = A9AAAA
 ******* TRELLO ******
 
 
-Tablero de trabajo Trello : https://trello.com/b/3ENgqF7i/sprint-3-y-4
+Tablero de trabajo Trello : https://trello.com/b/3ENgqF7i/sprint-3-y-4 
 
 
