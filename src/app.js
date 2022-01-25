@@ -33,8 +33,11 @@ app.use(registroRoutes)
 const productRoutes = require("./routes/product")                                                         
 app.use("/products",productRoutes)
 
+<<<<<<< HEAD
 const catalogoRoutes = require("./routes/catalogo")
 app.use("/catalogo",catalogoRoutes)
 
+=======
+>>>>>>> 7d129871837da0fa3213603c01ee776bc9e812f6
 const filesRoutes = require("./routes/files")                                                         
 app.use("/files",filesRoutes)
