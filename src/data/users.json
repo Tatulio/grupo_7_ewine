@@ -1,0 +1,32 @@
+[
+    {
+    "id": 1,
+    "name": "Juan",
+    "lastName": "Perez",
+    "email": "Malbec",
+    "password": "Tinto",
+    "image": [
+      4
+     ]
+    },
+    {
+    "id": 1,
+    "name": "Juan",
+    "lastName": "Perez",
+    "email": "Malbec",
+    "password": "Tinto",
+    "image": [
+      4
+     ]
+    },
+    {
+    "id": 1,
+    "name": "Juan",
+    "lastName": "Perez",
+    "email": "Malbec",
+    "password": "Tinto",
+     "image": [
+      4
+     ]
+    }
+  ]
