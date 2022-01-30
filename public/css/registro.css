@@ -7,7 +7,6 @@
     box-sizing: border-box;
     font-family: 'Roboto';
     font-weight: bold;
-
 }
 
 .main-register {
@@ -18,7 +17,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .main-register form{
@@ -31,13 +29,10 @@
 }
 
 .register-login {
-   
+    max-width: 400px;
     background-color: white;
     margin: 5%;
-    
 }
-
-
 
 .register-signin {
    
@@ -87,7 +82,6 @@ main input:hover {
     max-height: 16px;
 }
     
-
 fieldset {
     border: 0;
     margin-top: 20px;
@@ -97,8 +91,6 @@ fieldset {
 fieldset label{
     display: none;
 }
-
-
 
 .fs-button {
     margin-top: 5px;
@@ -125,11 +117,9 @@ fieldset label{
 .fs-conectar {
     display: flex;
     justify-content: flex-end;
-
-}
-
-.fs-conectar {
     align-self: stretch;
+    margin-top: 10px;
+
 }
 
 .fs-conectar a{
@@ -139,15 +129,23 @@ fieldset label{
     text-align: justify;
 }
 
+.botones-login {
+    display: flex;
+    justify-content:space-between;
+}
 
-
-
+.boton-imagen {
+    border: 0;
+    margin: 20px 5px;
+    margin-left: 4%;
+    width: 95%;
+    display: flex;
+}
 
 @media (min-width: 768px) {  /*TABLET*/
     body {        
         background-color: #440217
     }
-
 
 .main-register {
     background-color: #F4F4F4;
@@ -157,7 +155,6 @@ fieldset label{
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
-
 }
 
 .main-register form{
@@ -171,6 +168,9 @@ fieldset label{
     
 }
 
+.register-login {
+    min-width: 400px;
+}
 
 main input {
     border: 0;
@@ -178,9 +178,6 @@ main input {
     padding: 5px;
     width: 95%;
 }
-
-
-
 
 fieldset label{
     display: block;

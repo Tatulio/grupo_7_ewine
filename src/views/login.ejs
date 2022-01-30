@@ -1,0 +1,41 @@
+<%- include("./includes/head") %>
+<body>
+    <%- include("./includes/header") %>
+    <main class="main-register">
+        <form class="register-login">
+            <h2>Identificarse</h2>
+            <fieldset class="fs-e-mail">
+                <label for="e-mail">Correo Electronico</label>
+                <input type="email" id="e-mail" placeholder="Direccion de Email">
+            </fieldset>
+            <fieldset class="fs-pass">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" placeholder="**********">
+            </fieldset>
+
+            <fieldset class="fs-kl">
+                <input type="checkbox" name="kl" id="kl">
+                <label for="kl">Recordarme</label>
+            </fieldset> 
+            <article class="botones-login">
+            <fieldset class="fs-button">
+                <button>Identificarse</button>   
+            </fieldset>
+            <fieldset class="fs-button">
+                <button>Registrarse</button>   
+            </fieldset>
+        </article>
+            <section class="fs-conectar">
+                <a>Conectar con | </a>
+                <a href="http://google.com" target="_blank"><img href="google.com" class="img-google" src="/images/logo-google.png" alt="icono-google"></a>
+                <a href="http://facebook.com" target="_blank"><img href="facebook.com" class="img-fb" src="/images/logo-fb.jpg" alt="icono-fb"></a>
+            </section> 
+            
+
+        </form>
+
+
+    </main>
+    <%- include("./includes/footer") %>
+</body>
+</html>

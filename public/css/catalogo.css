@@ -4,28 +4,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .main-content{
     display: flex;
     width: 85vw;
 }
+
 .menuVertical{
+    display: none;
     width: 16%;
     min-height: 150vh;
-    background-color: #F4F4F4;
-    display: flex;
+    background-color: white;
     flex-direction: column;
-    justify-content: center;
+    text-align: left;
+    padding-top: 55px;
+    padding-left: 15px;
 }
 
 .menuVertical article{
     margin-bottom: 20%;
 }
+
 .menuVertical h3{
     font-size: 1.2rem;
     font-family:"Roboto";
     font-weight: 500;
-    margin-bottom: 2%;
+    margin-bottom: 10px;
 }
+
 .menuVertical nav{
     display: flex;
     flex-direction: column;
@@ -33,12 +39,14 @@
     gap: 5px;
     
 }
+
 .menuVertical nav a{
     font-size: 1rem;
     font-style: normal;
     text-decoration: none;
     color: black;
 }
+
 .catalogo{
     background-color: gainsboro;
     width: 100%;
@@ -48,8 +56,13 @@
     padding: 25px;
     flex-wrap: wrap;
     min-height: 150vh;
+    width: 30vh;
+    height: 45vh;
 }
+
 .vinos{
+    display: flex;
+    flex-wrap: nowrap;
     margin: 3vh 0;
     background: white;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -57,9 +70,15 @@
     border-radius: 10px;
     transition: all 0.2s;
 }
+
 .vinos:hover{
     box-shadow:0px 0px 10px rgb(100, 100, 100);
 }
+
+.vinos picture img{
+    border-radius: 10px;
+}
+
 .info{
     display: flex;
     flex-direction: column;
@@ -70,6 +89,7 @@
     font-family: "Roboto";
     font-size: 12px;
 }
+
 .info button{
     width: 20vh;
     margin-bottom: 3vh;
@@ -80,46 +100,88 @@
     height: 1.5em;
     transition: all 0.2s;
 }
+
 .info button:hover{
     box-shadow:0px 0px 10px #AD9863;
 }
+
 .info button:focus {
     background-color: #AD9863;
     color: #383D41;
     font-weight: bold;
     box-shadow: none;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 .aclaracion{
 font-weight: 300;
 }
+
 .precio{
     font-weight: bold;
 }
-.vinos picture img{
-    border-radius: 10px;
-}
-@media (max-width: 767px){
+
+
+
 .menuVertical{
     width: 40%;
 }
-.vinos{
-    width: 30vh;
-        height: 45vh;
-}
+
+
+
 .catalogo{
     width: 100%;
     gap: 5px;
 }
+
 .main-content{
     width: 100%;
 }
+
+@media (min-width: 768px) {
+    .menuVertical {
+        display: flex;
+        max-width:200px;
+     
+    }
+
+    .catalogo {
+      
+    }
+ 
+    body {
+        margin: 0 7.5vw;
+    }
+ 
+ 
+ /*.vinos{
+    margin: 3vh 0;
+    background: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: none;
+    border-radius: 10px;
+    transition: all 0.2s;
 }
-@media (min-width: 768px) and (max-width: 1200px){
-    .menuVertical{
+
+.vinos:hover{
+    box-shadow:0px 0px 10px rgb(100, 100, 100);
+}
+
+.vinos picture img{
+    border-radius: 10px;
+}
+*/
+ 
+ 
+ 
+ 
+ 
+ 
+    /*  .menuVertical{
         width: 20%;
     }
     .menuVertical h3{
@@ -138,5 +200,6 @@ font-weight: 300;
     .info button{
         height: 1rem;
         font-size: .7rem;
-    }
+    }*/
 }
+
