@@ -18,17 +18,17 @@
                     <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
                     
                    <% if (!user) { %>
-                    <a href="/register"><i class="fas fa-user"></i></a>
-                    <a href="/login"><i class="fas fa-sign-in-alt"></i></a>
+                    <a href="/users/register"><i class="fas fa-user"></i></a>
+                    <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
                     <% } else if (user && user.isAdmin) { %>
-                        <a href="/profile"><%= user.nombre + " Ewine"%></a>
+                        <a href="/users/profile"><%= user.nombre + " Ewine"%></a>
                         <form action="/users/logout" method="post">
                             <button type="submit">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>
                     <% } else { %>
-                        <a href="/profile"><%= user.nombre %></a>
+                        <a href="/users/profile"><%= user.nombre %></a>
                        
                         <form action="/users/logout" method="post">
                             <button type="submit">

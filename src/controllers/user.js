@@ -4,9 +4,18 @@ const user = require("../models/user");
 const bcrypt = require("bcrypt")
 
 module.exports= {
-    login: (req,res) => res.render("users/login"),
-    register: (req,res) => res.render("users/register"),
-    profile: (req,res) => res.render("users/profile"),
+    login: (req,res) => res.render("users/login",{
+        styles: ["register"],
+        title: "Inciar sesion"
+    }),
+    register: (req,res) => res.render("users/register",{
+        styles: ["register"],
+        title: "Registro"
+    }),
+    profile: (req,res) => res.render("users/profile",{
+        styles: ["register"],
+        title: "Perfil de " + req.session.user.nombre
+    }),
     access: (req,res) => {
         
         let errors = validator.validationResult(req)

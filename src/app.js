@@ -42,14 +42,6 @@ app.use(nosotrosRoutes)
 const productoRoutes = require("./routes/vino")                                                         
 app.use(productoRoutes)
 
-const registerRoutes = require("./routes/register")                                                         
-app.use(registerRoutes)
-
-const loginRoutes = require("./routes/login")                                                         
-app.use(loginRoutes)
-
-const profileRoutes = require("./routes/profile")                                                         
-app.use(profileRoutes)
 
 const productRoutes = require("./routes/product")                                                         
 app.use("/products",productRoutes)

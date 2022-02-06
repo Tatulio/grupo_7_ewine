@@ -3,6 +3,7 @@ const router = Router();
 const product = require("../controllers/product");
 const path = require("path")
 const multer = require("multer")
+const access = require("../middlewares/access")
 const upload = multer({storage: multer.diskStorage({
     destination: (req, file, cb) => cb(null, path.resolve(__dirname, "../../uploads")),
     filename: (req, file, cb) => cb(null, file.fieldname + "-" + Date.now()+ path.extname(file.originalname))
@@ -11,11 +12,11 @@ const upload = multer({storage: multer.diskStorage({
 
 router.get("/", product.product)
 
-router.get("/create", product.create)
+router.get("/create",[access], product.create)
 
 router.get("/:id", product.show)
 
-router.get("/update/:id", product.update)
+router.get("/update/:id",[access], product.update)
 
 router.put("/:id", product.modify)
 
