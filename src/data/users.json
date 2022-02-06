@@ -43,5 +43,77 @@
     "apellido": "asd",
     "isAdmin": false,
     "isActive": true
+  },
+  {
+    "id": 6,
+    "email": "undefined",
+    "password": "$2b$10$HQ0IFhppj3qTMitz3kPRzO/XRHPwU2fggCbelfoE5k/G2qCN8dJMK",
+    "nombre": "Nicolás",
+    "apellido": "Tablas",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 7,
+    "email": "undefined",
+    "password": "$2b$10$rMBi0gfgy.Raq2/XPYKwJeLCGwCtrtJp1XV1MqXA5htrMFYLRB2Ea",
+    "nombre": "Nicolás",
+    "apellido": "Tablas",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 8,
+    "email": "undefined",
+    "password": "$2b$10$ElLyzzFcppgPw5kOuXRSWOV1GncD4chtq/syUUjFLsI0Kw98V/9aK",
+    "nombre": "Nicolás",
+    "apellido": "Tablas",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 9,
+    "email": "undefined",
+    "password": "$2b$10$O0g0d5Z7ToUzC6q6NoONZetNrxZZafxsBZhBLd.03PqFm/fjVurGO",
+    "nombre": "Nicolás",
+    "apellido": "Tablas",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 10,
+    "email": "smkton@gmail.com",
+    "password": "$2b$10$4idny8RHQ07reCb8Zj0HhutrUYPYj.zseU7zjwf2vmkpyoUOnPKHm",
+    "nombre": "Nicolás",
+    "apellido": "Nicolás",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 11,
+    "email": "smkton1@gmail.com",
+    "password": "$2b$10$VKC8t6nRmQ5jr1BciKtuOOHbKXvSSn1UYVHFWnMyzyRRBBZFuZJR6",
+    "nombre": "Nicolás",
+    "apellido": "Nicolás",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 12,
+    "email": "smkton2@gmail.com",
+    "password": "$2b$10$rJLSmvyE9phwK41XRRTGOuvcYcpkp95RNbUVJh8yJzwOdAiFvO6Vi",
+    "nombre": "fabricio",
+    "apellido": "fabri",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 13,
+    "email": "smkton@ewine.com",
+    "password": "$2b$10$LGsgI5K27EX3rS.eTD6bseL3BT2RhOWlcsUqPapj9RV6m.IEMR1Pu",
+    "nombre": "Nicolás",
+    "apellido": "Nicolás",
+    "isAdmin": true,
+    "isActive": true
   }
 ]

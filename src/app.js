@@ -23,6 +23,8 @@ app.use(session({
     resave: false,
  })) 
 
+ app.use (require("./middlewares/user"))
+
  app.use(require("./routes/main"));
  app.use("/users", require("./routes/user"));
 

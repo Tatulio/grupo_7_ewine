@@ -1,7 +1,7 @@
 const path= require("path");
 const fs = require("fs");
 const bcrypt = require("bcrypt");
-const validator = require("express-validator");
+const {body} = require("express-validator");
 
 const model = {
     file: path.resolve(__dirname, "../data", "users.json"),
@@ -26,8 +26,8 @@ const model = {
     return user
 },
     validate: [
-        validator.body("email").isEmail().withMessage("El email no es valido"),
-        validator.body("password").isLength({min: 6}).withMessage("La contraseña debe tener al menos 6 caracteres"),
+        body("email").isEmail().withMessage("El email no es valido"),
+        body("password").isLength({min: 6}).withMessage("La contraseña debe tener al menos 6 caracteres"),
 
     ]
 
