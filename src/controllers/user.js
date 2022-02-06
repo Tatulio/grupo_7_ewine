@@ -10,17 +10,16 @@ module.exports= {
         let errors = validator.validationResult(req).mapped();
     
         if(errors.length > 0){
-            return res.render("users/register"),{
-                errors
+            return res.render("users/login"),{
+                errors,
+                styles: ["register"],
                 
             }
-        , {
-            styles:["register"],
-            title:"Iniciar Sesion"
-        }}
-        let exist = user.search("email",req.body.email)
+        }
+        let exist =user.search("email",req.body.email)
     if(!exist){
-        return res.render("users/register",{
+        return res.render("users/login",{
+            styles: ["register"],
             errors:{
                 email:{msg: "El email no existe",
             }
@@ -31,15 +30,14 @@ module.exports= {
 if (req.body.remember){
     res.cookie("email",req.body.email,{maxAge: 1000*60*60*24*7})
 }
-req.session.user = exist;
-return res.send(req.session.user)
     },
     save: (req,res) => {
      let errors = validator.validationResult(req).mapped();
     
     if(errors.length > 0){
         return res.render("users/register"),{
-            errors
+            errors,
+            styles: ["register"],
             
         }
     }
@@ -49,7 +47,8 @@ return res.send(req.session.user)
         return res.render("users/register",{
             errors:{
                 email:{msg: "El email ya existe",
-            }
+            },
+            styles: ["register"],
         }
         })
     
