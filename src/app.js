@@ -2,6 +2,8 @@ const path = require("path");
 const express = require("express");
 const method = require("method-override");
 const app = express();
+const cookie = require("cookie-parser");
+const session = require("express-session");
 
 app.set("view engine", "ejs");
 app.set("views" , path.resolve(__dirname, "views"));
@@ -13,6 +15,17 @@ app.use(express.static(path.resolve(__dirname,"../public")))
 app.use("/uploads", express.static(path.resolve(__dirname,"../uploads")))
 app.use(express.urlencoded({extended: true}))
 app.use(method("m")) // ?m=PUT -- ?m=DELETE
+
+app.use(cookie());
+app.use(session({
+    secret: "digital",
+    saveUninitialized: true,
+    resave: false,
+ })) 
+
+ app.use(require("./routes/main"));
+ app.use("/users", require("./routes/user"));
+
 
 
 const mainRoutes = require("./routes/main")                                                        
@@ -27,8 +40,8 @@ app.use(nosotrosRoutes)
 const productoRoutes = require("./routes/vino")                                                         
 app.use(productoRoutes)
 
-const registroRoutes = require("./routes/registro")                                                         
-app.use(registroRoutes)
+const registerRoutes = require("./routes/register")                                                         
+app.use(registerRoutes)
 
 const loginRoutes = require("./routes/login")                                                         
 app.use(loginRoutes)
@@ -41,3 +54,9 @@ app.use("/catalogo",catalogoRoutes)
 
 const filesRoutes = require("./routes/files")                                                         
 app.use("/files",filesRoutes)
+
+
+
+const userRoutes = require("./routes/user")
+app.use("/users",userRoutes)
+

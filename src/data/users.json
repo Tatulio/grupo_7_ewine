@@ -1,32 +1,47 @@
 [
-    {
+  {
     "id": 1,
-    "name": "Juan",
-    "lastName": "Perez",
-    "email": "Malbec",
-    "password": "Tinto",
-    "image": [
-      4
-     ]
-    },
-    {
-    "id": 1,
-    "name": "Juan",
-    "lastName": "Perez",
-    "email": "Malbec",
-    "password": "Tinto",
-    "image": [
-      4
-     ]
-    },
-    {
-    "id": 1,
-    "name": "Juan",
-    "lastName": "Perez",
-    "email": "Malbec",
-    "password": "Tinto",
-     "image": [
-      4
-     ]
-    }
-  ]
+    "email": "undefined",
+    "password": "$2b$10$BAlGBlQaSkC60DbdPgsYfeTYswEfdmN95gf2TGtaqEKU3CGve5IJ2",
+    "nombre": "juancito",
+    "apellido": "perez",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "email": "undefined",
+    "password": "$2b$10$OXkJeHKCy9SbX6nrm9OvSOSbwWZfsGVESQ/Wdy8qFF.SD7u5.bRzW",
+    "nombre": "edu",
+    "apellido": "virgilio",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "email": "undefined",
+    "password": "$2b$10$KaJwmcK7e4C344DM0wsjKO8auLRPoGB0UDWTl2Nz3Ek5ojHlQwNwa",
+    "nombre": "edu",
+    "apellido": "perez",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 4,
+    "email": "undefined",
+    "password": "$2b$10$0I8u322nQ0J05BZP89cIW.AJ2mbuMwKSBVB0n6ahjGg8u.EAn6dZ6",
+    "nombre": "Juan",
+    "apellido": "perez",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 5,
+    "email": "undefined",
+    "password": "$2b$10$91jM2esptBybMsOOGzTlx.PCk5a3bx9ssIO1ll1FYQeQ.ZNf1r3xG",
+    "nombre": "asd",
+    "apellido": "asd",
+    "isAdmin": false,
+    "isActive": true
+  }
+]
