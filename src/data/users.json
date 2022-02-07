@@ -115,5 +115,23 @@
     "apellido": "Nicolás",
     "isAdmin": true,
     "isActive": true
+  },
+  {
+    "id": 14,
+    "email": "v8design@hotmail.com",
+    "password": "$2b$10$k4H/ykre/6ZhnZYVZoHhney0Xhcr6Hf1Jyhr1PNwLHQ5F02sXpBYa",
+    "nombre": "Juan",
+    "apellido": "Juan",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 15,
+    "email": "juancito@ewines.com",
+    "password": "$2b$10$qvFYAuOx2TlysanfpV.Wre77FR94/AH1hMj/gPOaxCxbXjjF34AGG",
+    "nombre": "juancito",
+    "apellido": "perez",
+    "isAdmin": false,
+    "isActive": true
   }
 ]
