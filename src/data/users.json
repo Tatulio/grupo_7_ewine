@@ -133,5 +133,59 @@
     "apellido": "perez",
     "isAdmin": false,
     "isActive": true
+  },
+  {
+    "id": 16,
+    "email": "asd@ewines.com",
+    "password": "$2b$10$fU91f5A3dxwsHZWsYVjuFufTw3/J1aGj4lpL5d69gfPIg8qqTGUs2",
+    "nombre": "asd",
+    "apellido": "asd",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 17,
+    "email": "tuvieja@ewine.com",
+    "password": "$2b$10$O6GmJxj8nNqg61K6nKF9N.Jb2GTdaTvPg/Z2njq.cvgfjDUkmfhVC",
+    "nombre": "tuvieja",
+    "apellido": "asd",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 18,
+    "email": "tuviejas@ewine.com",
+    "password": "$2b$10$Oae0W8INVUKjljO1doiI7.gZ0BjJC08VrqJftDYpWuIeMTQ0BnjQm",
+    "nombre": "asd",
+    "apellido": "123",
+    "isAdmin": false,
+    "isActive": true
+  },
+  {
+    "id": 19,
+    "email": "ernesto@ewine.com",
+    "password": "$2b$10$IG586VZ8Ml.HpZ7kQ5JJr.HkUBESkZiXVKC.317fCkI/pNzgcuOPq",
+    "nombre": "ernesto",
+    "apellido": "guevara",
+    "isAdmin": true,
+    "isActive": true
+  },
+  {
+    "id": 20,
+    "email": "eladmin@ewine.com",
+    "password": "$2b$10$kGDdfwiX8.312ucqKxFUnOJurPEkjLOzM0n0nO3/szktLsoGhpo1y",
+    "nombre": "eladmin",
+    "apellido": "masadmin",
+    "isAdmin": true,
+    "isActive": true
+  },
+  {
+    "id": 21,
+    "email": "asd@admin.com",
+    "password": "$2b$10$aIPJouuWkd74ej3OqQRoeeOvCoxdjsfYLlG4MgjIS8rZuI.iGGo5C",
+    "nombre": "asd",
+    "apellido": "asd",
+    "isAdmin": false,
+    "isActive": true
   }
 ]

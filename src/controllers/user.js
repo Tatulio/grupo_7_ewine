@@ -4,6 +4,9 @@ const user = require("../models/user");
 const bcrypt = require("bcrypt")
 
 module.exports= {
+    index: (req,res) => res.send(user.all()),
+
+
     login: (req,res) => res.render("users/login",{
         styles: ["register"],
         title: "Inciar sesion"
