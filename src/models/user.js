@@ -2,6 +2,7 @@ const path= require("path");
 const fs = require("fs");
 const bcrypt = require("bcrypt");
 const {body} = require("express-validator");
+const file = require("./file");
 
 const model = {
     file: path.resolve(__dirname, "../data", "users.json"),
@@ -16,7 +17,8 @@ const model = {
         nombre: data.nombre,
         apellido: data.apellido,
         isAdmin: String(data.email).includes("@ewine.com"),
-        isActive: true
+        isActive: true,
+        image: data.files.map(f => file.create(f).id)
     }),
     create: data => {
     let all = model.all();

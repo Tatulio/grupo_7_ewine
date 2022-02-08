@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100%;
+}
+
 .main-content{
     display: flex;
     width: 85vw;
@@ -57,10 +61,10 @@
     flex-wrap: wrap;
     min-height: 150vh;
     width: 30vh;
-    height: 45vh;
 }
 
 .vinos{
+    justify-content:center;
     display: flex;
     flex-wrap: nowrap;
     margin: 3vh 0;
@@ -148,58 +152,14 @@ font-weight: 300;
         max-width:200px;
      
     }
-
-    .catalogo {
-      
-    }
  
     body {
         margin: 0 7.5vw;
     }
  
- 
- /*.vinos{
-    margin: 3vh 0;
-    background: white;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    box-shadow: none;
-    border-radius: 10px;
-    transition: all 0.2s;
-}
-
-.vinos:hover{
-    box-shadow:0px 0px 10px rgb(100, 100, 100);
-}
-
-.vinos picture img{
-    border-radius: 10px;
-}
-*/
- 
- 
- 
- 
- 
- 
-    /*  .menuVertical{
-        width: 20%;
+    .catalogo {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
     }
-    .menuVertical h3{
-        font-size: .9rem;
-    }
-    .menuVertical nav a{
-        font-size: .9rem;
-    }
-    .vinos{
-        width: 25vh;
-        height: 45vh;
-    }
-    .catalogo{
-        min-height: 200vh;
-    }
-    .info button{
-        height: 1rem;
-        font-size: .7rem;
-    }*/
 }
 

@@ -4,7 +4,7 @@ const file = require("../models/file")
 const controller = {
     product: (req,res) => res.render("products/list", {
         styles: ["products/list"],
-        title: "Producto",
+        title: "Productos",
         products: product.all().map(p => Object({...p, image: file.search("id",p.image)}))  
     }),
     create: (req,res) => res.render("products/create", {

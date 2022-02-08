@@ -1,7 +1,8 @@
-
 const validator = require("express-validator");
 const user = require("../models/user");
 const bcrypt = require("bcrypt")
+const file = require("../models/file")
+
 
 module.exports= {
     index: (req,res) => res.send(user.all()),
@@ -9,15 +10,23 @@ module.exports= {
 
     login: (req,res) => res.render("users/login",{
         styles: ["register"],
-        title: "Inciar sesion"
+        title: "Inciar sesion",
     }),
     register: (req,res) => res.render("users/register",{
         styles: ["register"],
-        title: "Registro"
+        title: "Registro",
     }),
+    save: (req,res) => {
+        req.body.files = req.files;        
+        let created = user.create(req.body);
+        return res.redirect("/users/login")    
+    },
     profile: (req,res) => res.render("users/profile",{
         styles: ["register"],
-        title: "Perfil de " + req.session.user.nombre
+        title: "Perfil de " + req.session.user.nombre,
+        user: {...req.session.user,
+        image: file.search("id",req.session.user.image)
+    }
     }),
     access: (req,res) => {
         
@@ -42,27 +51,27 @@ module.exports= {
         }
         })
     
-}
+    }
 
- if (!bcrypt.compareSync(req.body.password, exist.password)){
+    if (!bcrypt.compareSync(req.body.password, exist.password)){
      return res.render("users/login", {
         styles: ["register"], 
         errors:{
              password:{msg:"password is not valid"},
-         }
-     })
- }
-if (req.body.remember){
+            }
+        })
+    }
+    if (req.body.remember){
     res.cookie("email",req.body.email,{maxAge: 1000*60*60*24*7})
-}
+    }
 
     req.session.user = exist
 
     return res.redirect("/")
 
     },
-    save: (req,res) => {
-        
+    /* save: (req,res) => {
+        console.log(req.files)
      let errors = validator.validationResult(req)
 
 
@@ -87,13 +96,13 @@ if (req.body.remember){
         }
         })
     
-}   
+    }   
     let userRegistred = user.create(req.body)
 
 
    return res.redirect("/users/login")
 
- },
+    },*/
     logout: (req,res) => {
         delete req.session.user
         res.cookie('email',null,{maxAge:-1})

@@ -3,9 +3,11 @@
     <%- include("../includes/header") %>
     <main class="main-register">
         
-        <h2>Perfil</h2>
-
-        <form action ="/users/logout" method="post" class="register-signin">
+        <h2><%= title %></h2>
+        <% if (user.image) { %>
+            <img src="/uploads/users/<%= user.image.url %>" alt="" srcset="">          
+        <% } %>
+            <form action ="/users/logout" method="post" class="register-signin">
             
             <fieldset class="fs-button">
                 <button type="submit" >Logout</button>    

@@ -4,7 +4,7 @@
     <main>
         <h2><%= locals.title ? title : null %> </h2>
         <% if (product.image) { %>
-            <img src="/uploads/<%= product.image %>" alt="" srcset="">          
+            <img src="/uploads/products<%= product.image %>" alt="" srcset="">          
         <% } %>
         <article>
             <span>

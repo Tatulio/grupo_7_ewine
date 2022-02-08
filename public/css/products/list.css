@@ -13,8 +13,26 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction:row;
 }
 
 main {
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.product {
+    text-decoration: none;
+    list-style: none;
+}
+
+.product img {
+
+}
+
+.products {
+    display: flex;
 }
