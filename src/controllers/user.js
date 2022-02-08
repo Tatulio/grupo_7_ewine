@@ -17,6 +17,25 @@ module.exports= {
         title: "Registro",
     }),
     save: (req,res) => {
+        let errors = validator.validationResult(req)   
+        if(!errors.isEmpty()){
+            return res.render("users/register"),{
+                errors: errors.mapped(),
+                styles: ["register"],
+            }
+        }
+    
+        let exist =user.search("email",req.body.email)
+   
+        if(exist){
+            return res.render("users/register",{
+                styles: ["register"],
+                errors:{
+                    email:{msg: "El email ya existe",
+                },
+              }
+            })        
+        }   
         req.body.files = req.files;        
         let created = user.create(req.body);
         return res.redirect("/users/login")    
@@ -70,39 +89,6 @@ module.exports= {
     return res.redirect("/")
 
     },
-    /* save: (req,res) => {
-        console.log(req.files)
-     let errors = validator.validationResult(req)
-
-
-    
-    if(!errors.isEmpty()){
-        return res.render("users/register"),{
-            errors: errors.mapped(),
-            styles: ["register"],
-            
-        }
-    }
-
-    let exist =user.search("email",req.body.email)
-
-    if(exist){
-        return res.render("users/register",{
-            styles: ["register"],
-            errors:{
-                email:{msg: "El email ya existe",
-            },
-         
-        }
-        })
-    
-    }   
-    let userRegistred = user.create(req.body)
-
-
-   return res.redirect("/users/login")
-
-    },*/
     logout: (req,res) => {
         delete req.session.user
         res.cookie('email',null,{maxAge:-1})
