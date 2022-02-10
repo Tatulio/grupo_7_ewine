@@ -1,19 +1,18 @@
 <%- include("../includes/head") %>
 <body>
     <%- include("../includes/header") %>
-    <main class="main-register">
+    <main class="main-profile">
+        <section>
+            <p>Bienvenido <%= user.nombre %> <%= user.apellido %></p>
         
-        <h2><%= title %></h2>
-        <% if (user.image) { %>
-            <img src="/uploads/users/<%= user.image.url %>" alt="" srcset="">          
-        <% } %>
-            <form action ="/users/logout" method="post" class="register-signin">
-            
-            <fieldset class="fs-button">
-                <button type="submit" >Logout</button>    
-            </fieldset>
-            
-        </form>
+            <% if (user.image) { %>
+                <img class="imagen-profile" src="/uploads/users/<%= user.image.url %>" alt="" srcset="">          
+            <% } %>
+            <form action ="/users/logout" method="post" class="profile">
+                
+                    <button type="submit">Logout</button>    
+                
+            </form>
 
     </main>
     <%- include("../includes/footer") %>

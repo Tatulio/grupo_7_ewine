@@ -41,7 +41,7 @@ module.exports= {
         return res.redirect("/users/login")    
     },
     profile: (req,res) => res.render("users/profile",{
-        styles: ["register"],
+        styles: ["profile"],
         title: "Perfil de " + req.session.user.nombre,
         user: {...req.session.user,
         image: file.search("id",req.session.user.image)
@@ -49,14 +49,16 @@ module.exports= {
     }),
     access: (req,res) => {
         
+        
         let errors = validator.validationResult(req)
-    
+        
         if(!errors.isEmpty()){
-            return res.render("users/login"),{
+            console.log(errors)
+            return res.render("users/login",{
                 errors: errors.mapped(),
                 styles: ["register"],
                 
-            }
+            })
         }
         
         let exist =user.search("email",req.body.email)
@@ -76,7 +78,7 @@ module.exports= {
      return res.render("users/login", {
         styles: ["register"], 
         errors:{
-             password:{msg:"password is not valid"},
+             password:{msg:"La password es invalida"},
             }
         })
     }

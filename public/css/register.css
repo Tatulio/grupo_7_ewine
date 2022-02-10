@@ -142,6 +142,12 @@ fieldset label{
     display: flex;
 }
 
+.errores {
+    color: red;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
 @media (min-width: 768px) {  /*TABLET*/
     body {        
         background-color: #440217

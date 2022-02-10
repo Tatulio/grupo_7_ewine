@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.main-profile {
+    background-color: #F4F4F4;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-profile section{
+    max-width:400px;
+    width: 80%; 
+    margin: 5%;
+    border: solid #AD9863 1px;
+    border-radius: 4px;
+    padding: 2vh;
+    text-align: start;
+}
+
+
+
+.imagen-profile{
+    max-width: 100px;
+}

@@ -42,7 +42,6 @@ app.use(nosotrosRoutes)
 const productoRoutes = require("./routes/vino")                                                         
 app.use(productoRoutes)
 
-
 const productRoutes = require("./routes/product")                                                         
 app.use("/products",productRoutes)
 
@@ -51,8 +50,6 @@ app.use("/catalogo",catalogoRoutes)
 
 const filesRoutes = require("./routes/files")                                                         
 app.use("/files",filesRoutes)
-
-
 
 const userRoutes = require("./routes/user")
 app.use("/users",userRoutes)

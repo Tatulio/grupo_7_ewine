@@ -34,5 +34,39 @@
     "image": [
       11
     ]
+  },
+  {
+    "id": 4,
+    "email": "smkton@gmail.com",
+    "password": "$2b$10$hLHHun2.CmIm6W.TvrDdGOjyN9wcLiYEsTmgY3CsjXqxO8RboN3sy",
+    "nombre": "Nicolás",
+    "apellido": "Nicolás",
+    "isAdmin": false,
+    "isActive": true,
+    "image": []
+  },
+  {
+    "id": 5,
+    "email": "smkton@gmail.com5",
+    "password": "$2b$10$2Sl05c/.89k0NgNTjgNFUeGiTq7KlCcz9gbEpxam3rhGUkLnup9N2",
+    "nombre": "Nicolás",
+    "apellido": "Nicolás",
+    "isAdmin": false,
+    "isActive": true,
+    "image": [
+      12
+    ]
+  },
+  {
+    "id": 6,
+    "email": "smkton5@gmail.com",
+    "password": "$2b$10$d0hvhCF6VeIt1GKBS6D95.cWl5aGSGwChbhQoqrX6/EastvK6MWcy",
+    "nombre": "Nicolás",
+    "apellido": "Nicolás",
+    "isAdmin": false,
+    "isActive": true,
+    "image": [
+      13
+    ]
   }
 ]

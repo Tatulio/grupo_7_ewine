@@ -7,10 +7,16 @@
             <fieldset class="fs-e-mail">
                 <label for="email">Correo Electronico</label>
                 <input name="email" type="email" id="email" placeholder="Direccion de Email">
+                <% if (locals.errors && errors.email) { %>
+                    <p class="errores"><%= errors.email.msg %> </p>
+                <% } %>
             </fieldset>
             <fieldset class="fs-pass">
                 <label  for="password">Contraseña</label>
                 <input name="password" type="password" id="password" placeholder="**********">
+                <% if (locals.errors && errors.password) { %>
+                    <p class="errores"><%= errors.password.msg %> </p>
+                <% } %>
             </fieldset>
 
             <fieldset class="fs-kl">
@@ -18,13 +24,13 @@
                 <label for="kl">Recordarme</label>
             </fieldset> 
             <article class="botones-login">
-            <fieldset class="fs-button">
-                <button  type="submit">Identificarse</button>   
-            </fieldset>
-            <fieldset class="fs-button">
-                <a href="/users/register" ><button>Registrarse</button></a>  
-            </fieldset>
-        </article>
+                <fieldset class="fs-button">
+                    <button  type="submit">Identificarse</button>   
+                </fieldset>
+                <fieldset class="fs-button">
+                    <a href="/users/register" ><button type="button">Registrarse</button></a>  
+                </fieldset>
+            </article>
             <section class="fs-conectar">
                 <a>Conectar con | </a>
                 <a href="http://google.com" target="_blank"><img href="google.com" class="img-google" src="/images/logo-google.png" alt="icono-google"></a>
@@ -33,12 +39,6 @@
             
 
         </form>
-        <% if (locals.errors && errors.email) { %>
-            <p><%= errors.email.msg %> </p>
-           <% } %>
-           <% if (locals.errors && errors.password) { %>
-               <p><%= errors.password.msg %> </p>
-              <% } %>
 
 
     </main>

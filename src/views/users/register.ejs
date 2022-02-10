@@ -17,6 +17,9 @@
             <fieldset class="fs-e-mail-reg">
                 <label for="email">Correo Electronico</label>
                 <input type="text" name="email" id="email" placeholder="Direccion de Email">
+                <% if (locals.errors && errors.email) { %>
+                    <p><%= errors.email.msg %> </p>
+                <% } %>
             </fieldset>
             <fieldset class="fs-pass-reg">
                 <label for="password">Contraseña</label>
@@ -25,6 +28,9 @@
             <fieldset class="fs-pass-reg2">
                 <label for="pass-reg2">Confirmar Contraseña</label>
                 <input type="password" id="pass-reg2" placeholder="Confirmar">
+                <% if (locals.errors && errors.password) { %>
+                    <p><%= errors.password.msg %> </p>
+                <% } %>
             </fieldset>
             <label class="boton-imagen" for="file">
                 <input type="file" name="file" id="file" multiple>
@@ -37,15 +43,9 @@
                 <a href="http://google.com" target="_blank"><img href="google.com" class="img-google" src="/images/logo-google.png" alt="icono-google"></a>
                 <a href="http://facebook.com" target="_blank"><img href="facebook.com" class="img-fb" src="/images/logo-fb.jpg" alt="icono-fb"></a>
             </section>
-            
-            
         </form>
-        <% if (locals.errors && errors.email) { %>
-         <p><%= errors.email.msg %> </p>
-        <% } %>
-        <% if (locals.errors && errors.password) { %>
-            <p><%= errors.password.msg %> </p>
-           <% } %>
+
+
 
     </main>
     <%- include("../includes/footer") %>
