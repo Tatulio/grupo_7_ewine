@@ -1,72 +1,24 @@
 [
   {
     "id": 1,
-    "email": "agusverri@gmail.com",
-    "password": "$2b$10$GjvVJf3wxZall5K/RnEZNutANG7SNEEzKfEro30eYa7n00TAiBYdy",
+    "email": "martin@ewine.com",
+    "password": "$2b$10$kdfnBgpLm7xe3tEdDUWo3OT2huLuBGpPr8XWYuL.bHcm9w5gY.5OO",
     "nombre": "Martin",
     "apellido": "Martin",
-    "isAdmin": false,
+    "isAdmin": true,
     "isActive": true,
     "image": [
-      9
+      14
     ]
   },
   {
     "id": 2,
-    "email": "Aldana.dominguez07@gmail.com",
-    "password": "$2b$10$351ZD0UaCiJwcBETa3q1Fem0Yynh4eTOiNuWxtkY.CZA63MptSmn.",
+    "email": "martin@algo.com",
+    "password": "$2b$10$m.ljKTnIGSPdKnN5adF2UeIHflSWjllB.Kc8LxaYmfisRkfbV518a",
     "nombre": "Martin",
     "apellido": "Martin",
     "isAdmin": false,
     "isActive": true,
-    "image": [
-      10
-    ]
-  },
-  {
-    "id": 3,
-    "email": "Aldana.dominguez07@gmail.com",
-    "password": "$2b$10$JJgeNAsNaINi.J2VUyC3POh/tOwRn8rmzIUqy9BU29/kMm8vOyxG.",
-    "nombre": "Martin1111",
-    "apellido": "Martin",
-    "isAdmin": false,
-    "isActive": true,
-    "image": [
-      11
-    ]
-  },
-  {
-    "id": 4,
-    "email": "smkton@gmail.com",
-    "password": "$2b$10$hLHHun2.CmIm6W.TvrDdGOjyN9wcLiYEsTmgY3CsjXqxO8RboN3sy",
-    "nombre": "Nicolás",
-    "apellido": "Nicolás",
-    "isAdmin": false,
-    "isActive": true,
     "image": []
-  },
-  {
-    "id": 5,
-    "email": "smkton@gmail.com5",
-    "password": "$2b$10$2Sl05c/.89k0NgNTjgNFUeGiTq7KlCcz9gbEpxam3rhGUkLnup9N2",
-    "nombre": "Nicolás",
-    "apellido": "Nicolás",
-    "isAdmin": false,
-    "isActive": true,
-    "image": [
-      12
-    ]
-  },
-  {
-    "id": 6,
-    "email": "smkton5@gmail.com",
-    "password": "$2b$10$d0hvhCF6VeIt1GKBS6D95.cWl5aGSGwChbhQoqrX6/EastvK6MWcy",
-    "nombre": "Nicolás",
-    "apellido": "Nicolás",
-    "isAdmin": false,
-    "isActive": true,
-    "image": [
-      13
-    ]
   }
 ]

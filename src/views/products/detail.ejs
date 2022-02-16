@@ -4,42 +4,40 @@
     <main>
         <h2><%= locals.title ? title : null %> </h2>
         <% if (product.image) { %>
-            <img src="/uploads/products<%= product.image %>" alt="" srcset="">          
+            <img class="imagen-profile" src="/uploads/products/<%= product.image.url %>" alt="" srcset="">          
         <% } %>
-        <article>
-            <span>
-                <%= product.anno %> 
-          
-                <%= product.varietal %> 
-      
-                <%= product.tipoVino %> 
-           
-                <%= product.bodega %> 
+        <section class="caja-producto-principal">
+            
+            <picture class="imagen-producto">
+              <img src="/images/botella-producto.jpg" alt="botella-principal">              
+            </picture>
          
-                <%= product.notasCata %> 
-         
-                <%= product.maridaje %> 
-            </span>
-            <% if (product.offert) { %>
-            <span>
-                Ofertas
-            </span>
-            <%  } %>
-            <% if (product.destacado) { %>
-                <span>
-                    Destacados
-            </span>
-            <%  } %>
-            <% if (product.recomendaciones) { %>
-                <span>
-                    Recomendaciones
-            </span>
-            <%  } %>
-            <span>
-                $<%= product.price %> 
-            </span>
-        </article>
-
+              <article class="caja-textos-principal">
+              <article class="producto-datos">
+                  <p><b>AÑO DE COSECHA:</b> <%= product.anno %></p>  
+                  <p><b>VARIEDADES:</b><%= product.varietal %></p>
+                  <p><b>TIPO:</b><%= product.tipoVino %></p>
+              </article>
+  
+               <h4 class="titulo-maridaje-cata">NOTAS DE CATA</h4>
+  
+               <article class="producto-cata"> 
+                   <p><%= product.notasCata %></p>
+               </article> 
+  
+               <h4 class="titulo-maridaje-cata">MARIDAJE</h4>
+  
+               <article class="producto-maridaje"> 
+                <p><%= product.maridaje %></p>
+               </article>  
+               <p class="precio">$<%= product.price %></p>
+            </article>
+            <div class="esquinero1"></div>
+            <div class="esquinero2"></div> 
+            <div class="esquinero3"></div> 
+            <div class="esquinero4"></div>
+            </article>
+        </section>
     </main>
     <%- include("../includes/footer") %>
 </body>

@@ -5,11 +5,17 @@
  padding: 0px;
  box-sizing: border-box;
 }
+header {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+}
 
 body {
     font-family: "Roboto";
-    background:  #ebebeb;;
-    background-color: #440217;
+    background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -18,10 +24,24 @@ body {
 
 main {
     text-align: center;
+    background-color:#ebebeb,
 }
 
 a {
     text-decoration: none;
+}
+
+span {
+    margin: 5px 0;
+    color: #383D41;
+    text-decoration: none;    
+    font-family: "Roboto";
+}
+
+h2 {
+    font-size:36px;
+    color: #414141;
+    margin-top: 20px;
 }
 
 .product {
@@ -29,10 +49,79 @@ a {
     list-style: none;
 }
 
-.product img {
-
+.imagen-producto{
+    border-radius: 10px
 }
 
 .products {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 5%;
+    
+}
+
+.product {
+    margin: 3vh 0;
+    background: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: none;
+    border-radius: 10px;    
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+}
+.product:hover{
+    box-shadow:0px 0px 10px rgb(100, 100, 100);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px 0
+}
+
+.boton-delete {
+    margin-left: 180px;
+    font-size: 20px;
+    box-sizing: 0px;
+    border-radius:100px;
+    color: #AD9863;
+    border: none;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.boton-delete:hover{
+    color: #414141;
+}
+
+.icono-edit {
+    color: #AD9863;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+.icono-edit:hover {
+    color: #414141;
+}
+
+
+
+@media (min-width: 768px) {
+    body {
+        background-color: #440217;
+    }
+    header {
+        width: 85vw;
+    }    
+    footer {
+        width: 85vw;
+    }      
 }
