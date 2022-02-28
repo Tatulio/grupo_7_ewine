@@ -11,13 +11,13 @@ const upload = multer({storage: multer.diskStorage({
 })})
 
 
-router.get("/", [access], product.product)
+router.get("/", [auth], product.product)
 
-router.get("/create",[access], product.create)
+router.get("/create",[auth], product.create)
 
 router.get("/:id", product.show)
 
-router.get("/update/:id",[access], product.update)
+router.get("/update/:id",[auth], product.update)
 
 router.put("/:id", product.modify)
 
