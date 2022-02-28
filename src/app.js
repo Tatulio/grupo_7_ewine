@@ -54,3 +54,34 @@ app.use("/files",filesRoutes)
 const userRoutes = require("./routes/user")
 app.use("/users",userRoutes)
 
+const db = require("./database/models")
+const sequelize = require("sequelize") 
+const op = sequelize.Op
+
+const mysql = require("mysql")
+
+
+const conexion = mysql.createConnection({
+    host: "localhost",
+    database: "ewine_db",
+    user : "root",
+    password: "",   
+})
+conexion.connect(function(error){
+    if(error){
+        throw error ;
+    }else {console.log("coneccion existosa");
+}
+
+})
+
+conexion.query("SELECT * FROM users" , function(error, resultado, fields){
+    if(error)
+    throw error;
+
+    resultado.forEach(resultados => {
+        console.log(resultados.id, resultados.nombre, resultados.email,resultados.isAdmin, resultados.isActive, resultados.image)
+    })  })
+
+conexion.end;
+
