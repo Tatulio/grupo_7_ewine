@@ -16,7 +16,7 @@ module.exports= {
         styles: ["register"],
         title: "Registro",
     }),
-    save: (req,res) => {
+    save: async (req,res) => {
         let errors = validator.validationResult(req)   
         if(!errors.isEmpty()){
             return res.render("users/register"),{
@@ -25,7 +25,7 @@ module.exports= {
             }
         }
     
-        let exist =user.search("email",req.body.email)
+        let exist = await user.search("email",req.body.email)
    
         if(exist){
             return res.render("users/register",{
@@ -37,7 +37,7 @@ module.exports= {
             })        
         }   
         req.body.files = req.files;        
-        let created = user.create(req.body);
+        let created = await user.create(req.body);
         return res.redirect("/users/login")    
     },
     profile: (req,res) => res.render("users/profile",{
@@ -47,9 +47,8 @@ module.exports= {
         image: file.search("id",req.session.user.image)
     }
     }),
-    access: (req,res) => {
-        
-        
+    access: async (req,res) => {
+                
         let errors = validator.validationResult(req)
         
         if(!errors.isEmpty()){
@@ -61,7 +60,7 @@ module.exports= {
             })
         }
         
-        let exist =user.search("email",req.body.email)
+        let exist = await user.search("email",req.body.email)
     
         if(!exist){
         return res.render("users/login",{
@@ -73,7 +72,7 @@ module.exports= {
         })
     
     }
-
+    
     if (!bcrypt.compareSync(req.body.password, exist.password)){
      return res.render("users/login", {
         styles: ["register"], 

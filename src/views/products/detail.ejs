@@ -12,26 +12,31 @@
               <img src="/images/botella-producto.jpg" alt="botella-principal">              
             </picture>
          
-              <article class="caja-textos-principal">
-              <article class="producto-datos">
+                <article class="caja-textos-principal">
+                <article class="producto-datos">
                   <p><b>AÑO DE COSECHA:</b> <%= product.anno %></p>  
                   <p><b>VARIEDADES:</b><%= product.varietal %></p>
                   <p><b>TIPO:</b><%= product.tipoVino %></p>
-              </article>
+                </article>
   
-               <h4 class="titulo-maridaje-cata">NOTAS DE CATA</h4>
+                <h4 class="titulo-maridaje-cata">NOTAS DE CATA</h4>
   
-               <article class="producto-cata"> 
+                <article class="producto-cata"> 
                    <p><%= product.notasCata %></p>
-               </article> 
+                </article> 
   
-               <h4 class="titulo-maridaje-cata">MARIDAJE</h4>
+                <h4 class="titulo-maridaje-cata">MARIDAJE</h4>
   
-               <article class="producto-maridaje"> 
-                <p><%= product.maridaje %></p>
-               </article>  
-               <p class="precio">$<%= product.price %></p>
-            </article>
+                <article class="producto-maridaje"> 
+                    <p><%= product.maridaje %></p>
+                </article>  
+                    <p class="precio">$<%= product.price %></p>
+                </article>
+                <article class="producto-imagen"></article>
+                <% if (product.image) { %>
+                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">          
+                <% } %>
+                </article>
             <div class="esquinero1"></div>
             <div class="esquinero2"></div> 
             <div class="esquinero3"></div> 

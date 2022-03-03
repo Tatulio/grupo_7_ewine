@@ -4,9 +4,9 @@
     <%- include("../includes/header") %>   
 <main>
     <h2><%= locals.title ? title : null %> </h2>
-    <form action="/products/" enctype="multipart/form-data" method="post">
+    <form action="/products/update/<%=product.id%>"  method="post">
         <label for="name">
-            <input type="text" name="name" id="name" placeholder="Nombre del vino">
+            <input type="text" name="name" id="name" placeholder="Nombre del vino" value="<%= product.name%>">
         </label>
         <label for="anno">
             <input type="number" name="anno" id="anno" placeholder="Año de cosecha">

@@ -4,6 +4,7 @@ const method = require("method-override");
 const app = express();
 const cookie = require("cookie-parser");
 const session = require("express-session");
+const bp = require('body-parser');
 
 app.set("view engine", "ejs");
 app.set("views" , path.resolve(__dirname, "views"));
@@ -11,10 +12,15 @@ app.set("port", process.env.PORT || 9000);
 
 app.listen(app.get("port"), () => console.log("listening on port http://localhost:" + app.get("port")))
 
+app.use(bp.json())
+app.use(bp.urlencoded({ extended: true }))
+
 app.use(express.static(path.resolve(__dirname,"../public")))
 app.use("/uploads", express.static(path.resolve(__dirname,"../uploads")))
 app.use(express.urlencoded({extended: true}))
 app.use(method("m")) // ?m=PUT -- ?m=DELETE
+
+
 
 app.use(cookie());
 app.use(session({
@@ -54,3 +60,37 @@ app.use("/files",filesRoutes)
 const userRoutes = require("./routes/user")
 app.use("/users",userRoutes)
 
+
+
+
+
+
+var DataTypes = require('sequelize/lib/data-types');
+
+
+const mysql = require("mysql")
+
+
+const conexion = mysql.createConnection({
+    host: "localhost",
+    database: "ewine_db",
+    user : "root",
+    password: "",
+})
+conexion.connect(function(error){
+    if(error){
+        throw error ;
+    }else {console.log("coneccion existosa");
+}
+
+})
+
+/*conexion.query("SELECT * FROM users" , function(error, resultado, fields){
+    if(error)
+    throw error;
+
+    resultado.forEach(resultados => {
+        console.log(resultados.id, resultados.nombre, resultados.email,resultados.isAdmin, resultados.isActive, resultados.image)
+    })  })
+
+conexion.end;*/

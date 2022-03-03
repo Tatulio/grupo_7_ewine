@@ -4,14 +4,21 @@ const bcrypt = require("bcrypt");
 const {body} = require("express-validator");
 const file = require("./file");
 
+const db = require("../database/models/index") 
+
+
+
 const model = {
     file: path.resolve(__dirname, "../data", "users.json"),
     read: (data) => fs.readFileSync(model.file, "utf-8"),
     write: data => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
     all: () => JSON.parse(model.read()),
-    search: (prop,value) => model.all().find(element => element[prop] == value),
-    generated: data => Object({
-        id: model.all().length == 0 ? 1 : model.all().pop().id + 1,
+    search: (prop,value) => db["user"].findOne({
+        where: {
+          [prop]: value
+        }
+      }),
+    generated: data => Object({        
         email : String(data.email),
         password: bcrypt.hashSync(data.password, 10),
         nombre: data.nombre,
@@ -20,12 +27,10 @@ const model = {
         isActive: true,
         image: data.files.map(f => file.create(f).id)
     }),
-    create: data => {
-    let all = model.all();
-    let user = model.generated(data);
-    all.push(user);
-    model.write(all);
-    return user
+    create: async data => {
+        const jane = await db["user"].build(model.generated(data));
+        jane.save()
+        return jane
 },
     validate: [
         body("email").isEmail().withMessage("El email no es valido"),
