@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+'use strict';
+>>>>>>> 0c0adfcf1a95eaed21c5e5189bf53f86cef86845
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Users', {
