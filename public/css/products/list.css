@@ -1,127 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 *{
- margin: 0px;
- padding: 0px;
- box-sizing: border-box;
-}
-header {
-    width: 100%;
-}
-
-footer {
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto";
-    background-color: #ebebeb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction:row;
-}
-
-main {
-    text-align: center;
-    background-color:#ebebeb,
-}
-
-a {
-    text-decoration: none;
-}
-
-span {
-    margin: 5px 0;
-    color: #383D41;
-    text-decoration: none;    
-    font-family: "Roboto";
-}
-
-h2 {
-    font-size:36px;
-    color: #414141;
-    margin-top: 20px;
-}
-
-.product {
-    text-decoration: none;
-    list-style: none;
-}
-
-.imagen-producto{
-    border-radius: 10px
-}
-
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 5%;
+    height: 100%;
     
 }
 
-.product {
+.main-content{
+    display:flex;
+    width: 85vw;
+    justify-content: flex-start;
+
+}
+
+.menuVertical{
+    display: none;
+    width: 16%;
+    min-height: 150vh;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 55px;
+    padding-left: 15px;
+}
+
+.menuVertical article{
+    margin-bottom: 20%;
+}
+
+.menuVertical h3{
+    font-size: 1.2rem;
+    font-family:"Roboto";
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+.menuVertical nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.menuVertical nav a{
+    font-size: 1rem;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.titulo-producto {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.catalogo{
+    background-color: #ebebeb;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:stretch;
+    gap: 1px 30px;
+    padding: 25px;
+    flex-wrap: wrap;
+    min-height: 150vh;
+    width: 30vh;
+}
+
+.vinos{
+    justify-content:center;
+    display: flex;
+    max-width:300px;
+    max-height: 300px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin: 3vh 0;
     background: white;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     box-shadow: none;
-    border-radius: 10px;    
-    display: flex;
-    flex-direction: column;
+    border-radius: 10px;
     transition: all 0.2s;
 }
-.product:hover{
+
+.vinos:hover{
     box-shadow:0px 0px 10px rgb(100, 100, 100);
 }
 
-.info {
+.vinos picture img{
+    border-radius: 10px;
+}
+
+.imagen-producto {
+    max-width: 40%;
+}
+
+.info{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    font-style: italic;
+    font-family: "Roboto";
+    font-size: 12px;
 }
 
-.botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 15px 0
-}
-
-.boton-delete {
-    margin-left: 180px;
-    font-size: 20px;
-    box-sizing: 0px;
-    border-radius:100px;
-    color: #AD9863;
+.info button{
+    width: 20vh;
+    margin-bottom: 3vh;
+    border-radius: 6px;
     border: none;
-    background-color: white;
+    background-color: #383D41;
+    color: gainsboro ;
+    height: 1.5em;
     transition: all 0.2s;
 }
 
-.boton-delete:hover{
-    color: #414141;
+.info button:hover{
+    box-shadow:0px 0px 10px #AD9863;
 }
 
-.icono-edit {
-    color: #AD9863;
-    font-size: 20px;
-    transition: all 0.2s;
+.info button:focus {
+    background-color: #AD9863;
+    color: #383D41;
+    font-weight: bold;
+    box-shadow: none;
 }
 
-.icono-edit:hover {
-    color: #414141;
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.aclaracion{
+font-weight: 300;
+}
+
+.precio{
+    font-weight: bold;
 }
 
 
+
+.menuVertical{
+    width: 40%;
+}
+
+
+
+.catalogo{
+    width: 100%;
+    gap: 5px;
+}
+
+.main-content{
+    width: 100%;
+}
 
 @media (min-width: 768px) {
-    body {
-        background-color: #440217;
+    .menuVertical {
+        display: flex;
+        max-width:200px;
+     
     }
-    header {
-        width: 85vw;
-    }    
-    footer {
-        width: 85vw;
-    }      
+ 
+    body {
+        margin: 0 7.5vw;
+    }
+ 
+    .catalogo {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
 }
+

@@ -3,21 +3,68 @@
 
     <%- include("../includes/header") %>   
  
-    <main>
-        <h2><%= locals.title ? title : null %> </h2>
+    <main class="main-content">
+
+        <section class="menuVertical">
+            <article>
+                <h3>TIPOS DE VINO</h3>
+                <nav>
+                    <a href="/Blanco">Blanco</a>
+                    <a href="/Tinto">Tinto</a>
+                    <a href="/Espumantes">Espumantes</a>
+                </nav>
+            </article>
+
+            <article>
+                <h3>BODEGAS</h3>
+                <nav>
+                    <a href="/Rutini">Rutini</a>
+                    <a href="/Labiano">Labiano</a>
+                    <a href="/Luigi bosca">Luigi bosca</a>
+                    <a href="/Terrazas">Terrazas</a>
+                </nav>
+            </article>
+
+            <article>
+                <h3>VARIETAL</h3>
+                <nav>
+                    <a href="/Merlot">Merlot</a>
+                    <a href="/Malbec">Malbec</a>
+                    <a href="/Chardonnay">Chardonnay</a>
+                    <a href="/Cabernet sauvignon">Cabernet sauvignon</a>
+                </nav>
+            </article>
+
+            <article>
+                <h3>AÑO COSECHA</h3>
+                <nav>
+                    <a href="/2019">2019</a>
+                    <a href="/2018">2018</a>
+                    <a href="/2017">2017</a>
+                <   a href="/2016">2016</a>
+                </nav>
+            </article>
+        </section>
+        <!-- <h2 class="titulo"><%= locals.title ? title : null %> </h2> -->
+        <section class="catalogo">
+        
         <% if (locals.products) { %> 
             <% if (products.length > 0) { %>
-             <ul class="products">
+             <!-- <ul class="products"> -->
                 <% products.forEach(product => { %>
-                    <li class="product">
-                        <a href="/products/<%= product.id %> ">                            
+                    <article class="vinos">
+                    <!-- <li class="product"> -->
+                        <a href="/products/<%= product.id %> " class=""></a>                            
+                            <a class="titulo-producto">   
+                                <%= product.name %> 
+                            </a>
                             <% if (product.image) { %>
                                 <img class="imagen-producto" src="/uploads/products/<%= product.image %>" alt="" srcset="">                            
+                            <% } else { %>
+                                <img class="imagen-producto" src="/uploads/products/default.jpg" alt="" srcset="">
                             <% } %>
                             <section class="info">
-                            <span>
-                                <%= product.name %> 
-                            </span>
+                            
                             <span>
                                 $<%= product.price %> 
                             </span>
@@ -33,16 +80,20 @@
                                 </button>
                             </form>
                         </section>
-                    </li>
+                    <!-- </li> -->
+                       
+                    </article>  
                 <% }) %>
-             </ul>
+             <!-- </ul> -->
             <% } else { %>
                 <h2> No hay producto</h2>
             <% } %>
             <% } else { %>
                 <h2> No hay producto</h2>
        <% } %>
+        </section>
     </main>
+
     <%- include("../includes/footer") %>
 </body>
 </html>

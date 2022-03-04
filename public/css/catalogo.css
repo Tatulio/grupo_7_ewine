@@ -37,6 +37,7 @@ body {
     margin-bottom: 10px;
 }
 
+
 .menuVertical nav{
     display: flex;
     flex-direction: column;

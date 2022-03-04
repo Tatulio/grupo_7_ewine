@@ -4,11 +4,12 @@ const file = require("../models/file")
 const controller = {
     product: (req,res) => {
         product.all()
-        .then((resultado) => {res.render("products/list", {
-            styles: ["products/list"],
-            title: "Nuestros Productos",
-            products: resultado})
-        })
+        .then((resultado) => {
+            res.render("products/list", {
+                styles: ["products/list"],
+                title: "Administrador",
+                products: resultado})
+            })
     },
     create: (req,res) => res.render("products/create", {
         styles: ["products/create"],
