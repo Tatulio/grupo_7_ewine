@@ -7,9 +7,11 @@
             <img class="imagen-profile" src="/uploads/products/<%= product.image.url %>" alt="" srcset="">          
         <% } %>
         <section class="caja-producto-principal">
-            
+
             <picture class="imagen-producto">
-              <img src="/images/botella-producto.jpg" alt="botella-principal">              
+                <% if (product.image) { %>
+                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">          
+                <% } %>
             </picture>
          
                 <article class="caja-textos-principal">
@@ -32,11 +34,7 @@
                 </article>  
                     <p class="precio">$<%= product.price %></p>
                 </article>
-                <article class="producto-imagen"></article>
-                <% if (product.image) { %>
-                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">          
-                <% } %>
-                </article>
+                
             <div class="esquinero1"></div>
             <div class="esquinero2"></div> 
             <div class="esquinero3"></div> 
