@@ -54,17 +54,18 @@
                 <% products.forEach(product => { %>
                     <article class="vinos">
                     <!-- <li class="product"> -->
-                        <a href="/products/<%= product.id %> " class=""></a>                            
-                            <a class="titulo-producto">   
-                                <%= product.name %> 
-                            </a>
+                        <a href="/products/<%= product.id %> " class="titulo-producto">  
+                            
                             <% if (product.image) { %>
-                                <img class="imagen-producto" src="/uploads/products/<%= product.image %>" alt="" srcset="">                            
+                                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">                                
                             <% } else { %>
                                 <img class="imagen-producto" src="/uploads/products/default.jpg" alt="" srcset="">
                             <% } %>
+                        </a>
                             <section class="info">
-                            
+                            <span>
+                                <%= product.name %> 
+                            </span>
                             <span>
                                 $<%= product.price %> 
                             </span>

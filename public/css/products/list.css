@@ -7,14 +7,27 @@
 
 body {
     height: 100%;
-    
+}
+
+
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+span{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 16px;
 }
 
 .main-content{
     display:flex;
     width: 85vw;
     justify-content: flex-start;
-
 }
 
 .menuVertical{
@@ -39,7 +52,6 @@ body {
     font-weight: 500;
     margin-bottom: 10px;
 }
-
 
 .menuVertical nav{
     display: flex;
@@ -75,15 +87,15 @@ body {
 }
 
 .vinos{
-    justify-content:center;
     display: flex;
     max-width:300px;
-    max-height: 300px;
+    max-height: 397.5px;
+    min-height: 397.47px;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    margin: 3vh 0;
+    margin: 3vh 5px;
     background: white;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     box-shadow: none;
@@ -95,8 +107,10 @@ body {
     box-shadow:0px 0px 10px rgb(100, 100, 100);
 }
 
-.vinos picture img{
-    border-radius: 10px;
+.vinos img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 263px
 }
 
 .imagen-producto {
@@ -136,9 +150,36 @@ body {
     box-shadow: none;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px 0
+}
+
+.boton-delete {
+    margin-left: 180px;
+    font-size: 20px;
+    box-sizing: 0px;
+    border-radius:100px;
+    color: #AD9863;
+    border: none;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.boton-delete:hover{
+    color: #414141;
+}
+
+.icono-edit {
+    color: #AD9863;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+.icono-edit:hover {
+    color: #414141;
 }
 
 .aclaracion{
@@ -149,13 +190,9 @@ font-weight: 300;
     font-weight: bold;
 }
 
-
-
 .menuVertical{
     width: 40%;
 }
-
-
 
 .catalogo{
     width: 100%;
