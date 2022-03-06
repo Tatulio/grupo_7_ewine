@@ -10,8 +10,7 @@
 
 body {
     font-family: "Roboto";
-    background:  #ebebeb;;
-    background-color: #440217;
+    background:  #ebebeb;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -19,7 +18,15 @@ body {
 
 main {
     text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+    background:  #ebebeb;    
+}
+
+form {
+    background-color: white;
+    max-width: 500px;
 }
 
 main form {
@@ -36,17 +43,43 @@ main form {
 
 main input {
     width: 90%;
+    background-color: #ebebeb;
+    background-color: #F4F4F4;
+    box-shadow: 0px 0px 1px 1px #A9AAAA;
+    border: 0;
+    margin: 1px;
+    padding: 5px
 }
 
 
 main textarea {
     width: 90%;
+    background-color: #ebebeb;
+    background-color: #F4F4F4;
+    box-shadow: 0px 0px 1px 1px #A9AAAA;
+    border: 0;
+    margin: 1px;
+    padding: 5px
+}
+
+main textarea:hover {
+    box-shadow:0px 0px 10px #AD9863;
+}
+
+h2 {
+    width:100%;
+    margin-top: 20px;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
     border: 0px;
+    margin: 5px 0;
+}
+
+label {
+    margin-bottom:  3px;
 }
 
 main button {
@@ -99,43 +132,10 @@ section {
 }
 
 
-@media (min-width:1025px) and (min-width:1281px) {
-    ::-webkit-input-placeholder {
-       /* WebKit browsers */
-        color: transparent;
-   }
-    :-moz-placeholder {
-       /* Mozilla Firefox 4 to 18 */
-        color: transparent;
-   }
-    ::-moz-placeholder {
-       /* Mozilla Firefox 19+ */
-        color: transparent;
-   }
-    :-ms-input-placeholder {
-       /* Internet Explorer 10+ */
-        color: transparent;
-   }
-    input::placeholder {
-        color: transparent;
-   }
-    textarea::-webkit-input-placeholder {
-       /* WebKit browsers */
-        color: transparent;
-   }
-    textarea:-moz-placeholder {
-       /* Mozilla Firefox 4 to 18 */
-        color: transparent;
-   }
-    textarea::-moz-placeholder {
-       /* Mozilla Firefox 19+ */
-        color: transparent;
-   }
-    textarea:-ms-input-placeholder {
-       /* Internet Explorer 10+ */
-        color: transparent;
-   }
-    textarea::placeholder {
-        color: transparent;
-   }
+
+
+@media (min-width: 768px) {
+ body{     
+    background-color: #440217;
+ }
 }
