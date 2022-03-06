@@ -14,30 +14,28 @@
                     <input type="search" name="barra" placeholder="Buscar..."><button class="iconolupa"><i class="fas fa-search"></i></button>
                 </form>
         
-                <nav class="icon-carrito-usuario">
-                    <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-                    
-                   <% if (!user) { %>
-                    <a href="/users/register"><i class="fas fa-user"></i></a>
-                    <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
-                    <% } else if (user && user.isAdmin) { %>
-                        <a href="/users/profile"><%= user.nombre + " Ewine"%></a>
-                        <form action="/users/logout" method="post">
-                            <button type="submit">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </form>
-                    <% } else { %>
-                        <a href="/users/profile"><%= user.nombre %></a>
-                       
-                        <form action="/users/logout" method="post">
-                            <button type="submit">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </form>
-                    <% } %>
-
-                </nav>
+                <nav class="icon-carrito-usuario">                                        
+                    <% if (!user) { %>            
+                     <a href="/users/register"><i class="fas fa-user"></i></a>
+                     <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
+                     <% } else if (user && user.isAdmin) { %>                        
+                         <a href="/users/profile"><%= user.nombre + " Ewine"%></a>
+                         <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                         <form action="/users/logout" method="post">
+                             <button class="icon-logout" type="submit">
+                                 <i class="fas fa-sign-out-alt"></i>
+                             </button>
+                         </form>
+                     <% } else { %>                        
+                         <a href="/users/profile"><%= user.nombre %></a>
+                         <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                         <form action="/users/logout" method="post">
+                              <button class="icon-logout" type="submit">
+                                 <a href="/home"><i class="fas fa-sign-out-alt"></i></a>
+                             </button>
+                         </form>                  
+                     <% } %> 
+                 </nav>
 
                 <div class="burger-menu">
                     <a class="tresbarras" href="/menu"><i class="fas fa-bars"></i></a>
