@@ -1,6 +1,13 @@
+const product = require("../models/product")
+
 module.exports = {
-    catalogo: (req,res) => res.render("catalogo", {
-        styles: ["catalogo"],
-        title: "Nuestro Catalogo"
-    })
-}
+    product: (req,res) => {
+        product.all()
+        .then((resultado) => {
+            //res.send(resultado)
+            res.render("products/list", {
+                styles: ["products/list"],
+                title: "Administrador",
+                products: resultado})
+            })
+    }}

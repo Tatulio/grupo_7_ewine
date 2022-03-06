@@ -3,14 +3,12 @@
     <%- include("../includes/header") %>   
     <main>
         <h2><%= locals.title ? title : null %> </h2>
-        <% if (product.image) { %>
-            <img class="imagen-profile" src="/uploads/products/<%= product.image.url %>" alt="" srcset="">          
-        <% } %>
+        
         <section class="caja-producto-principal">
+            <% if (product.image) { %>
+                <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">          
+            <% } %>
             
-            <picture class="imagen-producto">
-              <img src="/images/botella-producto.jpg" alt="botella-principal">              
-            </picture>
          
                 <article class="caja-textos-principal">
                 <article class="producto-datos">
@@ -33,9 +31,7 @@
                     <p class="precio">$<%= product.price %></p>
                 </article>
                 <article class="producto-imagen"></article>
-                <% if (product.image) { %>
-                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">          
-                <% } %>
+                
                 </article>
             <div class="esquinero1"></div>
             <div class="esquinero2"></div> 
