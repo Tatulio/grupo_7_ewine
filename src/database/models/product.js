@@ -21,7 +21,7 @@ module.exports = function (sequelize,DataTypes){
       allowNull: false,
     },
     tipoVino:{
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     bodega: {
@@ -56,11 +56,11 @@ module.exports = function (sequelize,DataTypes){
     tableName: "products",
     timestamps: false,
     });
-    product.associated = function(models){
-    product.hasMany(models.Image,{
-      foreignKey: 'image',
-      as: 'image',
-    });
-    }
+    // product.associated = function(models){
+    // product.hasMany(models.tipo_vino,{
+    //   foreignKey: 'tipoVino',
+    //   as: 'tipoVino',
+    // });
+    //}
 return product;
 };

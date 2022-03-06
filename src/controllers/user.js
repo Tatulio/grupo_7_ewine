@@ -10,13 +10,13 @@ module.exports= {
 
     login: (req,res) => res.render("users/login",{
         styles: ["register"],
-        title: "Inciar sesion",
+        title: "Inciar sesion", 
     }),
     register: (req,res) => res.render("users/register",{
         styles: ["register"],
         title: "Registro",
     }),
-    save: async (req,res) => {
+    save: (req,res) => {
         let errors = validator.validationResult(req)   
         if(!errors.isEmpty()){
             return res.render("users/register"),{
@@ -25,7 +25,7 @@ module.exports= {
             }
         }
     
-        let exist = await user.search("email",req.body.email)
+        user.search("email",req.body.email).then((exist) => {
    
         if(exist){
             return res.render("users/register",{
@@ -37,15 +37,19 @@ module.exports= {
             })        
         }   
         req.body.files = req.files;        
-        let created = await user.create(req.body);
+        user.create(req.body).then((r) => {
+        file.create(req.files[0].filename, r.id,'user')
         return res.redirect("/users/login")    
-    },
-    profile: (req,res) => res.render("users/profile",{
+    })
+    })},
+    profile: (req,res) => 
+        //res.send()
+        res.render("users/profile",{
         styles: ["profile"],
         title: "Perfil de " + req.session.user.nombre,
         user: {...req.session.user,
-        image: file.search("id",req.session.user.image)
-    }
+        //image: file.search("id",req.session.user.image)
+     }
     }),
     access: async (req,res) => {
                 

@@ -37,11 +37,11 @@ module.exports = function (sequelize,DataTypes){
     tableName: "users",
     timestamps: false,
     });
-    user.associated = function(models){
-    user.hasMany(models.Image,{
-      foreignKey: 'image',
-      as: 'image',
-    });
-    }
+    // user.associated = function(models){
+    // user.hasMany(models.Image,{
+    //   foreignKey: 'image',
+    //   as: 'image',
+    // });
+    //}
 return user;
 };

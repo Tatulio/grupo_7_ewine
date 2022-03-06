@@ -9,7 +9,10 @@ const model = {
     /*file: path.resolve(__dirname, "../data","products.json"),
     read: () => fs.readFileSync(model.file),
     write: data => fs.writeFileSync(model.file,JSON.stringify(data,null,2)),*/                        
-    all: () => db["product"].findAll({raw : true}).then((resultado) => {
+    all: () => db["product"].findAll({raw : true})
+    .then((resultado) => {
+        
+        //res.send(resultado)
         return resultado;
     }),
     generate: data => Object({

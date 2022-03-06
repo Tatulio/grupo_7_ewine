@@ -5,6 +5,7 @@ const controller = {
     product: (req,res) => {
         product.all()
         .then((resultado) => {
+            //res.send(resultado)
             res.render("products/list", {
                 styles: ["products/list"],
                 title: "Administrador",
@@ -13,11 +14,11 @@ const controller = {
     },
     create: (req,res) => res.render("products/create", {
         styles: ["products/create"],
-        title: "Nuevo Producto",
+        title: "Nuevo Producto", 
     }),
     save:(req,res) => {
         product.create(req.body).then((resultado) => {
-            file.create(req.files[0].filename, resultado.id)    
+            file.create(req.files[0].filename, resultado.id,'product')    
             return res.redirect("/products/" +resultado.id)})    
     },
     show: (req,res) => {

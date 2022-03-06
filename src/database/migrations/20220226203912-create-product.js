@@ -21,7 +21,7 @@ module.exports = {
             allowNull: false,
           },
           tipoVino:{
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
           },
           bodega: {
@@ -53,6 +53,7 @@ module.exports = {
             type: DataTypes.STRING,      
           }
     });
+
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Products');

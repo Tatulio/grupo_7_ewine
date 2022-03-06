@@ -25,13 +25,15 @@ const model = {
         apellido: data.apellido,
         isAdmin: String(data.email).includes("@ewine.com"),
         isActive: true,
-        image: data.files.map(f => file.create(f).id)
+        //image: data.files.map(f => file.create(f).id)
     }),
-    create: async data => {
-        const jane = await db["user"].build(model.generated(data));
-        jane.save()
-        return jane
-},
+
+    create: data => db["user"].create(model.generated(data)).then((resultado) => resultado),
+    // create: async data => {
+    //     const jane = await db["user"].build(model.generated(data));
+    //     jane.save()
+    //     return jane
+//},
     validate: [
         body("email").isEmail().withMessage("El email no es valido"),
         body("password").isLength({min: 6}).withMessage("La contraseña debe tener al menos 6 caracteres"),

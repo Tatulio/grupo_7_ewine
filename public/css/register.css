@@ -94,7 +94,7 @@ fieldset label{
 
 .fs-button {
     margin-top: 5px;
-}
+} 
 
 .fs-kl {
     margin-top: 1px;
@@ -111,6 +111,7 @@ fieldset label{
     box-shadow: none;
     margin-right: 1%;
     align-self: center;
+    justify-content: flex-start;
     padding-top: 5px;
 }
 

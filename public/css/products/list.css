@@ -66,12 +66,12 @@ body {
     max-width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items:stretch;
+    align-items:flex-start;
     gap: 1px 30px;
     padding: 25px;
     flex-wrap: wrap;
     min-height: 150vh;
-    width: 30vh;
+    width: 20vh;
 }
 
 .vinos{

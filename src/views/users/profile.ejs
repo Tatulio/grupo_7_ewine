@@ -6,7 +6,7 @@
             <p>Bienvenido <%= user.nombre %> <%= user.apellido %></p>
         
             <% if (user.image) { %>
-                <img class="imagen-profile" src="/uploads/users/<%= user.image.url %>" alt="" srcset="">          
+                <img class="imagen-profile" src="/uploads/users/<%= user.image %>" alt="" srcset="">          
             <% } %>
             <form action ="/users/logout" method="post" class="profile">
                 
