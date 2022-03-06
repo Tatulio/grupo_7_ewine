@@ -45,139 +45,52 @@
 </section>
 
 <section class="catalogo">
-<article class="vinos">
-    <a href="/vino"><picture>
-    <img width="90%" height="70%" src="/images/Rutini-Gewurztraminer.webp" alt="blanco">
-</picture>
-<div class="info">
-<p>Gewurztraminer</p>
-<p class="aclaracion">Caja x6 botellas</p>
-<p class="precio">$8.000</p>
-<button>Agregar</button>
-</div></a>
-</article>
-<article class="vinos">
-    <a href="/vino"><picture>
-        <img width="90%" height="70%" src="/images/Rutini-Malbec.webp" alt="blanco">
-    </picture>
-    <div class="info">
-    <p>Gewurztraminer</p>
-    <p class="aclaracion">Caja x6 botellas</p>
-    <p class="precio">$8.000</p>
-    <button>Agregar</button>
-    </div></a>
-</article>
-<article class="vinos">
-    <a href="/vino"><picture>
-        <img width="90%" height="70%" src="/images/Rutini-Rose-de-Malbec.webp" alt="blanco">
-    </picture>
-    <div class="info">
-    <p>Gewurztraminer</p>
-    <p class="aclaracion">Caja x6 botellas</p>
-    <p class="precio">$8.000</p>
-    <button>Agregar</button>
-    </div></a>
-</article>
-<article class="vinos">
-    <a href="/vino"><picture>
-        <img width="90%" height="70%" src="/images/Single-Vineyard-Gualtallary-Malbec.webp" alt="blanco">
-    </picture>
-    <div class="info">
-    <p>Gewurztraminer</p>
-    <p class="aclaracion">Caja x6 botellas</p>
-    <p class="precio">$8.000</p>
-    <button>Agregar</button>
-    </div></a>
-</article>
-<article class="vinos">
-    <a href="/vino"><picture>
-        <img width="90%" height="70%" src="/images/Trumpeter-Cabernet-Sauvignon.webp" alt="blanco">
-    </picture>
-    <div class="info">
-    <p>Gewurztraminer</p>
-    <p class="aclaracion">Caja x6 botellas</p>
-    <p class="precio">$8.000</p>
-    <button>Agregar</button>
-    </div></a>
-    </article>
-    <article class="vinos">
-        <a href="/vino"><picture>
-            <img width="90%" height="70%" src="/images/Cajon-Madera-Encuentro-Chardonnay-Malbec-Cabernet-Sauvignon-x3.webp" alt="blanco">
-        </picture>
-        <div class="info">
-        <p>Gewurztraminer</p>
-        <p class="aclaracion">Caja x6 botellas</p>
-        <p class="precio">$8.000</p>
-        <button>Agregar</button>
-        </div></a>
-    </article>
-    <article class="vinos">
-        <a href="/vino"><picture>
-            <img width="90%" height="70%" src="/images/Rutini-Rose-de-Malbec.webp" alt="blanco">
-        </picture>
-        <div class="info">
-        <p>Gewurztraminer</p>
-        <p class="aclaracion">Caja x6 botellas</p>
-        <p class="precio">$8.000</p>
-        <button>Agregar</button>
-        </div></a>
-    </article>
-    <article class="vinos">
-        <a href="/vino"><picture>
-            <img width="90%" height="70%" src="/images/Single-Vineyard-Gualtallary-Malbec.webp" alt="blanco">
-        </picture>
-        <div class="info">
-        <p>Gewurztraminer</p>
-        <p class="aclaracion">Caja x6 botellas</p>
-        <p class="precio">$8.000</p>
-        <button>Agregar</button>
-        </div></a>
-    </article>
-    <article class="vinos">
-        <a href="/vino"><picture>
-            <img width="90%" height="70%" src="/images/Rutini-Gewurztraminer.webp" alt="blanco">
-        </picture>
-        <div class="info">
-        <p>Gewurztraminer</p>
-        <p class="aclaracion">Caja x6 botellas</p>
-        <p class="precio">$8.000</p>
-        <button>Agregar</button>
-        </div></a>
-        </article>
-        <article class="vinos">
-            <a href="/vino"><picture>
-                <img width="90%" height="70%" src="/images/Rutini-Malbec.webp" alt="blanco">
-            </picture>
-            <div class="info">
-            <p>Gewurztraminer</p>
-            <p class="aclaracion">Caja x6 botellas</p>
-            <p class="precio">$8.000</p>
-            <button>Agregar</button>
-            </div></a>
-        </article>
-        <article class="vinos">
-            <a href="/vino"><picture>
-                <img width="90%" height="70%" src="/images/Rutini-Rose-de-Malbec.webp" alt="blanco">
-            </picture>
-            <div class="info">
-            <p>Gewurztraminer</p>
-            <p class="aclaracion">Caja x6 botellas</p>
-            <p class="precio">$8.000</p>
-            <button>Agregar</button>
-            </div></a>
-        </article>
-        <article class="vinos">
-            <a href="/vino"><picture>
-                <img width="90%" height="70%" src="/images/Single-Vineyard-Gualtallary-Malbec.webp" alt="blanco">
-            </picture>
-            <div class="info">
-            <p>Gewurztraminer</p>
-            <p class="aclaracion">Caja x6 botellas</p>
-            <p class="precio">$8.000</p>
-            <button>Agregar</button>
-            </div></a>
-        </article>
-</section>
+        
+    <% if (locals.products) { %> 
+        <% if (products.length > 0) { %>
+         <!-- <ul class="products"> -->
+            <% products.forEach(product => { %>
+                <article class="vinos">
+                <!-- <li class="product"> -->
+                    <a href="/products/<%= product.id %> " class="titulo-producto">  
+                        
+                        <% if (product.image) { %>
+                                <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">                                
+                        <% } else { %>
+                            <img class="imagen-producto" src="/uploads/products/default.jpg" alt="" srcset="">
+                        <% } %>
+                    </a>
+                        <section class="info">
+                        <span>
+                            <%= product.name %> 
+                        </span>
+                        <span>
+                            $<%= product.price %> 
+                        </span>
+                        </section>
+                    <section class="botones">
+                        <!-- <a class="icono-edit" href="/products/update/<%= product.id %>">
+                            <i class= "fas fa-pen"></i>
+                        </a> -->
+                        <form class="fs-button" action="/products/delete/<%= product.id %>" method="post">
+                            <input type="hidden" name="id" value="<%= product.id %>">
+                            <button type="submit" >Agregar
+                                <!-- <i class="fas fa-trash"></i> -->
+                            </button>
+                        </form>
+                    </section>
+                <!-- </li> -->
+                   
+                </article>  
+            <% }) %>
+         <!-- </ul> -->
+        <% } else { %>
+            <h2> No hay producto</h2>
+        <% } %>
+        <% } else { %>
+            <h2> No hay producto</h2>
+   <% } %>
+    </section>
 
     </main>
     <%- include("./includes/footer") %>

@@ -1,195 +1,222 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
-    font-weight: bold;
 }
 
-.main-register {
-    background-color: #F4F4F4;
-    min-height: 50vh;
+body {
+    height: 100%;
+}
+
+
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+span{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 16px;
+}
+
+.main-content{
+    display:flex;
+    width: 85vw;
+    justify-content: flex-start;
+}
+
+.menuVertical{
+    display: none;
+    width: 16%;
+    min-height: 150vh;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 55px;
+    padding-left: 15px;
+}
+
+.menuVertical article{
+    margin-bottom: 20%;
+}
+
+.menuVertical h3{
+    font-size: 1.2rem;
+    font-family:"Roboto";
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.menuVertical nav{
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.menuVertical nav a{
+    font-size: 1rem;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.titulo-producto {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.catalogo{
+    background-color: #ebebeb;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    gap: 1px 30px;
+    padding: 25px;
+    flex-wrap: wrap;
+    min-height: 150vh;
+    width: 20vh;
+}
+
+.vinos{
+    display: flex;
+    max-width:300px;
+    max-height: 397.5px;
+    min-height: 397.47px;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-}
- 
-.main-register form{
-    width: 80%; 
-    margin: 10%;
-    border: solid #AD9863 1px;
-    border-radius: 4px;
-    padding: 2vh;
-    text-align: start;
+    margin: 3vh 5px;
+    background: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: none;
+    border-radius: 10px;
+    transition: all 0.2s;
 }
 
-.register-login {
-    max-width: 400px;
-    background-color: white;
-    margin: 5%;
+.vinos:hover{
+    box-shadow:0px 0px 10px rgb(100, 100, 100);
 }
 
-.register-signin {
-   
-    background-color: white;
-    margin: 1vh;
+.vinos img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 263px
 }
 
-main button {
-    background-color: #414141;
-    padding: 10px 5px 10px 5px;
-    border: solid #AD9863 1px;
-    border-radius: 4px;
-    color: white;
-    letter-spacing: 1px;
+.imagen-producto {
+    max-width: 40%;
 }
 
-main input {
-    background-color: #F4F4F4;
-    box-shadow: 0px 0px 1px 1px #A9AAAA;
-    border: 0;
-    margin-top: 1px;
-    padding: 5px;
-    width: 95%;
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    font-style: italic;
+    font-family: "Roboto";
+    font-size: 12px;
 }
 
-main button:hover {
+.info button{
+    width: 20vh;
+    margin-bottom: 3vh;
+    border-radius: 6px;
+    border: none;
+    background-color: #383D41;
+    color: gainsboro ;
+    height: 1.5em;
+    transition: all 0.2s;
+}
+
+.info button:hover{
     box-shadow:0px 0px 10px #AD9863;
 }
 
-main button:focus {
+.info button:focus {
     background-color: #AD9863;
     color: #383D41;
     font-weight: bold;
     box-shadow: none;
 }
 
-main input:hover {
-    box-shadow:0px 0px 10px #AD9863;
-}
-
-.img-google{
-    max-width: 16px;
-    max-height: 16px;
-}
-.img-fb{
-    max-width: 16px;
-    max-height: 16px;
-}
-    
-fieldset {
-    border: 0;
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-fieldset label{
-    display: none;
-}
-
-.fs-button {
-    margin-top: 5px;
-} 
-
-.fs-kl {
-    margin-top: 1px;
-    padding: 0px 0px 0px 10px;
-}
-
-.fs-kl label {
-    display: contents;
-    font-size: smaller;
-}
-
-.fs-kl input {
-    width:fit-content;
-    box-shadow: none;
-    margin-right: 1%;
-    align-self: center;
-    justify-content: flex-start;
-    padding-top: 5px;
-}
-
-.fs-conectar {
+.botones {
     display: flex;
-    justify-content: flex-end;
-    align-self: stretch;
-    margin-top: 10px;
-
-}
-
-.fs-conectar a{
-    margin-right: 5px;
-    font-size: smaller;
-    font-style: normal;
-    text-align: justify;
-}
-
-.botones-login {
-    display: flex;
-    justify-content:space-between;
-}
-
-.boton-imagen {
-    border: 0;
-    margin: 20px 5px;
-    margin-left: 4%;
-    width: 95%;
-    display: flex;
-}
-
-.errores {
-    color: red;
-    margin-top: 5px;
-    font-size: 15px;
-}
-
-@media (min-width: 768px) {  /*TABLET*/
-    body {        
-        background-color: #440217
-    }
-
-.main-register {
-    background-color: #F4F4F4;
-    width: 85vw;
-    min-height: 50vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
     flex-direction: row;
+    justify-content: center;
+    margin: 15px 0
 }
 
-.main-register form{
+.boton-delete {
+    margin-left: 180px;
+    font-size: 20px;
+    box-sizing: 0px;
+    border-radius:100px;
+    color: #AD9863;
+    border: none;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.boton-delete:hover{
+    color: #414141;
+}
+
+.icono-edit {
+    color: #AD9863;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+.icono-edit:hover {
+    color: #414141;
+}
+
+.aclaracion{
+font-weight: 300;
+}
+
+.precio{
+    font-weight: bold;
+}
+
+.menuVertical{
     width: 40%;
-    max-width: 350px;
-    margin: 5%;
-    border: solid #AD9863 1px;
-    border-radius: 4px;
-    padding: 2%;
-    flex-direction: column;
-    
 }
 
-.register-login {
-    min-width: 400px;
+.catalogo{
+    width: 100%;
+    gap: 5px;
 }
 
-main input {
-    border: 0;
-    margin-top: 1px;
-    padding: 5px;
-    width: 95%;
+.main-content{
+    width: 100%;
 }
 
-fieldset label{
-    display: block;
+@media (min-width: 768px) {
+    .menuVertical {
+        display: flex;
+        max-width:200px;
+     
+    }
+ 
+    body {
+        margin: 0 7.5vw;
+    }
+ 
+    .catalogo {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
 }
 
-
-
-}

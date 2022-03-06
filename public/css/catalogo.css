@@ -7,18 +7,34 @@
 
 body {
     height: 100%;
-    
+}
+
+
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+span{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 16px;
 }
 
 .main-content{
-    display: flex;
+    display:flex;
     width: 85vw;
+    justify-content: flex-start;
 }
 
 .menuVertical{
     display: none;
     width: 16%;
     min-height: 150vh;
+    justify-content: flex-start;
     background-color: white;
     flex-direction: column;
     text-align: left;
@@ -37,13 +53,11 @@ body {
     margin-bottom: 10px;
 }
 
-
 .menuVertical nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 5px;
-    
 }
 
 .menuVertical nav a{
@@ -53,23 +67,35 @@ body {
     color: black;
 }
 
+.titulo-producto {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .catalogo{
     background-color: #ebebeb;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items:flex-start;
     gap: 1px 30px;
     padding: 25px;
     flex-wrap: wrap;
     min-height: 150vh;
-    width: 30vh;
+    width: 20vh;
 }
 
 .vinos{
-    justify-content:center;
     display: flex;
-    flex-wrap: nowrap;
-    margin: 3vh 0;
+    max-width:300px;
+    max-height: 397.5px;
+    min-height: 397.47px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 3vh 5px;
     background: white;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     box-shadow: none;
@@ -81,8 +107,14 @@ body {
     box-shadow:0px 0px 10px rgb(100, 100, 100);
 }
 
-.vinos picture img{
-    border-radius: 10px;
+.vinos img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 263px
+}
+
+.imagen-producto {
+    max-width: 40%;
 }
 
 .info{
@@ -96,48 +128,39 @@ body {
     font-size: 12px;
 }
 
-.info button{
-    width: 20vh;
-    margin-bottom: 3vh;
-    border-radius: 6px;
-    border: none;
-    background-color: #383D41;
-    color: gainsboro ;
-    height: 1.5em;
-    transition: all 0.2s;
+
+main button {
+    background-color: #414141;
+    padding: 10px 5px 10px 5px;
+    border: solid #AD9863 1px;
+    border-radius: 4px;
+    color: white;
+    letter-spacing: 1px;
 }
 
-.info button:hover{
+main button:hover {
     box-shadow:0px 0px 10px #AD9863;
 }
 
-.info button:focus {
+main button:focus {
     background-color: #AD9863;
     color: #383D41;
     font-weight: bold;
     box-shadow: none;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+main input:hover {
+    box-shadow:0px 0px 10px #AD9863;
 }
 
-.aclaracion{
-font-weight: 300;
-}
 
 .precio{
     font-weight: bold;
 }
 
-
-
 .menuVertical{
     width: 40%;
 }
-
-
 
 .catalogo{
     width: 100%;
@@ -164,4 +187,5 @@ font-weight: 300;
         padding-right: 2.5%;
     }
 }
+
 

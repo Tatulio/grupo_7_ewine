@@ -5,8 +5,8 @@ module.exports = {
         product.all()
         .then((resultado) => {
             //res.send(resultado)
-            res.render("products/list", {
-                styles: ["products/list"],
+            res.render("catalogo", {
+                styles: ["catalogo"],
                 title: "Administrador",
                 products: resultado})
             })
