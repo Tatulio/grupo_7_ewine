@@ -91,8 +91,8 @@ h2 {
 
 .precio{
     font-size: 26px;
-    margin-top: 500px;
-    margin-bottom: 2%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .cantidades{
@@ -224,54 +224,56 @@ h2 {
         padding-top: 5%;
             }
     .imagen-producto{
-        padding-top: 5%;
+        padding-top: 5%;       
+    }
 
-}
+    .precio{
+        font-size: 26px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 
+    .producto-nombre {    
+        margin-left: 5%;
+        margin-right: 5%;   
+        padding-bottom: 10px;    
+        margin-bottom: 12px;    
+    }
 
-.producto-nombre {
-    
-    margin-left: 5%;
-    margin-right: 5%;
-   
-    padding-bottom: 10px;
-    
-    margin-bottom: 12px;
-    
-}
-.producto-datos{   
-    margin-left: 5%;
-    margin-right: 5%;
-}
+    .producto-datos{   
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
-.titulo-maridaje-cata {       
-    margin : 1% 5%;
-}
+    .titulo-maridaje-cata {       
+        margin : 1% 5%;
+    }
 
-.producto-cata {   
-   padding-bottom: 1%;
-}
+    .producto-cata {   
+        padding-bottom: 1%;
+    }   
 
-.producto-maridaje{   
-    margin: 1% 5%;
-    padding-bottom: 2%;
-}
+    .producto-maridaje{   
+        margin: 1% 5%;
+        padding-bottom: 2%;
+    }
 
-.agregar-producto{
-    margin-top: 20px;
-}
+    .agregar-producto{
+        margin-top: 20px;
+    }
 
-.agregar-producto b {
-    font-size: 20px;
-}
+    .agregar-producto b {
+        font-size: 20px;
+    }
 
-.precio{
-     margin: 1% 0;
-}
+    .precio{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        
+    }
 
-.agregar-producto button {
- margin: 4% 0 6% 0;
- max-width: 160px;
-}
-
+    .agregar-producto button {
+        margin: 4% 0 6% 0;
+        max-width: 160px;
+    }
 }
