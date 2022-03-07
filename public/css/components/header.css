@@ -81,12 +81,21 @@ img {
 .icon-carrito-usuario {
     text-align: center;
     margin-top: 15px;
+    display: flex;
 }
 
 .icon-carrito-usuario a {
     color: #AD9863;
     font-size: 25px;
     padding: 5px;
+}
+
+.icon-logout {
+    color: #AD9863;
+    font-size: 25px;
+    padding: 5px;
+    background-color: #383D41;
+    border:none;
 }
 
 .burger-menu {

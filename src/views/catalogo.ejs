@@ -69,21 +69,13 @@
                         </span>
                         </section>
                     <section class="botones">
-                        <!-- <a class="icono-edit" href="/products/update/<%= product.id %>">
-                            <i class= "fas fa-pen"></i>
-                        </a> -->
-                        <form class="fs-button" action="/products/delete/<%= product.id %>" method="post">
+                        <form class="fs-button">
                             <input type="hidden" name="id" value="<%= product.id %>">
-                            <button type="submit" >Agregar
-                                <!-- <i class="fas fa-trash"></i> -->
-                            </button>
+                            <button class="boton-agregar">Agregar</button>
                         </form>
-                    </section>
-                <!-- </li> -->
-                   
+                    </section>                   
                 </article>  
             <% }) %>
-         <!-- </ul> -->
         <% } else { %>
             <h2> No hay producto</h2>
         <% } %>
