@@ -22,7 +22,7 @@ module.exports = {
           },
           tipoVino:{
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
           },
           bodega: {
             type: DataTypes.STRING,

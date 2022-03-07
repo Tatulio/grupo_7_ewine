@@ -6,20 +6,16 @@ const db = require("../database/models/index")
 
 
 const model = {        
-    /*file: path.resolve(__dirname, "../data","products.json"),
-    read: () => fs.readFileSync(model.file),
-    write: data => fs.writeFileSync(model.file,JSON.stringify(data,null,2)),*/                        
-    all: () => db["product"].findAll({raw : true})
-    .then((resultado) => {
-        
-        //res.send(resultado)
-        return resultado;
+                       
+    all: () => db["product"].findAll(/*{raw : true},*/ {include: 'tipoVino1'})
+        .then((resultado) =>  {
+            return resultado;
     }),
     generate: data => Object({
         name: data.name,
         anno: parseInt(data.anno),
         varietal: data.varietal,
-        tipoVino: data.tipoVino,
+        tipoVino: data.tipoVino != "Vacio" ? parseInt(data.tipoVino) : null,
         bodega: data.bodega,
         notasCata: data.notasCata,
         maridaje: data.maridaje,

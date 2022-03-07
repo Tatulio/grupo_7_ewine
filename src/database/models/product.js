@@ -22,7 +22,7 @@ module.exports = function (sequelize,DataTypes){
     },
     tipoVino:{
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     bodega: {
       type: DataTypes.STRING,
@@ -56,11 +56,11 @@ module.exports = function (sequelize,DataTypes){
     tableName: "products",
     timestamps: false,
     });
-    // product.associated = function(models){
-    // product.hasMany(models.tipo_vino,{
-    //   foreignKey: 'tipoVino',
-    //   as: 'tipoVino',
-    // });
-    //}
+    product.associate = function(models){
+    product.belongsTo(models.tipo_vino,{
+      foreignKey: 'tipoVino',
+      as: 'tipoVino1',
+    });
+    }
 return product;
 };

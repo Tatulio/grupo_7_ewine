@@ -17,9 +17,17 @@
             <label for="varietal">Varietal</label>
                 <input type="text" name="varietal" id="varietal" placeholder="Varietal">
         </fieldset>
-        <fieldset>        
-            <label for="tipoVino">Tipo de Vino</label>
-                <input type="text" name="tipoVino" id="tipoVino" placeholder="Tipo de vino">
+        <fieldset>     
+            <select name="tipoVino">
+                    <option value="NULL">Vacio</option>
+                <% if (tipo_vino.length > 0) { %>
+                    <% tipo_vino.forEach(product => { %>
+                    <option value="<%= product.id%>"><%= product.name%></option> 
+                    <% }) %> 
+                <% } %> 
+             </select>   
+            <!-- <label for="tipoVino">Tipo de Vino</label>
+                <input type="text" name="tipoVino" id="tipoVino" placeholder="Tipo de vino"> -->
             
         </fieldset>
         <fieldset>    

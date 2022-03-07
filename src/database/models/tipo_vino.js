@@ -17,8 +17,10 @@ module.exports = function (sequelize,DataTypes){
     timestamps: false,
     });
     
-    tipo_vino.associated = function(models){
-    tipo_vino.belongsTo(models.products,{ foreignKey: 'tipoVino', as: 'tipoVino'});
+    tipo_vino.associate = function(models){
+    tipo_vino.hasMany(models.product,{ 
+      foreignKey: 'tipoVino', 
+      as: 'vinos'});
     }
 return tipo_vino;
 };
