@@ -47,7 +47,8 @@ img {
 
 .formsearch {
     position: relative;
-    display:flex;  
+    display:flex;    
+    border-radius: 50px; 
 }
 
 .formsearch input {
