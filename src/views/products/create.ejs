@@ -24,17 +24,26 @@
          </select>
         </fieldset>
         <fieldset>     
+<<<<<<< HEAD
             <select class="selector" name="tipoVino">
+=======
+            <label for="tipoVino">Tipo de Vino</label>
+            <select class="selector" name="tipoVino">                
+>>>>>>> 62d0b2f663c17b8adf9cf9fab64af670f32f0e81
                     <option value="NULL">Vacio</option>
                 <% if (tipo_vino.length > 0) { %>
                     <% tipo_vino.forEach(product => { %>
                     <option value="<%= product.id%>"><%= product.name%></option> 
                     <% }) %> 
                 <% } %> 
+<<<<<<< HEAD
              </select>   
             <!-- <label for="tipoVino">Tipo de Vino</label>
                 <input type="text" name="tipoVino" id="tipoVino" placeholder="Tipo de vino"> -->
              
+=======
+             </select>  
+>>>>>>> 62d0b2f663c17b8adf9cf9fab64af670f32f0e81
         </fieldset>
         <fieldset>    
             <select class="selector" name="bodega">

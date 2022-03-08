@@ -8,6 +8,15 @@
                 <a href="/catalogo">Vinos</a>
                 <a class="borde" href="/nosotros">Nosotros</a>
                 <a href="https://www.rutiniwines.com/contacto/" target="_blank">Contacto</a>
+                <% if (!user) { %>            
+                   
+                    <% } else if (user && user.isAdmin) { %>                        
+                        <a class="borde" href="/products">Productos</a>
+                        <a href="/products/create">Crear</a>
+                    <% } %> 
+
+
+                
             </nav>
 
                 <form action="#" class="formsearch">
