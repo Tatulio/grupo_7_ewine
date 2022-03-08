@@ -7,12 +7,11 @@ const varietal = require("../models/varietal")
 const controller = {
     product: (req,res) => {
         product.all()
-        .then((resultado) => { 
-            res.send(resultado)
-            res.render("products/list", {
-                styles: ["products/list"],
-                title: "Administrador",
-                products: resultado})
+        .then((resultado) => { //res.send(resultado)
+                res.render("products/list", {
+                    styles: ["products/list"],
+                    title: "Administrador",
+                    products: resultado})
              })
     },
     create: (req,res) => {
@@ -20,15 +19,12 @@ const controller = {
         let varietales = {}
         bodega.all().then(r => bodegas = r)
         varietal.all().then(r => varietales = r)
-        //console.log(bodegas)
         tipo_vino.all()
-        .then((resultado) => {
-            //console.log(resultado)
-            //res.send(varietales)
-            res.render("products/create", {
-            styles: ["products/create"],
-            title: "Nuevo Producto", tipo_vino: resultado, bodegas: bodegas, varietales: varietales})   
-        })
+        .then((resultado) => { res.send(varietales)
+        //     res.render("products/create", {
+        //     styles: ["products/create"],
+        //     title: "Nuevo Producto", tipo_vino: resultado, bodegas: bodegas, varietales: varietales})   
+         })
         .catch ((err) => console.log(err))
     },
     save:(req,res) => {
@@ -38,7 +34,8 @@ const controller = {
     },
     show: (req,res) => {
         product.search("id", req.params.id).then((resultado) => {
-            return resultado ? res.render("products/detail", {
+            return resultado ? 
+            res.render("products/detail", {
             styles: ["products/detail"],
             title: "Producto | " +resultado.name,
             product: resultado

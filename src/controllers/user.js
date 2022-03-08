@@ -38,9 +38,9 @@ module.exports= {
         }   
         req.body.files = req.files;        
         user.create(req.body).then((r) => {
-        file.create(req.files[0].filename, r.id,'user')
+            if (req.files[0]) {file.create(req.files[0].filename, r.id,'user')}
         return res.redirect("/users/login")    
-    })
+    }) 
     })},
     profile: (req,res) => 
         //res.send()
