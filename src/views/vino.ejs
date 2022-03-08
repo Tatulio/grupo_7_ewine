@@ -6,7 +6,9 @@
         <section class="caja-producto-principal">
             
           <picture class="imagen-producto">
-            <img src="/images/botella-producto.jpg" alt="botella-principal">
+            <% if (product.image) { %>
+                <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">          
+            <% } %>
             
             </picture>
        
