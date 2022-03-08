@@ -7,5 +7,7 @@ const access = require("../middlewares/access")
 
 router.get("/", catalogo.product)
 
+router.get("/:id", catalogo.show)
+
 
 module.exports = router

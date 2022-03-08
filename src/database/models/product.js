@@ -17,16 +17,16 @@ module.exports = function (sequelize,DataTypes){
       allowNull: false,
     },
     varietal:{
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: true,
     },
     tipoVino:{
       type: DataTypes.INTEGER,
       allowNull: true,
     },
     bodega: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: true,
     },
     notasCata: {
       type: DataTypes.STRING,
@@ -60,7 +60,15 @@ module.exports = function (sequelize,DataTypes){
     product.belongsTo(models.tipo_vino,{
       foreignKey: 'tipoVino',
       as: 'tipoVino1',
-    });
+    }),
+    product.belongsTo(models.bodega,{
+      foreignKey: 'bodega',
+      as: 'tipoBodega',
+    }),
+    product.belongsTo(models.varietal,{
+      foreignKey: 'varietal',
+      as: 'tipoVarietal',
+    })
     }
 return product;
 };

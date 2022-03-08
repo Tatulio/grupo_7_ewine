@@ -131,7 +131,20 @@ section {
     padding-top: 5px;
 }
 
+.selector {
+    width: 90%;
+    background-color: #ebebeb;
+    background-color: #F4F4F4;
+    box-shadow: 0px 0px 1px 1px #A9AAAA;
+    border: 0;
+    margin: 1px;
+    padding: 5px 0px;
+    color: #383D41;
+}
 
+.selector:hover {
+    box-shadow:0px 0px 10px #AD9863;
+}
 
 
 @media (min-width: 768px) {

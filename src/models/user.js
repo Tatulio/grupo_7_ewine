@@ -6,13 +6,11 @@ const file = require("./file");
 
 const db = require("../database/models/index") 
 
-
-
 const model = {
-    file: path.resolve(__dirname, "../data", "users.json"),
-    read: (data) => fs.readFileSync(model.file, "utf-8"),
-    write: data => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
-    all: () => JSON.parse(model.read()),
+    // file: path.resolve(__dirname, "../data", "users.json"),
+    // read: (data) => fs.readFileSync(model.file, "utf-8"),
+    // write: data => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
+    // all: () => JSON.parse(model.read()),
     search: (prop,value) => db["user"].findOne({
         where: {
           [prop]: value

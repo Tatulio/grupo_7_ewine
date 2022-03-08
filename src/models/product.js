@@ -7,16 +7,16 @@ const db = require("../database/models/index")
 
 const model = {        
                        
-    all: () => db["product"].findAll(/*{raw : true},*/ {include: 'tipoVino1'})
+    all: () => db["product"].findAll(/*{raw : true},*/ {include: 'tipoVino1', include: 'tipoBodega', include: 'tipoVarietal'})
         .then((resultado) =>  {
             return resultado;
     }),
     generate: data => Object({
         name: data.name,
         anno: parseInt(data.anno),
-        varietal: data.varietal,
+        varietal: data.tipoVino != "Vacio" ? parseInt(data.varietal) : null,
         tipoVino: data.tipoVino != "Vacio" ? parseInt(data.tipoVino) : null,
-        bodega: data.bodega,
+        bodega: data.tipoVino != "Vacio" ? parseInt(data.bodega) : null,
         notasCata: data.notasCata,
         maridaje: data.maridaje,
         price: parseInt(data.price),

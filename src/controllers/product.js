@@ -1,12 +1,14 @@
 const product = require("../models/product")
 const tipo_vino = require("../models/tipo_vino")
 const file = require("../models/file")
+const bodega = require("../models/bodega")
+const varietal = require("../models/varietal")
 
 const controller = {
     product: (req,res) => {
         product.all()
         .then((resultado) => { 
-            //res.send(resultado)
+            res.send(resultado)
             res.render("products/list", {
                 styles: ["products/list"],
                 title: "Administrador",
@@ -14,12 +16,18 @@ const controller = {
              })
     },
     create: (req,res) => {
+        let bodegas = {}
+        let varietales = {}
+        bodega.all().then(r => bodegas = r)
+        varietal.all().then(r => varietales = r)
+        //console.log(bodegas)
         tipo_vino.all()
         .then((resultado) => {
-            console.log(resultado)
+            //console.log(resultado)
+            //res.send(varietales)
             res.render("products/create", {
             styles: ["products/create"],
-            title: "Nuevo Producto", tipo_vino: resultado})   
+            title: "Nuevo Producto", tipo_vino: resultado, bodegas: bodegas, varietales: varietales})   
         })
         .catch ((err) => console.log(err))
     },

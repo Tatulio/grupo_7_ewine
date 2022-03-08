@@ -14,11 +14,17 @@
                 <input type="number" name="anno" id="anno" placeholder="Año de cosecha">
         </fieldset>    
         <fieldset>
-            <label for="varietal">Varietal</label>
-                <input type="text" name="varietal" id="varietal" placeholder="Varietal">
+            <select class="selector" name="varietal">
+                <option value="NULL">Vacio</option>
+            <% if (varietales.length > 0) { %>
+                <% varietales.forEach(product => { %>
+                <option value="<%= product.id%>"><%= product.name%></option> 
+                <% }) %> 
+            <% } %> 
+         </select>
         </fieldset>
         <fieldset>     
-            <select name="tipoVino">
+            <select class="selector" name="tipoVino">
                     <option value="NULL">Vacio</option>
                 <% if (tipo_vino.length > 0) { %>
                     <% tipo_vino.forEach(product => { %>
@@ -28,11 +34,17 @@
              </select>   
             <!-- <label for="tipoVino">Tipo de Vino</label>
                 <input type="text" name="tipoVino" id="tipoVino" placeholder="Tipo de vino"> -->
-            
+             
         </fieldset>
         <fieldset>    
-            <label for="bodega">Bodega</label>
-                <input type="text" name="bodega" id="bodega" placeholder="Bodega">
+            <select class="selector" name="bodega">
+                <option value="NULL">Vacio</option>
+            <% if (bodegas.length > 0) { %>
+                <% bodegas.forEach(product => { %>
+                <option value="<%= product.id%>"><%= product.name%></option> 
+                <% }) %> 
+            <% } %> 
+         </select>
         </fieldset>
         <fieldset>
             <label for="notasCata">Notas de Cata</label>        
