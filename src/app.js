@@ -31,8 +31,8 @@ app.use(session({
 
  app.use (require("./middlewares/user"))
 
- app.use(require("./routes/main"));
- app.use("/users", require("./routes/user"));
+ //app.use(require("./routes/main"));
+ //app.use("/users", require("./routes/user"));
 
 
 
@@ -54,8 +54,7 @@ app.use("/products",productRoutes)
 const catalogoRoutes = require("./routes/catalogo")
 app.use("/catalogo",catalogoRoutes)
 
-const filesRoutes = require("./routes/files")                                                         
-app.use("/files",filesRoutes)
+
 
 const userRoutes = require("./routes/user")
 app.use("/users",userRoutes)
@@ -65,7 +64,7 @@ app.use("/users",userRoutes)
 
 
 
-var DataTypes = require('sequelize/lib/data-types');
+//var DataTypes = require('sequelize/lib/data-types');
 
 
 const mysql = require("mysql")

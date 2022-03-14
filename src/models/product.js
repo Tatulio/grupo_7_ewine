@@ -1,13 +1,9 @@
-const path = require("path")
-const fs = require("fs");
-const file = require("./file");
-
 const db = require("../database/models/index") 
 
 
 const model = {        
                        
-    all: () => db["product"].findAll(/*{raw : true},*/ {include: ['tipoVino1','tipoBodega' ,'tipoVarietal']})
+    all: () => db["product"].findAll({include: ['tipoVino1','tipoBodega' ,'tipoVarietal']})
         .then((resultado) =>  {
             return resultado;
     }),
@@ -27,13 +23,8 @@ const model = {
 
     create: data => db["product"].create(model.generate(data)).then((resultado) => resultado),
     
-    search: (prop,value) => db["product"].findByPk(value,{include: ['tipoVino1','tipoBodega' ,'tipoVarietal']}    
-    // search: (prop,value) => db["product"].findOne({
-    //     where: {
-    //       [prop]: value
-    //     }
-    //}, {include: 'tipoVino1', include: 'tipoBodega', include: 'tipoVarietal'}).then((resultado) => resultado),
-).then((r) => r),
+    search: (prop,value) => db["product"].findByPk(value,{include: ['tipoVino1','tipoBodega' ,'tipoVarietal']}).then((r) => r),
+    
     update: (id, data) => db["product"].update(
         {
         name: data.name,

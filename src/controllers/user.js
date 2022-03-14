@@ -1,4 +1,4 @@
-const validator = require("express-validator");
+const {validationResult} = require("express-validator");
 const user = require("../models/user");
 const bcrypt = require("bcrypt")
 const file = require("../models/file")
@@ -17,7 +17,7 @@ module.exports= {
         title: "Registro",
     }), 
     save: (req,res) => {
-        let errors = validator.validationResult(req)   
+        let errors = validationResult(req) 
         if(!errors.isEmpty()){
             return res.render("users/register",{
                 errors: errors.mapped(),
@@ -48,15 +48,14 @@ module.exports= {
         styles: ["profile"],
         title: "Perfil de " + req.session.user.nombre,
         user: {...req.session.user,
-        //image: file.search("id",req.session.user.image)
      }
     }),
     access: async (req,res) => {
                 
-        let errors = validator.validationResult(req)
+        let errors = validationResult(req)
         
         if(!errors.isEmpty()){
-            console.log(errors)
+            //console.log(errors)
             return res.render("users/login",{
                 errors: errors.mapped(),
                 styles: ["register"],

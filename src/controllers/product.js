@@ -20,10 +20,10 @@ const controller = {
         bodega.all().then(r => bodegas = r)
         varietal.all().then(r => varietales = r)
         tipo_vino.all()
-        .then((resultado) => { res.send(varietales)
-        //     res.render("products/create", {
-        //     styles: ["products/create"],
-        //     title: "Nuevo Producto", tipo_vino: resultado, bodegas: bodegas, varietales: varietales})   
+        .then((resultado) => {
+            res.render("products/create", {
+            styles: ["products/create"],
+            title: "Nuevo Producto", tipo_vino: resultado, bodegas: bodegas, varietales: varietales})   
          })
         .catch ((err) => console.log(err))
     },

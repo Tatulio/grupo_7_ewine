@@ -1,7 +1,3 @@
-const path = require("path")
-const fs = require("fs");
-const file = require("./file");
-
 const db = require("../database/models/index") 
 
 
