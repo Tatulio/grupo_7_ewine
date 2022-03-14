@@ -15,14 +15,14 @@ module.exports= {
     register: (req,res) => res.render("users/register",{
         styles: ["register"],
         title: "Registro",
-    }),
+    }), 
     save: (req,res) => {
         let errors = validator.validationResult(req)   
         if(!errors.isEmpty()){
-            return res.render("users/register"),{
+            return res.render("users/register",{
                 errors: errors.mapped(),
                 styles: ["register"],
-            }
+            })
         }
     
         user.search("email",req.body.email).then((exist) => {

@@ -27,6 +27,8 @@ const model = {
     validate: [
         body("email").isEmail().withMessage("El email no es valido"),
         body("password").isLength({min: 6}).withMessage("La contraseña debe tener al menos 6 caracteres"),
+        body("nombre").notEmpty().withMessage("El nombre es obligatorio"),
+        body("apellido").notEmpty().withMessage("El apellido es obligatorio"),
 
     ]
 

@@ -8,7 +8,7 @@ const bp = require('body-parser');
 
 app.set("view engine", "ejs");
 app.set("views" , path.resolve(__dirname, "views"));
-app.set("port", process.env.PORT || 9000);
+app.set("port", process.env.PORT || 7000);
 
 app.listen(app.get("port"), () => console.log("listening on port http://localhost:" + app.get("port")))
 

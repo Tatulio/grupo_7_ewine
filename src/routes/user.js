@@ -17,7 +17,7 @@ router.get("/login", user.login)
 router.get("/register", user.register)
 router.get("/profile",[access], user.profile)
 
-router.post("/", [upload.any()], user.save)
+//router.post("/", [upload.any()], user.save)
 
 router.post("/",[userModel.validate], user.save)
 router.post("/access",[userModel.validate], user.access)
