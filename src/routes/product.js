@@ -19,7 +19,7 @@ router.get("/:id", product.show)
 
 router.post("/", [upload.any()], product.save)
 
-router.get("/update/:id",[], product.update)
+router.get("/update/:id", product.update)
 
 router.post("/update/:id", product.modify)
 

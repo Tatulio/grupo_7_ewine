@@ -7,44 +7,78 @@
     <form action="/products/update/<%=product.id%>"  method="post">
         <fieldset>
             <label for="name">Nombre</label>
-                <input type="text" name="name" id="name" placeholder="Nombre del vino">
+                <input type="text" name="name" id="name" placeholder="Nombre del vino" 
+                       value= "<%= locals.product ? product.name : null %>">
         </fieldset>
         <fieldset>    
             <label for="anno">Año de Cosecha</label>
-                <input type="number" name="anno" id="anno" placeholder="Año de cosecha">
+                <input type="number" name="anno" id="anno" placeholder="Año de cosecha"
+                       value= "<%= locals.product ? product.anno : null %>">
         </fieldset>    
         <fieldset>
             <label for="varietal">Varietal</label>
-                <input type="text" name="varietal" id="varietal" placeholder="Varietal">
+                <select class="selector" name="varietal">
+                    <option value="NULL">Vacio</option>
+                <% if (varietales.length > 0) { %>
+                    <% varietales.forEach(r => { %>
+                    <option value="<%= r.id%>"
+                        <% if (product['tipoVarietal'].name == r.name) { %>
+                        selected
+                        <% } %> > <%= r.name%></option> 
+                    <% }) %> 
+                <% } %> 
+                </select>
         </fieldset>
         <fieldset>        
             <label for="tipoVino">Tipo de Vino</label>
-                <input type="text" name="tipoVino" id="tipoVino" placeholder="Tipo de vino">
-            
+            <select class="selector" name="tipoVino">                
+                <option value="NULL">Vacio</option>
+            <% if (tipos_vino.length > 0) { %>
+                <% tipos_vino.forEach(r => { %>
+                    <option value="<%= r.id%>"     
+                    <% if (product['tipoVino1'].name == r.name) { %>
+                        selected
+                        <% } %> > <%= r.name%></option> 
+                <% }) %> 
+            <% } %> 
+         </select>      
         </fieldset>
         <fieldset>    
             <label for="bodega">Bodega</label>
-                <input type="text" name="bodega" id="bodega" placeholder="Bodega">
+            <select class="selector" name="bodega">
+                <option value="NULL">Vacio</option>
+            <% if (bodegas.length > 0) { %>
+                <% bodegas.forEach(r => { %> 
+                <option value="<%= r.id%>"
+                    <% if (product['tipoBodega'].name == r.name) { %>
+                        selected
+                        <% } %> > <%= r.name%></option> 
+                <% }) %> 
+            <% } %> 
+         </select>
         </fieldset>
         <fieldset class="maridaje-cata">
             <label for="notasCata">Notas de Cata</label>        
-                <textarea rows="3" cols="30" name="notasCata" id="notasCata" placeholder="Nota de cata"></textarea>
+                <textarea rows="3" cols="30" name="notasCata" id="notasCata" placeholder="Nota de cata"><%= locals.product ? product.notasCata : null %></textarea>
         </fieldset>
-        <fieldset class="maridaje-cata">    
+        <fieldset class="maridaje-cata">     
             <label for="maridaje">Maridaje</label> 
-                <textarea rows="3" cols="30" name="maridaje" id="maridaje" placeholder="Maridaje"></textarea>
+            <textarea rows="3" cols="30" name="maridaje" id="maridaje" placeholder="Maridaje"><%= locals.product ? product.maridaje : null %></textarea>
         </fieldset>
         <section class="check">
             <fieldset class="fs-kl">    
-                <input type="checkbox" name="offert" id="offert">
+                <input type="checkbox" name="offert" id="offert"
+                       value= "<%= locals.product ? product.offert : null %>">
                 <label for="offert">Oferta</label>
             </fieldset>
             <fieldset class="fs-kl">
-                <input type="checkbox" name="destacado" id="destacado">
+                <input type="checkbox" name="destacado" id="destacado"
+                       value= "<%= locals.product ? product.destacado : null %>">
                 <label for="destacado">Destacado</label>
             </fieldset>
             <fieldset class="fs-kl">
-                <input type="checkbox" name="recomendaciones" id="recomendaciones">
+                <input type="checkbox" name="recomendaciones" id="recomendaciones"
+                       value= "<%= locals.product ? product.redomendaciones : null %>">
                 <label for="recomendaciones">Recomendado</label>
             </fieldset>
         </section>
@@ -54,7 +88,8 @@
             </fieldset>
         <fieldset>
             <label for="price">Precio</label>
-                <input type="number" name="price" id="price" placeholder="Precio" min="0">
+                <input type="number" name="price" id="price" placeholder="Precio" min="0"
+                       value= "<%= locals.product ? product.price : null %>">
             
         </fieldset>
         <fieldset>

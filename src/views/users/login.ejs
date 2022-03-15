@@ -6,7 +6,8 @@
             <h2>Identificarse</h2>
             <fieldset class="fs-e-mail">
                 <label for="email">Correo Electronico</label>
-                <input name="email" type="email" id="email" placeholder="Direccion de Email">
+                <input name="email" type="email" id="email" placeholder="Direccion de Email"
+                       value= "<%= locals.oldData ? oldData.email : null %>">
                 <% if (locals.errors && errors.email) { %>
                     <p class="errores"><%= errors.email.msg %> </p>
                 <% } %>

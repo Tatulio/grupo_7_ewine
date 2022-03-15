@@ -22,6 +22,7 @@ module.exports= {
             return res.render("users/register",{
                 errors: errors.mapped(),
                 styles: ["register"],
+                oldData: req.body
             })
         }
     
@@ -43,7 +44,6 @@ module.exports= {
     }) 
     })},
     profile: (req,res) => 
-        //res.send()
         res.render("users/profile",{
         styles: ["profile"],
         title: "Perfil de " + req.session.user.nombre,
@@ -55,7 +55,6 @@ module.exports= {
         let errors = validationResult(req)
         
         if(!errors.isEmpty()){
-            //console.log(errors)
             return res.render("users/login",{
                 errors: errors.mapped(),
                 styles: ["register"],
@@ -81,7 +80,8 @@ module.exports= {
         styles: ["register"], 
         errors:{
              password:{msg:"La password es invalida"},
-            }
+            },
+        oldData: req.body
         })
     }
     if (req.body.remember){

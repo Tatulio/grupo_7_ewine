@@ -7,6 +7,7 @@ const model = {
         .then((resultado) =>  {
             return resultado;
     }),
+
     generate: data => Object({
         name: data.name,
         anno: parseInt(data.anno),

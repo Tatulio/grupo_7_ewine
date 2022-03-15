@@ -7,7 +7,7 @@ const varietal = require("../models/varietal")
 const controller = {
     product: (req,res) => {
         product.all()
-        .then((resultado) => { //res.send(resultado)
+        .then((resultado) => {
                 res.render("products/list", {
                     styles: ["products/list"],
                     title: "Administrador",
@@ -45,16 +45,24 @@ const controller = {
         })
     })},
     update: (req,res) => {
-        product.search("id", req.params.id)
-        .then((resultado) => {
-            res.render("products/update", {
-                styles: ["products/update"],
-                title: "Actualizar",
-                product: resultado,
+        let bodegas = {}
+        let varietales = {}
+        let tipos_vino = {}
+        bodega.all().then((r) => { bodegas = r
+            tipo_vino.all().then((r) => { tipos_vino = r
+                varietal.all().then((r) =>  varietales = r)
+            }).then ((r) => {
+                product.search("id", req.params.id)
+                .then((resultado) => { 
+                    res.render("products/update", {
+                    styles: ["products/update"],
+                    title: "Actualizar",
+                    product: resultado, bodegas: bodegas, varietales: varietales, tipos_vino: tipos_vino                        })
+                })
             })
-    })
+        })
     },
-    modify: (req,res) => {
+    modify: (req,res) => { 
         product.update(req.params.id,req.body)
         .then ((resultado) => {
             console.log(resultado)

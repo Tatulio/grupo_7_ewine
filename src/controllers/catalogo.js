@@ -4,7 +4,6 @@ module.exports = {
     product: (req,res) => {
         product.all()
         .then((resultado) => {
-            //res.send(resultado)
             res.render("catalogo", {
                 styles: ["catalogo"],
                 title: "Administrador",
@@ -14,7 +13,7 @@ module.exports = {
 
     show: (req,res) => {
         product.search("id", req.params.id).then((resultado) => {
-            return resultado ? //res.send(resultado) : null
+            return resultado ? 
             res.render("vino", {
             styles: ["vino"],
             title: "Vino | " +resultado.name,

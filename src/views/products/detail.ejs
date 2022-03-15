@@ -15,8 +15,8 @@
                 <article class="caja-textos-principal">
                 <article class="producto-datos">
                   <p><b>AÑO DE COSECHA:</b> <%= product.anno %></p>  
-                  <p><b>VARIEDADES:</b> <%= product.varietal %></p>
-                  <p><b>TIPO:</b><%= product.tipoVino1 %></p>
+                  <p><b>VARIEDADES:</b> <%= product['tipoVarietal'].name %></p>
+                  <p><b>TIPO:</b><%= product['tipoVino1'].name %></p>
                 </article>
   
                 <h4 class="titulo-maridaje-cata">NOTAS DE CATA</h4>
