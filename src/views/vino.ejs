@@ -13,7 +13,7 @@
             </picture>
        
             <article class="caja-textos-principal">
-             <h3 class="producto-nombre"><%= product.price %></h3>
+             <h3 class="producto-nombre"><%= product.name %></h3>
              <article class="producto-datos">
                 <p><b>AÑO DE COSECHA: </b> <%= product.anno %></p>  
                 <p><b>VARIEDADES: </b> <%= product['tipoVarietal'].name %></p>
@@ -35,7 +35,7 @@
 
              <article class="agregar-producto">
               <b class="nombre-producto-bottom"><%= product.name %></b>
-              <p class="precio">$<%= product.price %></p>
+              <p class="precio">$ <%= product.price %></p>
               <p class="seleccionar"><i>Seleccione Cantidad:</i></p>
               <div class="cantidades">
                   <p class="mas-menos">-</p>
