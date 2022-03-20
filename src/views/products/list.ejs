@@ -45,15 +45,15 @@
                 </nav>
             </article>
         </section>
-        <!-- <h2 class="titulo"><%= locals.title ? title : null %> </h2> -->
+
         <section class="catalogo">
         
         <% if (locals.products) { %> 
             <% if (products.length > 0) { %>
-             <!-- <ul class="products"> -->
+
                 <% products.forEach(product => { %>
                     <article class="vinos">
-                    <!-- <li class="product"> -->
+
                         <a href="/products/<%= product.id %> " class="titulo-producto">  
                             
                             <% if (product.image) { %>
@@ -74,18 +74,18 @@
                             <a class="icono-edit" href="/products/update/<%= product.id %>">
                                 <i class= "fas fa-pen"></i>
                             </a>
-                            <form action="/products/delete/<%= product.id %>" method="post">
+                            <form action="/products/delete/<%= product.id %>" method="post" id="form">
                                 <input type="hidden" name="id" value="<%= product.id %>">
-                                <button class="boton-delete" type="submit">
+                                <button class="boton-delete" type="submit" id="button">
                                     <i class="fas fa-trash"></i>
                                 </button>
                             </form>
                         </section>
-                    <!-- </li> -->
+ 
                        
                     </article>  
                 <% }) %>
-             <!-- </ul> -->
+
             <% } else { %>
                 <h2> No hay producto</h2>
             <% } %>
@@ -94,6 +94,7 @@
        <% } %>
         </section>
     </main>
+    <script src="/js/list.js"></script>
 
     <%- include("../includes/footer") %>
 </body>
