@@ -6,6 +6,12 @@ window.addEventListener('load', function (){
     let apellidoError = document.querySelector('#apellido-error')
     let email = document.querySelector('#email')
     let emailError = document.querySelector('#email-error')
+    let password = document.querySelector('#password')
+    let passwordError = document.querySelector('#password-error')
+    let password2 = document.querySelector('#password2')
+    let password2Error = document.querySelector('#password2-error')
+    let form = document.querySelector('#form')
+
 
     nombre.focus();
 
@@ -14,12 +20,11 @@ window.addEventListener('load', function (){
     nombre.addEventListener('change', function (e){
         if (nombre.value.length < 3){
             nombreError.classList.remove('display-errores')
-            nombre.classList.add('errores')
+            nombreError.classList.add('errores')
             nombreError.innerText = 'Debe escribir al menos 3 caracteres'
-            errores
         } else {
             nombreError.classList.add('display-errores')
-            nombre.classList.remove('errores')
+            nombreError.classList.remove('errores')
             
         }
     })
@@ -27,11 +32,11 @@ window.addEventListener('load', function (){
     apellido.addEventListener('change', function (e){
         if (apellido.value.length < 3){
             apellidoError.classList.remove('display-errores')
-            apellido.classList.add('errores')
+            apellidoError.classList.add('errores')
             apellidoError.innerText = 'Debe escribir al menos 3 caracteres';
         } else {
             apellidoError.classList.add('display-errores')
-            apellido.classList.remove('errores')    
+            apellidoError.classList.remove('errores')    
         }
     })
 
@@ -52,8 +57,39 @@ window.addEventListener('load', function (){
             emailError.classList.add('display-errores')
             email.classList.remove('errores')       
         }
+    })
 
-       
+    password.addEventListener('change', function (e){
+        if (password.value.length < 8){
+            passwordError.classList.remove('display-errores')
+            passwordError.classList.add('errores')
+            passwordError.innerText = 'Debe escribir al menos 8 caracteres';
+        } else {
+            passwordError.classList.add('display-errores')
+            passwordError.classList.remove('errores')
+
+        }
+    })
+    password2.addEventListener('change', function (e){
+        if (password2.value != password.value){
+            password2Error.classList.remove('display-errores')
+            password2Error.classList.add('errores')
+            password2Error.innerText = 'Las contraseñas deben coincidir';
+        } else {
+            password2Error.classList.add('display-errores')
+            password2Error.classList.remove('errores')
+
+        }
+    })
+    
+
+    form.addEventListener('submit', function (e){
+        let listaErrores = document.querySelector('.errores')
+        console.log(listaErrores);
+    if (listaErrores != null) {
+        e.preventDefault();
+    }
+    
     })
 
 

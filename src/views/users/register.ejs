@@ -4,13 +4,13 @@
     <main class="main-register">
 
 
-        <form action ="/users/" enctype="multipart/form-data" method="post" class="register-signin">
+        <form action ="/users/" enctype="multipart/form-data" method="post" class="register-signin" id="form">
             <h2>Registro</h2>
             <fieldset class="fs-nombre" id="fs-nombre">
                 <label for="nombre">Nombre</label>
                 <input name="nombre" type="text" id="nombre" placeholder="Ingrese su nombre completo" 
                        value= "<%= locals.oldData ? oldData.nombre : null %>"> 
-                       <p class="errores" class="display-error" id="nombre-error"></p> 
+                       <p  class="display-error" id="nombre-error"></p> 
                 <% if (locals.errors && errors.nombre) { %>
                     <p class="errores"><%= errors.nombre.msg %> </p>
                 <% } %>
@@ -19,7 +19,7 @@
                 <label for="apellido">Apellido</label>
                 <input name="apellido" type="text" id="apellido" placeholder="Ingrese su apellido"
                        value= "<%= locals.oldData ? oldData.apellido : null %>">
-                       <p class="errores" class="display-error" id="apellido-error"></p>
+                       <p  class="display-error" id="apellido-error"></p>
                 <% if (locals.errors && errors.apellido) { %>
                     <p class="errores"><%= errors.apellido.msg %> </p>
                 <% } %>
@@ -28,7 +28,7 @@
                 <label for="email">Correo Electronico</label>
                 <input type="text" name="email" id="email" placeholder="Direccion de Email"
                        value= "<%= locals.oldData ? oldData.email : null %>">
-                       <p class="errores" class="display-error" id="email-error"></p>
+                       <p  class="display-error" id="email-error"></p>
                 <% if (locals.errors && errors.email) { %>
                     <p class="errores"><%= errors.email.msg %> </p>
                 <% } %>
