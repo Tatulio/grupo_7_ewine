@@ -6,32 +6,40 @@ window.addEventListener('load', function (){
     let apellidoError = document.querySelector('#apellido-error')
     let email = document.querySelector('#email')
     let emailError = document.querySelector('#email-error')
+    let password = document.querySelector('#password')
+    let passwordError = document.querySelector('#password-error')
+    let password2 = document.querySelector('#password2')
+    let password2Error = document.querySelector('#password2-error')
+    let formulario = document.querySelector('#formulario')
+    let formularioError = document.querySelector('#formulario-error')
 
     nombre.focus();
 
-    let errores = []
+    let completados = []
 
     nombre.addEventListener('change', function (e){
-        if (nombre.value.length < 3){
+        if (nombre.value.length < 2){
             nombreError.classList.remove('display-errores')
-            nombre.classList.add('errores')
-            nombreError.innerText = 'Debe escribir al menos 3 caracteres'
-            errores
+            nombreError.classList.add('errores')
+            nombreError.innerText = 'Debe escribir al menos 2 caracteres'
         } else {
             nombreError.classList.add('display-errores')
-            nombre.classList.remove('errores')
+            nombreError.classList.remove('errores')
             
-        }
+        }        
     })
 
+
+
     apellido.addEventListener('change', function (e){
-        if (apellido.value.length < 3){
+        if (apellido.value.length < 2){
             apellidoError.classList.remove('display-errores')
-            apellido.classList.add('errores')
-            apellidoError.innerText = 'Debe escribir al menos 3 caracteres';
+            apellidoError.classList.add('errores')
+            apellidoError.innerText = 'Debe escribir al menos 2 caracteres';
         } else {
             apellidoError.classList.add('display-errores')
-            apellido.classList.remove('errores')    
+            apellidoError.classList.remove('errores')
+            
         }
     })
 
@@ -42,19 +50,76 @@ window.addEventListener('load', function (){
 
         if (!regex.test(valor)) {
             emailError.classList.remove('display-errores')
-            email.classList.add('errores')
+            emailError.classList.add('errores')
             emailError.innerText = 'Ingrese un email valido'
-            console.log(valor.value)
             if (valor.length < 1){
                 emailError.innerText = 'No puede dejar el campo vacio';
             } 
         } else {
             emailError.classList.add('display-errores')
-            email.classList.remove('errores')       
+            emailError.classList.remove('errores') 
+            
         }
 
        
     })
 
 
-})
+    password.addEventListener('change', function (e){
+        if (password.value.length < 8){
+            passwordError.classList.remove('display-errores')
+            passwordError.classList.add('errores')
+            passwordError.innerText = 'Debe escribir al menos 8 caracteres';
+        } else {
+            passwordError.classList.add('display-errores')
+            passwordError.classList.remove('errores')
+            
+        }
+    })
+    password2.addEventListener('change', function (e){
+        if (password2.value != password.value){
+            password2Error.classList.remove('display-errores')
+            password2Error.classList.add('errores')
+            password2Error.innerText = 'Las contraseñas deben coincidir';
+        } else {
+            password2Error.classList.add('display-errores')
+            password2Error.classList.remove('errores')
+              
+        }
+    })
+
+
+    formulario.addEventListener('submit', function (e){
+        let listaErrores = document.querySelector('.errores')
+        console.log(listaErrores);
+    if (listaErrores != null) {
+        e.preventDefault();
+    }
+
+     }) 
+    
+    })
+
+//     formulario.addEventListener('submit', function (e){
+//         let listaErrores = document.querySelector('.errores')
+
+//         let formulario = document.querySelector("form");
+//         console.log(listaErrores)
+//         formulario.addEventListener("submit", (e) => {
+//             if (listaErrores != null) {
+//                 e.preventDefault()
+//             }console.log(listaErrores)
+          
+//             console.log(listaErrores)
+//         })
+//     })
+
+
+//     //     console.log(listaErrores)
+//     //     e.preventDefault()
+//     //     if (listaErrores != null) {
+        
+//     //     }
+//     //     e.preventDefault()
+//     // })
+// })
