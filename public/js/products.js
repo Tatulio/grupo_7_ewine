@@ -113,7 +113,7 @@ window.addEventListener('load', function (){
         if (maridaje.value.length < 20){
             maridajeError.classList.remove('display-errores')
             maridajeError.classList.add('errores')
-            maridajeError.innerText = 'Debe escribir al menos 2 caracteres'
+            maridajeError.innerText = 'Debe escribir al menos 20 caracteres'
         } else {
             maridajeError.classList.add('display-errores')
             maridajeError.classList.remove('errores')            

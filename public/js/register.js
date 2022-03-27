@@ -131,19 +131,7 @@ window.addEventListener('load', function (){
     
     })
 
-//     formulario.addEventListener('submit', function (e){
-//         let listaErrores = document.querySelector('.errores')
-
-//         let formulario = document.querySelector("form");
-//         console.log(listaErrores)
-//         formulario.addEventListener("submit", (e) => {
-//             if (listaErrores != null) {
-//                 e.preventDefault()
-//             }console.log(listaErrores)
-          
-//             console.log(listaErrores)
-//         })
-//     })
+//    
 
 
 //     //     console.log(listaErrores)
