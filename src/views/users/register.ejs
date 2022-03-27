@@ -4,22 +4,13 @@
     <main class="main-register">
 
 
-<<<<<<< HEAD
-        <form action ="/users/" enctype="multipart/form-data" method="post" id="formulario" class="register-signin">
-            <p class="display-error" id="formulario-error"></p>
-=======
         <form action ="/users/" enctype="multipart/form-data" method="post" class="register-signin" id="form">
->>>>>>> becbe32587c52832fd5b6edade397fc8925b5f7a
             <h2>Registro</h2>
             <fieldset class="fs-nombre" id="fs-nombre">
                 <label for="nombre">Nombre</label>
                 <input name="nombre" type="text" id="nombre" placeholder="Ingrese su nombre completo" 
                        value= "<%= locals.oldData ? oldData.nombre : null %>"> 
-<<<<<<< HEAD
-                       <p class="display-error" id="nombre-error"></p> 
-=======
                        <p  class="display-error" id="nombre-error"></p> 
->>>>>>> becbe32587c52832fd5b6edade397fc8925b5f7a
                 <% if (locals.errors && errors.nombre) { %>
                     <p class="errores"><%= errors.nombre.msg %> </p>
                 <% } %>
@@ -28,11 +19,7 @@
                 <label for="apellido">Apellido</label>
                 <input name="apellido" type="text" id="apellido" placeholder="Ingrese su apellido"
                        value= "<%= locals.oldData ? oldData.apellido : null %>">
-<<<<<<< HEAD
-                       <p class="display-error" id="apellido-error"></p>
-=======
                        <p  class="display-error" id="apellido-error"></p>
->>>>>>> becbe32587c52832fd5b6edade397fc8925b5f7a
                 <% if (locals.errors && errors.apellido) { %>
                     <p class="errores"><%= errors.apellido.msg %> </p>
                 <% } %>
@@ -41,11 +28,7 @@
                 <label for="email">Correo Electronico</label>
                 <input type="text" name="email" id="email" placeholder="Direccion de Email"
                        value= "<%= locals.oldData ? oldData.email : null %>">
-<<<<<<< HEAD
-                       <p class="display-error" id="email-error"></p>
-=======
                        <p  class="display-error" id="email-error"></p>
->>>>>>> becbe32587c52832fd5b6edade397fc8925b5f7a
                 <% if (locals.errors && errors.email) { %>
                     <p class="errores"><%= errors.email.msg %> </p>
                 <% } %>

@@ -10,13 +10,8 @@ window.addEventListener('load', function (){
     let passwordError = document.querySelector('#password-error')
     let password2 = document.querySelector('#password2')
     let password2Error = document.querySelector('#password2-error')
-<<<<<<< HEAD
-    let formulario = document.querySelector('#formulario')
-    let formularioError = document.querySelector('#formulario-error')
-=======
     let form = document.querySelector('#form')
 
->>>>>>> becbe32587c52832fd5b6edade397fc8925b5f7a
 
     nombre.focus();
 
@@ -26,11 +21,7 @@ window.addEventListener('load', function (){
         if (nombre.value.length < 2){
             nombreError.classList.remove('display-errores')
             nombreError.classList.add('errores')
-<<<<<<< HEAD
             nombreError.innerText = 'Debe escribir al menos 2 caracteres'
-=======
-            nombreError.innerText = 'Debe escribir al menos 3 caracteres'
->>>>>>> becbe32587c52832fd5b6edade397fc8925b5f7a
         } else {
             nombreError.classList.add('display-errores')
             nombreError.classList.remove('errores')
@@ -44,18 +35,11 @@ window.addEventListener('load', function (){
         if (apellido.value.length < 2){
             apellidoError.classList.remove('display-errores')
             apellidoError.classList.add('errores')
-<<<<<<< HEAD
             apellidoError.innerText = 'Debe escribir al menos 2 caracteres';
         } else {
             apellidoError.classList.add('display-errores')
             apellidoError.classList.remove('errores')
             
-=======
-            apellidoError.innerText = 'Debe escribir al menos 3 caracteres';
-        } else {
-            apellidoError.classList.add('display-errores')
-            apellidoError.classList.remove('errores')    
->>>>>>> becbe32587c52832fd5b6edade397fc8925b5f7a
         }
     })
 
