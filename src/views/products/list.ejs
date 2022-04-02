@@ -50,10 +50,8 @@
         
         <% if (locals.products) { %> 
             <% if (products.length > 0) { %>
-
                 <% products.forEach(product => { %>
                     <article class="vinos">
-
                         <a href="/products/<%= product.id %> " class="titulo-producto">  
                             
                             <% if (product.image) { %>
@@ -74,7 +72,7 @@
                             <a class="icono-edit" href="/products/update/<%= product.id %>">
                                 <i class= "fas fa-pen"></i>
                             </a>
-                            <form action="/products/delete/<%= product.id %>" method="post" id="form">
+                            <form action="/products/delete/<%= product.id %>" method="post" class="form">
                                 <input type="hidden" name="id" value="<%= product.id %>">
                                 <button class="boton-delete" type="submit" id="button">
                                     <i class="fas fa-trash"></i>
@@ -85,7 +83,6 @@
                        
                     </article>  
                 <% }) %>
-
             <% } else { %>
                 <h2> No hay producto</h2>
             <% } %>

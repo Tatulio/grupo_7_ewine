@@ -8,58 +8,51 @@
         <fieldset>
             <label for="name">Nombre</label>
                 <input type="text" name="name" id="name" placeholder="Nombre del vino">
-                <p class="display-error" id="name-error"></p>
         </fieldset>
         <fieldset>    
             <label for="anno">Año de Cosecha</label>
                 <input type="number" name="anno" id="anno" placeholder="Año de cosecha">
-                <p class="display-error" id="anno-error"></p>
         </fieldset>    
         <fieldset>
             <label for="tipoVino">Varietal</label>
-            <select class="selector" name="varietal" id="varietal">                
-                <option value="NULL">Seleccione Varietal</option>
+            <select class="selector" name="varietal">
+                <option value="NULL">Vacio</option>
             <% if (varietales.length > 0) { %>
                 <% varietales.forEach(product => { %>
                 <option value="<%= product.id%>"><%= product.name%></option> 
                 <% }) %> 
             <% } %> 
             </select>
-            <p class="display-error" id="varietal-error"></p>
         </fieldset>
         <fieldset>     
             <label for="tipoVino">Tipo de Vino</label>
-            <select class="selector" name="tipoVino" id="tipoVino">             
-                    <option value="NULL">Seleccione Tipo de Vino</option>
+            <select class="selector" name="tipoVino">                
+                    <option value="NULL">Vacio</option>
                 <% if (tipo_vino.length > 0) { %>
                     <% tipo_vino.forEach(product => { %>
                     <option value="<%= product.id%>"><%= product.name%></option> 
                     <% }) %> 
                 <% } %> 
-             </select>   
-             <p class="display-error" id="tipoVino-error"></p>  
+             </select>  
         </fieldset>
         <fieldset>
             <label for="tipoVino">Bodega</label>   
-            <select class="selector" name="bodega" id="bodega">
-                <option value="NULL">Seleccione Bodega</option>
+            <select class="selector" name="bodega">
+                <option value="NULL">Vacio</option>
             <% if (bodegas.length > 0) { %>
                 <% bodegas.forEach(product => { %>
                 <option value="<%= product.id%>"><%= product.name%></option> 
                 <% }) %> 
             <% } %> 
          </select>
-         <p class="display-error" id="bodega-error"></p>
         </fieldset>
         <fieldset>
             <label for="notasCata">Notas de Cata</label>        
                 <textarea rows="3" cols="30" name="notasCata" id="notasCata" placeholder="Nota de cata"></textarea>
-                <p class="display-error" id="notasCata-error"></p>
         </fieldset>
         <fieldset>    
             <label for="maridaje">Maridaje</label> 
-                <textarea rows="3" cols="30" name="maridaje" id="maridaje" placeholder="Maridaje" required></textarea>
-                <p class="display-error" id="maridaje-error"></p>
+                <textarea rows="3" cols="30" name="maridaje" id="maridaje" placeholder="Maridaje"></textarea>
         </fieldset>
         <section class="check">
             <fieldset class="fs-kl">    
@@ -78,18 +71,16 @@
             <fieldset>
                 <label for="file"></label>
                 <input type="file" name="file" id="file" multiple>
-                <p class="display-error" id="file-error"></p>
             </fieldset>
         <fieldset>
             <label for="price">Precio</label>
                 <input type="number" name="price" id="price" placeholder="Precio" min="0">
-                <p class="display-error" id="price-error"></p>
+            
         </fieldset>
         <fieldset>
             <button type="submit">Save</button> 
         </fieldset>
     </form>
-    <script src="/js/products.js"></script>
 
 </main>
 

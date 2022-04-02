@@ -14,15 +14,14 @@ const upload = multer({storage: multer.diskStorage({
 
 const validate = [
     body("email").isEmail().withMessage("El email no es valido"),
-    body("password").isLength({min: 8}).withMessage("La contraseña debe tener al menos 8 caracteres"),
-    body("password2").isLength({min: 8}).withMessage("La contraseña debe tener al menos 8 caracteres"),
-    body("nombre").isLength({min: 2}).withMessage("El nombre es obligatorio"),
-    body("apellido").isLength({min: 2}).withMessage("El apellido es obligatorio"),
+    body("password").isLength({min: 6}).withMessage("La contraseña debe tener al menos 6 caracteres"),
+    body("nombre").isLength({min: 1}).withMessage("El nombre es obligatorio"),
+    body("apellido").isLength({min: 1}).withMessage("El apellido es obligatorio"),
   ]
 
   const validate2 = [
     body("email").isEmail().withMessage("El email no es valido"),
-    body("password").isLength({min: 8}).withMessage("La contraseña debe tener al menos 8 caracteres"),
+    body("password").isLength({min: 6}).withMessage("La contraseña debe tener al menos 6 caracteres"),
   ]
 router.get("/",[auth], user.index)
 

@@ -9,18 +9,16 @@
             <label for="name">Nombre</label>
                 <input type="text" name="name" id="name" placeholder="Nombre del vino" 
                        value= "<%= locals.product ? product.name : null %>">
-                       <p class="display-error" id="name-error"></p>
         </fieldset>
         <fieldset>    
             <label for="anno">Año de Cosecha</label>
                 <input type="number" name="anno" id="anno" placeholder="Año de cosecha"
                        value= "<%= locals.product ? product.anno : null %>">
-                       <p class="display-error" id="anno-error"></p>
         </fieldset>    
         <fieldset>
             <label for="varietal">Varietal</label>
-                <select class="selector" name="varietal" id="varietal">
-                    <option value="NULL">Seleccione Varietal</option>
+                <select class="selector" name="varietal">
+                    <option value="NULL">Vacio</option>
                 <% if (varietales.length > 0) { %>
                     <% varietales.forEach(r => { %>
                     <option value="<%= r.id%>"
@@ -30,12 +28,11 @@
                     <% }) %> 
                 <% } %> 
                 </select>
-                <p class="display-error" id="varietal-error"></p>
         </fieldset>
         <fieldset>        
             <label for="tipoVino">Tipo de Vino</label>
-            <select class="selector" name="tipoVino" id="tipoVino">                
-                <option value="NULL">Seleccione Tipo de Vino</option>
+            <select class="selector" name="tipoVino">                
+                <option value="NULL">Vacio</option>
             <% if (tipos_vino.length > 0) { %>
                 <% tipos_vino.forEach(r => { %>
                     <option value="<%= r.id%>"     
@@ -44,13 +41,12 @@
                         <% } %> > <%= r.name%></option> 
                 <% }) %> 
             <% } %> 
-         </select>  
-         <p class="display-error" id="tipoVino-error"></p>    
+         </select>      
         </fieldset>
         <fieldset>    
             <label for="bodega">Bodega</label>
-            <select class="selector" name="bodega" id="bodega">
-                <option value="NULL">Seleccione Bodega</option>
+            <select class="selector" name="bodega">
+                <option value="NULL">Vacio</option>
             <% if (bodegas.length > 0) { %>
                 <% bodegas.forEach(r => { %> 
                 <option value="<%= r.id%>"
@@ -60,17 +56,14 @@
                 <% }) %> 
             <% } %> 
          </select>
-         <p class="display-error" id="bodega-error"></p>
         </fieldset>
         <fieldset class="maridaje-cata">
             <label for="notasCata">Notas de Cata</label>        
                 <textarea rows="3" cols="30" name="notasCata" id="notasCata" placeholder="Nota de cata"><%= locals.product ? product.notasCata : null %></textarea>
-                <p class="display-error" id="notasCata-error"></p>
         </fieldset>
         <fieldset class="maridaje-cata">     
             <label for="maridaje">Maridaje</label> 
             <textarea rows="3" cols="30" name="maridaje" id="maridaje" placeholder="Maridaje"><%= locals.product ? product.maridaje : null %></textarea>
-            <p class="display-error" id="maridaje-error"></p>
         </fieldset>
         <section class="check">
             <fieldset class="fs-kl">    
@@ -97,14 +90,13 @@
             <label for="price">Precio</label>
                 <input type="number" name="price" id="price" placeholder="Precio" min="0"
                        value= "<%= locals.product ? product.price : null %>">
-                       <p class="display-error" id="price-error"></p>
             
         </fieldset>
         <fieldset>
             <button type="submit">Save</button> 
         </fieldset>
     </form>
-    <script src="/js/products.js"></script>
+
 </main>
 
     <%- include("../includes/footer") %>

@@ -31,10 +31,6 @@ app.use(session({
 
  app.use (require("./middlewares/user"))
 
- //app.use(require("./routes/main"));
- //app.use("/users", require("./routes/user"));
-
-
 
 const mainRoutes = require("./routes/main")                                                        
 app.use(mainRoutes)
@@ -64,10 +60,6 @@ app.use("/api",apiRoutes)
 
 
 
-
-//var DataTypes = require('sequelize/lib/data-types');
-
-
 const mysql = require("mysql")
 
 
@@ -84,13 +76,3 @@ conexion.connect(function(error){
 }
 
 })
-
-/*conexion.query("SELECT * FROM users" , function(error, resultado, fields){
-    if(error)
-    throw error;
-
-    resultado.forEach(resultados => {
-        console.log(resultados.id, resultados.nombre, resultados.email,resultados.isAdmin, resultados.isActive, resultados.image)
-    })  })
-
-conexion.end;*/

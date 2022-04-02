@@ -10,8 +10,8 @@ window.addEventListener('load', function (){
     let passwordError = document.querySelector('#password-error')
     let password2 = document.querySelector('#password2')
     let password2Error = document.querySelector('#password2-error')
-    let form = document.querySelector('#form')
-
+    let formulario = document.querySelector('#formulario')
+    let formularioError = document.querySelector('#formulario-error')
 
     nombre.focus();
 
@@ -60,39 +60,8 @@ window.addEventListener('load', function (){
             emailError.classList.remove('errores') 
             
         }
-    })
 
-    password.addEventListener('change', function (e){
-        if (password.value.length < 8){
-            passwordError.classList.remove('display-errores')
-            passwordError.classList.add('errores')
-            passwordError.innerText = 'Debe escribir al menos 8 caracteres';
-        } else {
-            passwordError.classList.add('display-errores')
-            passwordError.classList.remove('errores')
-
-        }
-    })
-    password2.addEventListener('change', function (e){
-        if (password2.value != password.value){
-            password2Error.classList.remove('display-errores')
-            password2Error.classList.add('errores')
-            password2Error.innerText = 'Las contraseñas deben coincidir';
-        } else {
-            password2Error.classList.add('display-errores')
-            password2Error.classList.remove('errores')
-
-        }
-    })
-    
-
-    form.addEventListener('submit', function (e){
-        let listaErrores = document.querySelector('.errores')
-        console.log(listaErrores);
-    if (listaErrores != null) {
-        e.preventDefault();
-    }
-    
+       
     })
 
 
@@ -130,15 +99,3 @@ window.addEventListener('load', function (){
      }) 
     
     })
-
-//    
-
-
-//     //     console.log(listaErrores)
-//     //     e.preventDefault()
-//     //     if (listaErrores != null) {
-        
-//     //     }
-//     //     e.preventDefault()
-//     // })
-// })

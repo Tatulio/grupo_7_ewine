@@ -16,12 +16,6 @@ router.get("/products", api.products) // http://localhost/api/users
 
 router.get("/products/:id", api.productDetail) // http://localhost/api/users/id
 
-//router.post("/", [upload.any()], product.save)
 
-
-
-//router.post("/update/:id", product.modify)
-
-//router.post("/delete/:id", product.delete)
 
 module.exports = router
