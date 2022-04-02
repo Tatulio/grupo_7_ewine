@@ -19,100 +19,87 @@
               </article>
         </section>
         <article class="titulares">Destacados</article>
-        <section class="cajadecajas">
-            <article class="vinos">
-                <a href="/vino"><picture>
-                        <img width="90%" height="70%" src="/images/Single-Vineyard-Gualtallary-Malbec.webp" alt="blanco">
-                    </picture>
-                    <div class="info">
-                    <p>Gewurztraminer</p>
-                    <p class="aclaracion">Caja x6 botellas</p>
-                    <p class="precio">$8.000</p>
-                    <button>Agregar</button>
-                    </div></a>
-            </article>
-            <article class="vinos">
-                <a href="/vino"><picture>
-                        <img width="90%" height="70%" src="/images/Rutini-Rose-de-Malbec.webp" alt="blanco">
-                    </picture>
-                    <div class="info">
-                    <p>Gewurztraminer</p>
-                    <p class="aclaracion">Caja x6 botellas</p>
-                    <p class="precio">$8.000</p>
-                    <button>Agregar</button>
-                    </div></a>
-                </article>
-                <article class="vinos">
-                <a href="/vino"><picture>
-                        <img width="90%" height="70%" src="/images/Rutini-Malbec.webp" alt="blanco">
-                    </picture>
-                    <div class="info">
-                    <p>Gewurztraminer</p>
-                    <p class="aclaracion">Caja x6 botellas</p>
-                    <p class="precio">$8.000</p>
-                    <button>Agregar</button>
-                    </div></a>
-                </article> 
-                <article class="vinos">
-                <a href="/vino"><picture>
-                        <img width="90%" height="70%" src="/images/Single-Vineyard-Gualtallary-Malbec.webp" alt="blanco">
-                    </picture>
-                    <div class="info">
-                    <p>Gewurztraminer</p>
-                    <p class="aclaracion">Caja x6 botellas</p>
-                    <p class="precio">$8.000</p>
-                    <button>Agregar</button>
-                    </div></a>
-                </article>   
-    </section>
+        <section class="catalogo">
+        
+            <% if (locals.products) { %> 
+                <% if (products.length > 0 )  { %>
+                 <!-- <ul class="products"> -->
+                    <% products.slice(0, 4).forEach(product => { %>
+                        <article class="vinos">
+                        <!-- <li class="product"> -->
+                            <a href="/catalogo/<%= product.id %> " class="titulo-producto">  
+                                
+                                <% if (product.image) { %>
+                                        <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">                                
+                                <% } else { %>
+                                    <img class="imagen-producto" src="/uploads/products/default.jpg" alt="" srcset="">
+                                <% }%>
+                                </a>
+                                <section class="info">
+                                <span>
+                                    <%= product.name %> 
+                                </span>
+                                <span>
+                                    $<%= product.price %> 
+                                </span>
+                                </section>
+                                <section class="botones">
+                                <form class="fs-button">
+                                    <input type="hidden" name="id" value="<%= product.id %>">
+                                    <button class="boton-agregar">Agregar</button>
+                                </form>
+                            </section>                   
+                        </article>  
+                    <% }) %>
+                <% } else { %>
+                    <h2> No hay producto</h2>
+                <% } %>
+                <% } else { %>
+                    <h2> No hay producto</h2>
+           <% } %>
+            </section>
+        
     <br>
     <article class="titulares">Sección de Ofertas</article>
-        <section class="cajadecajas">
-            <article class="vinos">
-                <a href="/vino"><picture>
-                        <img width="90%" height="70%" src="/images/Single-Vineyard-Gualtallary-Malbec.webp" alt="blanco">
-                    </picture>
-                    <div class="info">
-                    <p>Gewurztraminer</p>
-                    <p class="aclaracion">Caja x6 botellas</p>
-                    <p class="precio">$8.000</p>
-                    <button>Agregar</button>
-                    </div></a>
-            </article>
-            <article class="vinos">
-                <a href="/producto"><picture>
-                        <img width="90%" height="70%" src="/images/Rutini-Rose-de-Malbec.webp" alt="blanco">
-                    </picture>
-                    <div class="info">
-                    <p>Gewurztraminer</p>
-                    <p class="aclaracion">Caja x6 botellas</p>
-                    <p class="precio">$8.000</p>
-                    <button>Agregar</button>
-                    </div></a>
-                </article>
-                <article class="vinos">
-                <a href="/vino"><picture>
-                        <img width="90%" height="70%" src="/images/Rutini-Malbec.webp" alt="blanco">
-                    </picture>
-                    <div class="info">
-                    <p>Gewurztraminer</p>
-                    <p class="aclaracion">Caja x6 botellas</p>
-                    <p class="precio">$8.000</p>
-                    <button>Agregar</button>
-                    </div></a>
-                </article> 
-                <article class="vinos">
-                <a href="/vino"><picture>
-                        <img width="90%" height="70%" src="/images/Single-Vineyard-Gualtallary-Malbec.webp" alt="blanco">
-                    </picture>
-                    <div class="info">
-                    <p>Gewurztraminer</p>
-                    <p class="aclaracion">Caja x6 botellas</p>
-                    <p class="precio">$8.000</p>
-                    <button>Agregar</button>
-                    </div></a>
-                </article>   
-    </section>
+    <section class="catalogo">
+        
+        <% if (locals.products) { %> 
+            <% if (products.length > 0 )  { %>
+             <!-- <ul class="products"> -->
+                <% products.slice(4, 8).forEach(product => { %>
+                    <article class="vinos">
+                    <!-- <li class="product"> -->
+                        <a href="/catalogo/<%= product.id %> " class="titulo-producto">  
+                            
+                            <% if (product.image) { %>
+                                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">                                
+                            <% } else { %>
+                                <img class="imagen-producto" src="/uploads/products/default.jpg" alt="" srcset="">
+                            <% }%>
+                            </a>
+                            <section class="info">
+                            <span>
+                                <%= product.name %> 
+                            </span>
+                            <span>
+                                $<%= product.price %> 
+                            </span>
+                            </section>
+                            <section class="botones">
+                            <form class="fs-button">
+                                <input type="hidden" name="id" value="<%= product.id %>">
+                                <button class="boton-agregar">Agregar</button>
+                            </form>
+                        </section>                   
+                    </article>  
+                <% }) %>
+            <% } else { %>
+                <h2> No hay producto</h2>
+            <% } %>
+            <% } else { %>
+                <h2> No hay producto</h2>
+       <% } %>
+        </section>
     </main>
     <%- include("./includes/footer") %>
 </body>

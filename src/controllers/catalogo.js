@@ -6,7 +6,7 @@ module.exports = {
         .then((resultado) => {
             res.render("catalogo", {
                 styles: ["catalogo"],
-                title: "Administrador",
+                title: "Catalogo",
                 products: resultado})
             })
     },
