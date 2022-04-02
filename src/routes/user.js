@@ -29,6 +29,11 @@ router.get("/login", user.login)
 router.get("/register", user.register)
 router.get("/profile",[access], user.profile)
 
+router.post("/", [upload.any()], user.save)
+router.get("/update/:id", user.update)
+router.post("/update/:id", user.modify)
+router.post("/delete/:id", user.delete)
+
 router.post("/", [upload.any()], validate, user.save)
 router.post("/access",[validate2], user.access)
 router.post("/logout", user.logout)

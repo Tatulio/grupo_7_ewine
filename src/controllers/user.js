@@ -24,11 +24,9 @@ module.exports= {
                 styles: ["register"],
                 oldData: req.body
             })
-        }
-    
+        }    
         user.search("email",req.body.email).then((exist) => {
-   
-        if(exist){
+           if(exist){
             return res.render("users/register",{
                 styles: ["register"],
                 errors:{
@@ -93,6 +91,32 @@ module.exports= {
     return res.redirect("/")
 
     },
+    modify: (req,res) => { 
+        console.log(req.body)
+        user.update(req.params.id,req.body)
+        .then ((resultado) => {
+            console.log(resultado)
+            delete req.session.user
+            res.cookie('email',null,{maxAge:-1})
+            return res.redirect('/')           
+        })
+    },
+    delete: (req,res) => {
+        user.delete(req.params.id).then((resultado) => {
+        return res.redirect("/users/")
+    })},
+    update: (req,res) => {
+        user.search("id", req.params.id).then((resultado) => {
+            return resultado ? 
+            res.render("users/update", {
+            styles: ["register"],
+            title: "Editar perfil de " + resultado.nombre + " " + resultado.apellido,
+            user: resultado 
+
+        }) : res.render("error",{
+            msg: "Producto no encontrado"
+        })
+    })},
     logout: (req,res) => {
         delete req.session.user
         res.cookie('email',null,{maxAge:-1})

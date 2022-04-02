@@ -24,6 +24,23 @@ const model = {
 
     create: data => db["user"].create(model.generated(data)).then((resultado) => resultado),
 
+    update: (id, data) => db["user"].update(
+      {
+      email: data.email,
+      nombre: data.name,
+      apellido: data.apellido,
+      },
+      {
+          where: {id: id}
+      })
+      .then((resultado) => {
+        console.log(data.name)
+      return id
+  }),    
+  delete: id => db["user"].destroy({
+      where:{id: id}
+  }), 
+
     validate: [
         body("email").isEmail().withMessage("El email no es valido"),
         body("password").isLength({min: 6}).withMessage("La contraseña debe tener al menos 6 caracteres"),
