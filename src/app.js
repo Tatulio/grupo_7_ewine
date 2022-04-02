@@ -59,7 +59,8 @@ app.use("/catalogo",catalogoRoutes)
 const userRoutes = require("./routes/user")
 app.use("/users",userRoutes)
 
-
+const apiRoutes = require("./routes/apis")
+app.use("/api",apiRoutes)
 
 
 
