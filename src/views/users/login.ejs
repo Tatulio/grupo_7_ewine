@@ -8,13 +8,16 @@
                 <label for="email">Correo Electronico</label>
                 <input name="email" type="email" id="email" placeholder="Direccion de Email"
                        value= "<%= locals.oldData ? oldData.email : null %>">
+                       <p  class="display-error" id="email-error"></p> 
                 <% if (locals.errors && errors.email) { %>
                     <p class="errores"><%= errors.email.msg %> </p>
                 <% } %>
+
             </fieldset>
             <fieldset class="fs-pass">
                 <label  for="password">Contraseña</label>
                 <input name="password" type="password" id="password" placeholder="**********">
+                <p  class="display-error" id="password-error"></p> 
                 <% if (locals.errors && errors.password) { %>
                     <p class="errores"><%= errors.password.msg %> </p>
                 <% } %>
@@ -40,7 +43,7 @@
             
 
         </form>
-
+        <script src="/js/login.js"></script>
 
     </main>
     <%- include("../includes/footer") %>
