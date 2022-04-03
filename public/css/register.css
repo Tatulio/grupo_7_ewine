@@ -58,6 +58,12 @@ main input {
     width: 95%;
 }
 
+.boton-imagen-edit {    
+    border: 0;
+    margin-top: 1px;
+    width: 100%;
+}
+
 main button:hover {
     box-shadow:0px 0px 10px #AD9863;
 }
@@ -161,6 +167,20 @@ input.errores:hover {
     display: none;
 }
 
+.register-signin {
+    width: 80%; 
+    margin: 10%;
+    border: solid #AD9863 1px;
+    border-radius: 4px;
+    padding: 2vh;
+    text-align: start;
+}
+
+.userName {
+    margin-top: 20px;
+}
+
+
 @media (min-width: 768px) {  /*TABLET*/
     body {        
         background-color: #440217
@@ -169,7 +189,7 @@ input.errores:hover {
 .main-register {
     background-color: #F4F4F4;
     width: 85vw;
-    min-height: 50vh;
+    min-height: 58vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -183,8 +203,7 @@ input.errores:hover {
     border: solid #AD9863 1px;
     border-radius: 4px;
     padding: 2%;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 
 .register-login {
@@ -202,6 +221,17 @@ fieldset label{
     display: block;
 }
 
+.register-signin {
+    width: 40%;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: solid #AD9863 1px;
+    border-radius: 4px;
+    padding: 2%;
+    flex-direction: column;
 
+}
 
 }

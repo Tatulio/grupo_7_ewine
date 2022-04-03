@@ -3,19 +3,20 @@
     <%- include("../includes/header") %>
     <main class="main-profile">
         <section>
-            <p>Bienvenido <%= user.nombre %> <%= user.apellido %></p>
-        
+            <p class="nombreUsuario">Bienvenido <%= user.nombre %> <%= user.apellido %></p>
+            <p class="mailUsuario"><%= user.email %></p>
             <% if (user.image) { %>
                 <img class="imagen-profile" src="/uploads/users/<%= user.image %>" alt="" srcset="">          
             <% } %>
-            <form action ="/users/logout" method="post" class="profile">
-                
-                    <button type="submit">Logout</button>    
-                    <a class="icono-edit" href="/users/update/<%= user.id %>">
-                        <i class= "fas fa-pen"></i>
-                    </a>
+            <article class="botones">
+            <form action ="/users/update/<%= user.id %>">
+                <button type="submit">Editar perfil</button>
             </form>
-
+            <form action ="/users/logout" method="post" class="profile">                
+                    <button type="submit">Cerar sesion</button>
+            </form>
+            </article>
+        </section>
     </main>
     <%- include("../includes/footer") %>
 </body>

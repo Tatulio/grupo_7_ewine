@@ -3,30 +3,33 @@
 
     <%- include("../includes/header") %>   
 <main>
-    <h2><%= locals.title ? title : null %> </h2>
-    <form action="/users/update/<%=user.id%>"  method="post">
-        <fieldset>
+    <h2 class="userName"><%= locals.title ? title : null %> </h2>
+    <form action="/users/update/<%=user.id%>"  method="post" class="register-signin" id="form">
+        <fieldset class="fs-nombre" id="fs-nombre">
             <label for="nombre">Nombre</label>
                 <input type="text" name="name" id="nombre" placeholder="Nombre" 
                        value= "<%= locals.user ? user.name : null %>">
-        </fieldset>
-        <fieldset>
+                       <p class="display-error" id="nombre-error"></p> 
+                    </fieldset>
+        <fieldset class="fs-apellido">
             <label for="apellido">Apellido</label>
                 <input type="text" name="apellido" id="apellido" placeholder="Apellido" 
                        value= "<%= locals.user ? user.apellido : null %>">
+                       <p class="display-error" id="apellido-error"></p>
         </fieldset>
        <fieldset>
-            <label for="file"></label>
+            <label class="boton-imagen-edit" for="file">
             <input type="file" name="file" id="file" multiple>
+        </label>
         </fieldset>
         
 
             
         <fieldset>
-            <button type="submit">Save</button> 
+            <button type="submit">Guardar</button> 
         </fieldset>
     </form>
-
+    <script src="/js/register.js"></script>
 </main>
 
     <%- include("../includes/footer") %>

@@ -114,7 +114,7 @@ module.exports= {
             user: resultado 
 
         }) : res.render("error",{
-            msg: "Producto no encontrado"
+            msg: "Usuario no encontrado"
         })
     })},
     logout: (req,res) => {
