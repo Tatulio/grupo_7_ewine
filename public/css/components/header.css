@@ -45,6 +45,15 @@ img {
     margin: 1.5vh 0;
 }
 
+.main-navbar a {        
+    color: #FFFFFF;        
+    display: inline-block;
+    text-decoration: none;
+    font-size: 21.5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}   
+
 .formsearch {
     position: relative;
     display:flex;    
@@ -89,6 +98,7 @@ img {
     color: #AD9863;
     font-size: 25px;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
 .icon-logout {
@@ -97,30 +107,6 @@ img {
     padding: 5px;
     background-color: #383D41;
     border:none;
-}
-
-.burger-menu {
-    text-align: center;
-    font-size: 30px;
-    width: 50px; 
-    padding: 6px;
-    box-sizing: border-box;
-    border: solid 1px #AD9863;
-    margin: 3vh 0;
-    border-radius: 10px;
-    transition: all 0.2s;
-}
-
-.burger-menu:hover{
-    box-shadow:0px 0px 10px #AD9863;
-}
-
-.tresbarras{
-    color: #AD9863;
-}
-
-.main-navbar {
-    display: none;
 }
 
 .main-navbar ul {
@@ -168,13 +154,6 @@ img {
         align-self: center;
     }
 
-    .main-navbar a {        
-        color: #FFFFFF;        
-        display: inline-block;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 0 10px;
-    }    
 
     .borde{
         border-right: white solid 1.5px; 
@@ -195,6 +174,14 @@ img {
     .banner {
         display: none;
     }
+
+    .icon-carrito-usuario a {       
+        margin-bottom: 0px;
+    }
+
+    .main-navbar a {
+        margin-bottom: 0px;
+    } 
 }
 
 

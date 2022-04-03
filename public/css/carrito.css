@@ -20,6 +20,11 @@ img {
     max-height: 100%;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .secciones-carrito {
     display: flex;
     flex-wrap: wrap;
@@ -263,6 +268,129 @@ h5 {
     color: #AD9863;
     margin: 30px 0 20px 5%;
 }
+
+.catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 2.5%
+}
+
+.vinos{
+    display: flex;
+    min-width:262.9px;
+    max-width:263px;
+    max-height: 397.5px;
+    min-height: 397.47px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 20px 2%;
+    background: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: none;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.vinos:hover{
+    box-shadow:0px 0px 10px rgb(100, 100, 100);
+}
+
+.vinos img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 300px;
+    min-height: 299.99px;
+    max-width: 263px;
+    min-width: 262.99px;
+}
+
+.imagen-producto {
+    max-width: 40%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    font-style: italic;
+    font-family: "Roboto";
+    font-size: 12px;
+}
+
+.boton-agregar {width: 20vh;
+    margin-bottom: 3vh;
+    border-radius: 6px;
+    border: none;
+    background-color: #383D41;
+    color: #ebebeb ;
+    height: 1.5em;
+    transition: all 0.2s;
+}
+
+.boton-agregar:hover {
+    box-shadow:0px 0px 10px #AD9863;
+}
+
+.boton-agregar:focus {
+    background-color: #AD9863;
+    color: #383D41;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+main input:hover {
+    box-shadow:0px 0px 10px #AD9863;
+}
+
+.producto-agregado-carrito {
+    margin-bottom: 3%;
+}
+
+.vinos-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px #383D41;    
+    transition: all 0.2s;
+    padding: 0px 5px;
+    margin: 1%;
+}
+
+.vinos-carrito:hover {
+    box-shadow:0px 0px 5px #AD9863;
+}
+
+.imagen-profile-carrito {
+    max-width: 60px;
+}
+
+.titulo-producto-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+
+.info-carrito-nombre {
+    text-align: left;
+    width: 50px;
+    font-style: italic;
+    transition: all 0.2s;
+}
+
+.info-carrito-precio {
+    text-align: right;
+}
+
+.info-carrito-nombre:hover {
+    text-decoration: underline;
+}
+
 
 
 @media (min-width: 768px) {
