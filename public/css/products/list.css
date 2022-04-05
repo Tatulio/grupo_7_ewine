@@ -65,6 +65,11 @@ span{
     font-style: normal;
     text-decoration: none;
     color: black;
+    transition: all 0.2s;
+}
+
+.menuVertical nav a:hover{
+    text-decoration: underline;
 }
 
 .titulo-producto {

@@ -52,7 +52,13 @@ footer{
     color: #A9AAAA;
     flex-direction: column;
     text-decoration-line: none;
+    transition: all 0.2s;
 }
+
+.link-footer a:hover{
+    text-decoration: underline;
+}
+
 
 .link-footer-principal {
     font-size: 21px;
