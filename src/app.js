@@ -50,14 +50,11 @@ app.use("/products",productRoutes)
 const catalogoRoutes = require("./routes/catalogo")
 app.use("/catalogo",catalogoRoutes)
 
-
-
 const userRoutes = require("./routes/user")
 app.use("/users",userRoutes)
 
 const apiRoutes = require("./routes/apis")
 app.use("/api",apiRoutes)
-
 
 
 const mysql = require("mysql")
