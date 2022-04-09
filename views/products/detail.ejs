@@ -1,0 +1,59 @@
+<%- include("../includes/head") %>
+<body>
+    <%- include("../includes/header") %>   
+    <main>
+        <h2><%= locals.title ? title : null %> </h2>
+
+        <section class="caja-producto-principal">
+
+            <picture class="imagen-producto">
+                <% if (product.image) { %>
+                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">          
+                <% } %>
+            </picture>
+         
+                <article class="caja-textos-principal">
+                <article class="producto-datos">
+                  <p><b>AÑO DE COSECHA:</b> <%= product.anno %></p>  
+                  <p><b>VARIEDADES:</b> <%= product['tipoVarietal'].name %></p>
+                  <p><b>TIPO:</b> <%= product['tipoVino1'].name %></p>
+                  <p><b>BODEGA: </b><%= product['tipoBodega'].name %></p>
+                </article>
+  
+                <h4 class="titulo-maridaje-cata">NOTAS DE CATA</h4>
+  
+                <article class="producto-cata"> 
+                   <p><%= product.notasCata %></p>
+                </article> 
+  
+                <h4 class="titulo-maridaje-cata">MARIDAJE</h4>
+  
+                <article class="producto-maridaje"> 
+                    <p><%= product.maridaje %></p>
+                </article>  
+                    <p class="precio">$<%= product.price %></p>
+                    <section class="botones">
+                        <a class="icono-edit" href="/products/update/<%= product.id %>">
+                            <i class= "fas fa-pen"></i>
+                        </a>
+                        <form action="/products/delete/<%= product.id %>" method="post" class="form">
+                            <input type="hidden" name="id" value="<%= product.id %>">
+                            <button class="boton-delete" type="submit" id="button">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </section>
+                </article>
+              
+             
+                
+            <div class="esquinero1"></div>
+            <div class="esquinero2"></div> 
+            <div class="esquinero3"></div> 
+            <div class="esquinero4"></div>
+            </article>
+        </section>
+    </main>
+    <%- include("../includes/footer") %>
+</body>
+</html>

@@ -40,7 +40,8 @@ const model = {
                 e.imageURL = "http://localhost:9000/api/products/"+e.id
                 delete e.image
             })
-            var apiResult = [{count: resultado.length, counCat:{Malbec: 0, CabernetSauvignon: 0, Merlot: 0, Syrah: 0, Chardonnay: 0, SauvignonBlanc: 0, PinotNoir: 0},products: resultado}]           
+            var apiResult = [{count: resultado.length, ultimoProducto: resultado[resultado.length-1].name, counCat:{Malbec: 0, CabernetSauvignon: 0, Merlot: 0, Syrah: 0, Chardonnay: 0, SauvignonBlanc: 0, PinotNoir: 0},products: resultado}]           
+            
             for (i=0; i < resultado.length; i++){
                 resultado[i]['tipoVarietal.name'] == 'Cabernet Sauvignon' ? apiResult[0].counCat['CabernetSauvignon'] ++ : null
                 resultado[i]['tipoVarietal.name'] == 'Malbec' ? apiResult[0].counCat['Malbec'] ++ : null

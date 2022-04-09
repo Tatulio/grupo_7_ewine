@@ -1,0 +1,49 @@
+<header class="main-header">
+    <section class="main-header-top-bar">
+        <picture class="logo">
+            <a class="" href="/"><img  src="/images/logo.png" alt="icono"></a>
+            </picture>
+
+            <nav class="main-navbar">
+                <a href="/catalogo">Vinos</a>
+                <a class="borde" href="/nosotros">Nosotros</a>
+                <a href="https://www.rutiniwines.com/contacto/" target="_blank">Contacto</a>
+                <% if (!user) { %>            
+                   
+                    <% } else if (user && user.isAdmin) { %>                        
+                        <a class="borde" href="/products">Productos</a>
+                        <a href="/products/create">Crear</a>
+                    <% } %> 
+
+
+                
+            </nav>
+
+                <form action="#" class="formsearch">
+                    <input type="search" name="barra" placeholder="Buscar..."><button class="iconolupa"><i class="fas fa-search"></i></button>
+                </form>
+        
+                <nav class="icon-carrito-usuario">                                        
+                    <% if (!user) { %>            
+                     <a href="/users/register"><i class="fas fa-user"></i></a>
+                     <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
+                     <% } else if (user && user.isAdmin) { %>                        
+                         <a href="/users/profile"><%= user.nombre + " Ewine"%></a>
+                         <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                         <form action="/users/logout" method="post">
+                             <button class="icon-logout" type="submit">
+                                 <i class="fas fa-sign-out-alt"></i>
+                             </button>
+                         </form>
+                     <% } else { %>                        
+                         <a href="/users/profile"><%= user.nombre %></a>
+                         <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                         <form action="/users/logout" method="post">
+                              <button class="icon-logout" type="submit">
+                                 <a href="/home"><i class="fas fa-sign-out-alt"></i></a>
+                             </button>
+                         </form>                  
+                     <% } %> 
+                 </nav>
+            </section>           
+</header>

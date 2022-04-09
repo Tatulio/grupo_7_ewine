@@ -1,0 +1,98 @@
+<%- include("../includes/head") %>
+<body>
+
+    <%- include("../includes/header") %>   
+ 
+    <main class="main-content">
+
+        <section class="menuVertical">
+            <article>
+                <h3>TIPOS DE VINO</h3>
+                <nav>
+                    <a href="/Blanco">Blanco</a>
+                    <a href="/Tinto">Tinto</a>
+                    <a href="/Espumantes">Espumantes</a>
+                </nav>
+            </article>
+
+            <article>
+                <h3>BODEGAS</h3>
+                <nav>
+                    <a href="/Rutini">Rutini</a>
+                    <a href="/Labiano">Labiano</a>
+                    <a href="/Luigi bosca">Luigi bosca</a>
+                    <a href="/Terrazas">Terrazas</a>
+                </nav>
+            </article>
+
+            <article>
+                <h3>VARIETAL</h3>
+                <nav>
+                    <a href="/Merlot">Merlot</a>
+                    <a href="/Malbec">Malbec</a>
+                    <a href="/Chardonnay">Chardonnay</a>
+                    <a href="/Cabernet sauvignon">Cabernet sauvignon</a>
+                </nav>
+            </article>
+
+            <article>
+                <h3>AÑO COSECHA</h3>
+                <nav>
+                    <a href="/2019">2019</a>
+                    <a href="/2018">2018</a>
+                    <a href="/2017">2017</a>
+                    <a href="/2016">2016</a>
+                </nav>
+            </article>
+        </section>
+
+        <section class="catalogo">
+        
+        <% if (locals.products) { %> 
+            <% if (products.length > 0) { %>
+                <% products.forEach(product => { %>
+                    <article class="vinos">
+                        <a href="/products/<%= product.id %> " class="titulo-producto">  
+                            
+                            <% if (product.image) { %>
+                                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">                                
+                            <% } else { %>
+                                <img class="imagen-producto" src="/uploads/products/default.jpg" alt="" srcset="">
+                            <% } %>
+                        </a>
+                            <section class="info">
+                            <span>
+                                <%= product.name %> 
+                            </span>
+                            <span>
+                                $<%= product.price %> 
+                            </span>
+                            </section>
+                        <section class="botones">
+                            <a class="icono-edit" href="/products/update/<%= product.id %>">
+                                <i class= "fas fa-pen"></i>
+                            </a>
+                            <form action="/products/delete/<%= product.id %>" method="post" class="form">
+                                <input type="hidden" name="id" value="<%= product.id %>">
+                                <button class="boton-delete" type="submit" id="button">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </section>
+ 
+                       
+                    </article>  
+                <% }) %>
+            <% } else { %>
+                <h2> No hay producto</h2>
+            <% } %>
+            <% } else { %>
+                <h2> No hay producto</h2>
+       <% } %>
+        </section>
+    </main>
+    <script src="/js/list.js"></script>
+
+    <%- include("../includes/footer") %>
+</body>
+</html>

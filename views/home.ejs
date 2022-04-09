@@ -1,0 +1,107 @@
+<%- include("./includes/head") %>
+<body>
+
+    <%- include("./includes/header.ejs") %>   
+    <picture>
+        <img class="banner" src="/images/BANNER-VINO.jpg" alt="banner">
+    </picture>   
+    <main>
+        <section class="foto-texto-principal">
+              <picture class="bodega">
+                <img class="bodegas-tablet" src="/images/Bodega_Montagnac.jpg"
+                alt="Bodega-rutini-tablet">
+                <img class="bodegas-desktop" src="/images/bodega.jpg"
+                alt="Bodega-rutini-desktop">              
+              </picture>
+              <article class="text-titulo-bodega">
+                <p class="text-titulo">EWINE | Desde 2021</p>
+                <p class="text-bodega">Al pie de La Cordillera de los Andes, en el corazón del Alto Valle de Uco, creamos y diseñamos vinos que despliegan todo el potencial de un suelo privilegiado. Inmersos en la naturaleza de este entorno único, procuramos el cuidado y evolución del mismo terroir que nos vio nacer hace más de 100 años.</p>
+              </article>
+        </section>
+        <article class="titulares">Destacados</article>
+        <section class="catalogo">
+        
+            <% if (locals.products) { %> 
+                <% if (products.length > 0 )  { %>
+                 <!-- <ul class="products"> -->
+                    <% products.slice(0, 4).forEach(product => { %>
+                        <article class="vinos">
+                        <!-- <li class="product"> -->
+                            <a href="/catalogo/<%= product.id %> " class="titulo-producto">  
+                                
+                                <% if (product.image) { %>
+                                        <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">                                
+                                <% } else { %>
+                                    <img class="imagen-producto" src="/uploads/products/default.jpg" alt="" srcset="">
+                                <% }%>
+                                </a>
+                                <section class="info">
+                                <span>
+                                    <%= product.name %> 
+                                </span>
+                                <span>
+                                    $<%= product.price %> 
+                                </span>
+                                </section>
+                                <section class="botones">
+                                <form class="fs-button">
+                                    <input type="hidden" name="id" value="<%= product.id %>">
+                                    <button class="boton-agregar">Agregar</button>
+                                </form>
+                            </section>                   
+                        </article>  
+                    <% }) %>
+                <% } else { %>
+                    <h2> No hay producto</h2>
+                <% } %>
+                <% } else { %>
+                    <h2> No hay producto</h2>
+           <% } %>
+            </section>
+        
+    <br>
+    <article class="titulares">Sección de Ofertas</article>
+    <section class="catalogo">
+        
+        <% if (locals.products) { %> 
+            <% if (products.length > 0 )  { %>
+             <!-- <ul class="products"> -->
+                <% products.slice(4, 8).forEach(product => { %>
+                    <article class="vinos">
+                    <!-- <li class="product"> -->
+                        <a href="/catalogo/<%= product.id %> " class="titulo-producto">  
+                            
+                            <% if (product.image) { %>
+                                    <img class="imagen-profile" src="/uploads/products/<%= product.image %>" alt="" srcset="">                                
+                            <% } else { %>
+                                <img class="imagen-producto" src="/uploads/products/default.jpg" alt="" srcset="">
+                            <% }%>
+                            </a>
+                            <section class="info">
+                            <span>
+                                <%= product.name %> 
+                            </span>
+                            <span>
+                                $<%= product.price %> 
+                            </span>
+                            </section>
+                            <section class="botones">
+                            <form class="fs-button">
+                                <input type="hidden" name="id" value="<%= product.id %>">
+                                <button class="boton-agregar">Agregar</button>
+                            </form>
+                        </section>                   
+                    </article>  
+                <% }) %>
+            <% } else { %>
+                <h2> No hay producto</h2>
+            <% } %>
+            <% } else { %>
+                <h2> No hay producto</h2>
+       <% } %>
+        </section>
+    </main>
+    <%- include("./includes/footer") %>
+</body>
+</html>
+
