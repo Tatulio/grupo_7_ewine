@@ -1,1 +1,0 @@
-module.exports = (req,res,next) => req.session && req.session.user ? req.session.user.isAdmin ? next() : res.redirect("/") : res.redirect("users/login");
