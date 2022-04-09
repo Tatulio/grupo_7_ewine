@@ -5,18 +5,16 @@ const app = express();
 const cookie = require("cookie-parser");
 const session = require("express-session");
 const bp = require('body-parser');
-const cors = require('cors');
 
+const cors = require('cors');
 
 const corsOptions ={
     origin:'*', 
     credentials:true,
     optionSuccessStatus:200,
- }
+ };
 
- app.use(cors(corsOptions));
- 
-
+ app.use(cors(corsOptions))
 app.set("view engine", "ejs");
 app.set("views" , path.resolve(__dirname, "views"));
 app.set("port", process.env.PORT || 9000);
