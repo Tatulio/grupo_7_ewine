@@ -12,7 +12,12 @@ const model = {
             resultado.forEach(e => { 
                 e.imageURL = "http://localhost:9000/api/users/"+e.id
             })
-            return resultado
+            let objetoResult = [{
+                count: resultado.length,
+                ultimoUser: resultado[resultado.length-1].nombre + " " + resultado[resultado.length-1].apellido +" | " + resultado[resultado.length-1].email,
+                users: resultado 
+            }]
+            return objetoResult
     }),
 
     userDetail: (id) => db["user"].findByPk(id,{

@@ -9,15 +9,11 @@ const controller = {
     users: (req,res) => {
         apis.usersAll()
         .then((resultado) => {           
-            let apiResult = [{
-                    longitud: resultado.length,
-                    users: resultado
-                }]
-                res.json(apiResult)
+                res.json(resultado)
              })
     },
     userDetail: (req,res) => {
-        apis.detail(req.params.id)
+        apis.userDetail(req.params.id)
         .then((resultado) => res.json(resultado))
     },
     products: (req,res) => {
