@@ -145,7 +145,10 @@ section {
     box-shadow:0px 0px 10px #AD9863;
 }
 
-
+.display-error {
+    margin-top:5px;
+    color: red;
+}
 
 @media (min-width: 768px) {
  body{     

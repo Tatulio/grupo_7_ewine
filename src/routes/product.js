@@ -13,7 +13,7 @@ const upload = multer({storage: multer.diskStorage({
 
 router.get("/", [auth], product.product)
 
-router.get("/create",[auth], product.create)
+router.get("/create",[access],[auth], product.create)
 
 router.get("/:id", product.show)
 

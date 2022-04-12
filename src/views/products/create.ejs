@@ -8,10 +8,12 @@
         <fieldset>
             <label for="name">Nombre</label>
                 <input type="text" name="name" id="name" placeholder="Nombre del vino">
+                <p  class="display-error" id="name-error"></p>
         </fieldset>
         <fieldset>    
             <label for="anno">Año de Cosecha</label>
                 <input type="number" name="anno" id="anno" placeholder="Año de cosecha">
+                <p  class="display-error" id="anno-error"></p>
         </fieldset>    
         <fieldset>
             <label for="tipoVino">Varietal</label>
@@ -49,10 +51,12 @@
         <fieldset>
             <label for="notasCata">Notas de Cata</label>        
                 <textarea rows="3" cols="30" name="notasCata" id="notasCata" placeholder="Nota de cata"></textarea>
+                <p  class="display-error" id="notasCata-error"></p>
         </fieldset>
         <fieldset>    
             <label for="maridaje">Maridaje</label> 
                 <textarea rows="3" cols="30" name="maridaje" id="maridaje" placeholder="Maridaje"></textarea>
+                <p  class="display-error" id="maridaje-error"></p>
         </fieldset>
         <section class="check">
             <fieldset class="fs-kl">    
@@ -75,13 +79,13 @@
         <fieldset>
             <label for="price">Precio</label>
                 <input type="number" name="price" id="price" placeholder="Precio" min="0">
-            
+                <p  class="display-error" id="price-error"></p>
         </fieldset>
         <fieldset>
             <button type="submit">Save</button> 
         </fieldset>
     </form>
-
+    <script src="/js/products.js"></script>
 </main>
 
     <%- include("../includes/footer") %>
